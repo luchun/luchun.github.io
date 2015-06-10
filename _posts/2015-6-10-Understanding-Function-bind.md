@@ -5,12 +5,14 @@ title: 理解Function.prototype.bind
 ## 2015/2/27 理解Function.prototype.bind
 
 最近在看一本新书《Programming javascript Applications》，讲到调用其它对象的方法，以前我们使用call和apply,
+
 ```js
 someMethod.call(context,argument1,argument2);
 someMethod.apply(context,[argumentsArray]);
 ```
 两者的区别就是前者将参数依次传入，后者将参数作为数组传入
 平时用的比较多的就是用toString来判断类型
+
 ```js
 console.log(Object.prototype.toString.call([]))
 // [object Array]
