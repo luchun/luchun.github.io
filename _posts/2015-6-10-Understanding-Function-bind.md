@@ -7,21 +7,22 @@ title: 理解Function.prototype.bind
 最近在看一本新书《Programming javascript Applications》，讲到调用其它对象的方法，以前我们使用call和apply,
 
 ```js
-someMethod.call(context,argument1,argument2);
-someMethod.apply(context,[argumentsArray]);
+    someMethod.call(context,argument1,argument2);
+    someMethod.apply(context,[argumentsArray]);
 ```
 两者的区别就是前者将参数依次传入，后者将参数作为数组传入
 平时用的比较多的就是用toString来判断类型
 
 ```js
-console.log(Object.prototype.toString.call([]))
-// [object Array]
+    console.log(Object.prototype.toString.call([]))
+    // [object Array]
 ```
 由于js自带的typeof 不能区分Object和Array等，所以就有人想出了这个办法，网上有详细的说明，不再多说。
 今年还用到过Math.max来取数组中最大值
+
 ```js
-Math.max.apply(null,[2,5,3])
-//5
+    Math.max.apply(null,[2,5,3])
+    //5
 ```
 以此来弥补Array方法的不足。
 
@@ -57,19 +58,19 @@ call和apply是存在很久的方法了，今天学习的是另一个方法：bi
 在网上还有一个更明显的例子，这里借用一下
 
 ```js
-var foo = {
-    x: 3
-}
+    var foo = {
+        x: 3
+        }
  
-var bar = function(){
-    console.log(this.x);
-}
+    var bar = function(){
+        console.log(this.x);
+        }
  
-bar(); 
-// undefined
+    bar(); 
+    // undefined
  
-var boundFunc = bar.bind(foo);
+    var boundFunc = bar.bind(foo);
  
-boundFunc(); 
-// 3
+    boundFunc(); 
+    // 3
 ```
