@@ -5,7 +5,7 @@ title: 理解Function.prototype.bind
 ## 2015/2/27 理解Function.prototype.bind
 
 最近在看一本新书《Programming javascript Applications》，讲到调用其它对象的方法，以前我们使用call和apply,
-```javascript
+```js
 someMethod.call(context,argument1,argument2);
 someMethod.apply(context,[argumentsArray]);
 ```
