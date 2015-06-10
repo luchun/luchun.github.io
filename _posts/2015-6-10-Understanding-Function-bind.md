@@ -2,7 +2,7 @@
 layout: post
 title: 理解Function.prototype.bind
 ---
-## 2015/2/27 理解Function.prototype.bind
+## 2015/6/10 理解Function.prototype.bind
 
 最近在看一本新书《Programming javascript Applications》，讲到调用其它对象的方法，以前我们使用call和apply,
 
