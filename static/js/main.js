@@ -1,4 +1,3 @@
-
 require.config({
     baseUrl: "js",
     shim: {
@@ -17,8 +16,8 @@ require.config({
         lodash: "lodash.min"
     }
 });
-require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swiper, postal) {
-  function whichAnimationEnd() {
+require(['jquery', 'Mustache', "swiper", "postal"], function ($, Mustache, Swiper, postal) {
+    function whichAnimationEnd() {
         var t,
             el = document.createElement("fakeelement");
 
@@ -45,13 +44,15 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
         _this.parentIndex = this.closest(".swiper-slide").index();
         _this.items = _this.find('li');
         _this.itemslen = _this.find('li').length;
-        var  shownext=function() {
+        var shownext = function () {
             _this.items = _this.find('li');
             _this.itemslen = _this.find('li').length;
             var templen = _this.itemslen;
             while (templen > 0) {
                 var sec = Math.round(3 * (_this.itemslen - templen)) / 10;
-                _this.items.eq(templen).find('img').attr('class', 'backinit' + (templen - 1)).css({"animation-delay": "" + sec + "s"});
+                _this.items.eq(templen).find('img').attr('class', 'backinit' + (templen - 1)).css({
+                    "animation-delay": "" + sec + "s"
+                });
                 templen--;
             }
         }
@@ -62,7 +63,9 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
             first.attr('class', 'hideToleft out');
             first.one(animationEnd, function () {
                 $(this).attr('class', '');
-                $(this).find("img").attr('class', '').css({"animation-delay": "0s"});
+                $(this).find("img").attr('class', '').css({
+                    "animation-delay": "0s"
+                });
                 $(this).appendTo(_this);
             });
             shownext();
@@ -73,7 +76,9 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
             first.attr('class', 'hideToright out');
             first.one(animationEnd, function () {
                 $(this).attr('class', '');
-                $(this).find("img").attr('class', '').css({"animation-delay": "0s"});
+                $(this).find("img").attr('class', '').css({
+                    "animation-delay": "0s"
+                });
                 $(this).appendTo(_this);
             });
 
@@ -98,7 +103,21 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
             swiperWrapper.append(output);
         });
         $("#product-swiper").html(swiperWrapper);
+        var swiperImgLen = $("#product-swiper").find("img").length,
+            loadedLen = 0;
+        $("#product-swiper").find("img").one("load", function () {
+            loadedLen++;
+            if (loadedLen == swiperImgLen) {
+                console.log("all loaded");
 
+                initSwiper();
+                $("#product-swiper").show();
+                $("#loading-layer").remove();
+
+            };
+        }).each(function () {
+            if (this.complete) $(this).load();
+        });
         $('.template2').each(function () {
             var lilen = $(this).find("li").length;
             if (lilen <= 1) return;
@@ -120,59 +139,61 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
             ss = scales[i].style;
             ss.webkitTransform = ss.MsTransform = ss.msTransform = ss.MozTransform = ss.OTransform = ss.transform = 'translateX(' + scales[i].offsetWidth * (scaleW - 1) / 2 + 'px) translateY(' + scales[i].offsetHeight * (scaleH - 1) / 2 + 'px)scaleX(' + scaleW + ') scaleY(' + scaleH + ') ';
         }
-        var mySwiper = new Swiper('.product-swiper-wrapper', {
-            direction: 'vertical',
-            effect: 'coverflow',
-            mousewheelControl: true,
-            onInit: function (swiper) {
-                swiperAnimateCache(swiper);
-                swiperAnimate(swiper);
-            },
-            onTransitionEnd: function (swiper) {
 
-                var activeIndex = swiper.activeIndex;
-                swiperAnimate(swiper);
-                channelV.publish("slide" + activeIndex + "V", {
-                    activeIndex: activeIndex
-                });
-            },
-            onTouchEnd: function (swiper) {
-                var activeIndex = mySwiper.activeIndex,
-                    touchesInfo = swiper.touches,
-                    diffX = touchesInfo.currentX - touchesInfo.startX,
-                    diffY = touchesInfo.currentY - touchesInfo.startY;
-                if (Math.abs(diffY) > Math.abs(diffX) || Math.abs(diffX) < 40) return;
-                if (diffX > 0) {
-                    channelH.publish("slide" + activeIndex + ".right", {
-                        activeIndex: activeIndex,
-                        diffX: diffX
+        function initSwiper() {
+            var mySwiper = new Swiper('.product-swiper-wrapper', {
+                direction: 'vertical',
+                effect: 'coverflow',
+                mousewheelControl: true,
+                onInit: function (swiper) {
+                    swiperAnimateCache(swiper);
+                    swiperAnimate(swiper);
+                },
+                onTransitionEnd: function (swiper) {
+
+                    var activeIndex = swiper.activeIndex;
+                    swiperAnimate(swiper);
+                    channelV.publish("slide" + activeIndex + "V", {
+                        activeIndex: activeIndex
                     });
-                } else {
-                    channelH.publish("slide" + activeIndex + ".left", {
-                        activeIndex: activeIndex,
-                        diffX: diffX
-                    });
+                },
+                onTouchEnd: function (swiper) {
+                    var activeIndex = mySwiper.activeIndex,
+                        touchesInfo = swiper.touches,
+                        diffX = touchesInfo.currentX - touchesInfo.startX,
+                        diffY = touchesInfo.currentY - touchesInfo.startY;
+                    if (Math.abs(diffY) > Math.abs(diffX) || Math.abs(diffX) < 40) return;
+                    if (diffX > 0) {
+                        channelH.publish("slide" + activeIndex + ".right", {
+                            activeIndex: activeIndex,
+                            diffX: diffX
+                        });
+                    } else {
+                        channelH.publish("slide" + activeIndex + ".left", {
+                            activeIndex: activeIndex,
+                            diffX: diffX
+                        });
+                    }
+
+
                 }
-
-
-            }
-        })
+            })
+        }
 
     });
 
     function swiperAnimateCache() {
-        for (allBoxes = window.document.documentElement.querySelectorAll(".ani"), i = 0; i < allBoxes.length; i++)allBoxes[i].attributes["style"] ? allBoxes[i].setAttribute("swiper-animate-style-cache", allBoxes[i].attributes["style"].value) : allBoxes[i].setAttribute("swiper-animate-style-cache", " "), allBoxes[i].style.visibility = "hidden"
+        for (allBoxes = window.document.documentElement.querySelectorAll(".ani"), i = 0; i < allBoxes.length; i++) allBoxes[i].attributes["style"] ? allBoxes[i].setAttribute("swiper-animate-style-cache", allBoxes[i].attributes["style"].value) : allBoxes[i].setAttribute("swiper-animate-style-cache", " "), allBoxes[i].style.visibility = "hidden"
     }
 
     function swiperAnimate(a) {
         clearSwiperAnimate();
         var b = a.slides[a.activeIndex].querySelectorAll(".ani");
-        for (i = 0; i < b.length; i++)b[i].style.visibility = "visible", effect = b[i].attributes["swiper-animate-effect"] ? b[i].attributes["swiper-animate-effect"].value : "", b[i].className = b[i].className + "  " + effect + " " + "animated", style = b[i].attributes["style"].value, duration = b[i].attributes["swiper-animate-duration"] ? b[i].attributes["swiper-animate-duration"].value : "", duration && (style = style + "animation-duration:" + duration + ";-webkit-animation-duration:" + duration + ";"), delay = b[i].attributes["swiper-animate-delay"] ? b[i].attributes["swiper-animate-delay"].value : "", delay && (style = style + "animation-delay:" + delay + ";-webkit-animation-delay:" + delay + ";"), b[i].setAttribute("style", style)
+        for (i = 0; i < b.length; i++) b[i].style.visibility = "visible", effect = b[i].attributes["swiper-animate-effect"] ? b[i].attributes["swiper-animate-effect"].value : "", b[i].className = b[i].className + "  " + effect + " " + "animated", style = b[i].attributes["style"].value, duration = b[i].attributes["swiper-animate-duration"] ? b[i].attributes["swiper-animate-duration"].value : "", duration && (style = style + "animation-duration:" + duration + ";-webkit-animation-duration:" + duration + ";"), delay = b[i].attributes["swiper-animate-delay"] ? b[i].attributes["swiper-animate-delay"].value : "", delay && (style = style + "animation-delay:" + delay + ";-webkit-animation-delay:" + delay + ";"), b[i].setAttribute("style", style)
     }
 
     function clearSwiperAnimate() {
-        for (allBoxes = window.document.documentElement.querySelectorAll(".ani"), i = 0; i < allBoxes.length; i++)allBoxes[i].attributes["swiper-animate-style-cache"] && allBoxes[i].setAttribute("style", allBoxes[i].attributes["swiper-animate-style-cache"].value), allBoxes[i].style.visibility = "hidden", allBoxes[i].className = allBoxes[i].className.replace("animated", " "), allBoxes[i].attributes["swiper-animate-effect"] && (effect = allBoxes[i].attributes["swiper-animate-effect"].value, allBoxes[i].className = allBoxes[i].className.replace(effect, " "))
+        for (allBoxes = window.document.documentElement.querySelectorAll(".ani"), i = 0; i < allBoxes.length; i++) allBoxes[i].attributes["swiper-animate-style-cache"] && allBoxes[i].setAttribute("style", allBoxes[i].attributes["swiper-animate-style-cache"].value), allBoxes[i].style.visibility = "hidden", allBoxes[i].className = allBoxes[i].className.replace("animated", " "), allBoxes[i].attributes["swiper-animate-effect"] && (effect = allBoxes[i].attributes["swiper-animate-effect"].value, allBoxes[i].className = allBoxes[i].className.replace(effect, " "))
     }
 
 });
-
