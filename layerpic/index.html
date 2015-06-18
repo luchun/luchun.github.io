@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title>
+			堆叠相册效果
+		</title>
+		<style type="text/css">
+			/*reset begin */
+			*{ margin:0; padding:0;}
+			body{ width: 100%; height: 100%; overflow-x: hidden; background: #e2e2e2;}
+			ul,li{ list-style-type: none;}
+			/* reset end */
+		</style>
+		<link rel="stylesheet" href="fonglezenDDpic.css">
+	</head>
+	<body>
+		<ul id="fonglezen_ddpic">
+			<li><img src="images/1.jpg" class="goimg"></li>
+			<li><img src="images/2.jpg" class="goimg"></li>
+			<li><img src="images/3.jpg" class="goimg"></li>
+			<li><img src="images/4.jpg" class="goimg"></li>
+			<li><img src="images/5.jpg" class="goimg"></li>
+			<li><img src="images/6.jpg"></li>
+			<li><img src="images/7.jpg"></li>
+			<li><img src="images/8.jpg"></li>
+			<li><img src="images/9.jpg"></li>
+			<li><img src="images/10.jpg"></li>
+			<li><img src="images/11.jpg"></li>
+		</ul>
+		<div id="flz_prev"><img src="images/leftarr.png" alt=""></div>
+		<div id="flz_next"><img src="images/rightarr.png" alt=""></div>
+
+		<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="fonglezenDDpic.js"></script>
+		<script type="text/javascript">
+			$('#fonglezen_ddpic').fonglezenDDpic();
+		</script>
+	</body>
+</html>
