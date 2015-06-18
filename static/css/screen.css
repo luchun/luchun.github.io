@@ -751,10 +751,10 @@ html, body {
 }
 @-webkit-keyframes backinit1 {
   from {
-    transform: rotateZ(6deg);
+    -webkit-transform: rotateZ(6deg);
   }
   to {
-    transform: rotateZ(3deg);
+    -webkit-transform: rotateZ(3deg);
   }
 }
 @keyframes backinit1 {
@@ -787,10 +787,10 @@ html, body {
 }
 @-webkit-keyframes backinit2 {
   from {
-    transform: rotateZ(9deg);
+    -webkit-transform: rotateZ(9deg);
   }
   to {
-    transform: rotateZ(6deg);
+    -webkit-transform: rotateZ(6deg);
   }
 }
 @keyframes backinit2 {
@@ -823,10 +823,10 @@ html, body {
 }
 @-webkit-keyframes backinit3 {
   from {
-    transform: rotateZ(12deg);
+    -webkit-transform: rotateZ(12deg);
   }
   to {
-    transform: rotateZ(9deg);
+    -webkit-transform: rotateZ(9deg);
   }
 }
 @keyframes backinit3 {
@@ -859,10 +859,10 @@ html, body {
 }
 @-webkit-keyframes backinit4 {
   from {
-    transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
   }
   to {
-    transform: rotateZ(12deg);
+    -webkit-transform: rotateZ(12deg);
   }
 }
 @keyframes backinit4 {
@@ -895,10 +895,10 @@ html, body {
 }
 @-webkit-keyframes backinit5 {
   from {
-    transform: rotateZ(18deg);
+    -webkit-transform: rotateZ(18deg);
   }
   to {
-    transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
   }
 }
 @keyframes backinit5 {
@@ -931,10 +931,10 @@ html, body {
 }
 @-webkit-keyframes backinit6 {
   from {
-    transform: rotateZ(21deg);
+    -webkit-transform: rotateZ(21deg);
   }
   to {
-    transform: rotateZ(18deg);
+    -webkit-transform: rotateZ(18deg);
   }
 }
 @keyframes backinit6 {
@@ -967,10 +967,10 @@ html, body {
 }
 @-webkit-keyframes backinit7 {
   from {
-    transform: rotateZ(24deg);
+    -webkit-transform: rotateZ(24deg);
   }
   to {
-    transform: rotateZ(21deg);
+    -webkit-transform: rotateZ(21deg);
   }
 }
 @keyframes backinit7 {
@@ -1003,10 +1003,10 @@ html, body {
 }
 @-webkit-keyframes backinit8 {
   from {
-    transform: rotateZ(27deg);
+    -webkit-transform: rotateZ(27deg);
   }
   to {
-    transform: rotateZ(24deg);
+    -webkit-transform: rotateZ(24deg);
   }
 }
 @keyframes backinit8 {
@@ -1039,10 +1039,10 @@ html, body {
 }
 @-webkit-keyframes backinit9 {
   from {
-    transform: rotateZ(30deg);
+    -webkit-transform: rotateZ(30deg);
   }
   to {
-    transform: rotateZ(27deg);
+    -webkit-transform: rotateZ(27deg);
   }
 }
 @keyframes backinit9 {
