@@ -45,7 +45,7 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
         _this.parentIndex = this.closest(".swiper-slide").index();
         _this.items = _this.find('li');
         _this.itemslen = _this.find('li').length;
-        var  shownext=function {
+        var  shownext=function() {
             _this.items = _this.find('li');
             _this.itemslen = _this.find('li').length;
             var templen = _this.itemslen;
