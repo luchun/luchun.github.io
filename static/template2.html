@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel='stylesheet' href='css/animate.css'/>
+    <link rel='stylesheet' href='css/screen.css'/>
+
+</head>
+<body>
+<div id="product-swiper" class="product-swiper-wrapper">
+</div>
+<div id="templates" style="display: none;"></div>
+<script>
+    var config = {
+        "pages": [
+            "page1"
+        ],
+        "data": [
+            {
+                "name": "page1",
+                "type": "template2",
+                "content": {
+                    "img": [
+                        "images/example1.jpg",
+                        "images/example2.jpg",
+                        "images/example3.jpg",
+                        "images/example4.jpg",
+                        "images/example5.jpg"
+                    ]
+                }
+            }
+
+        ]
+    }
+</script>
+<script data-main="js/main" src="js/require.js"></script>
+
+<script id="template1" type="text/x-mustache">
+    <div class="swiper-slide">
+        <img src="{{img}}" alt=""/>
+    </div>
+
+</script>
+<script id="template2" type="text/x-mustache">
+    <div class="swiper-slide">
+        <ul class="template2">
+            {{#img}}
+            <li><img src="{{.}}" class="goimg"></li>
+            {{/img}}
+        </ul>
+        <div id="flz_prev"><img src="images/leftarr.png" alt="" style="z-index: 11"></div>
+        <div id="flz_next"><img src="images/rightarr.png" alt="" style="z-index: 11"></div>
+    </div>
+
+</script>
+
+<script id="template3" type="text/x-mustache">
+   <div class="swiper-slide">
+        <img src="{{img1}}" class="ani resize" style="width:300px;height:230px;left:10px;top:10px;z-index:3;" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  >
+        <img src="{{img2}}" class="ani resize" style="width:145px;height:220px;left:10px;top:250px;z-index:3;" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  >
+        <img src="{{img3}}" class="ani resize" style="width:145px;height:220px;left:165px;top:250px;z-index:3;" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="0.5s" swiper-animate-delay="1s"   >
+   </div>
+
+</script>
+
+<script id="template4" type="text/x-mustache">
+   <div class="swiper-slide">
+        <img src="{{img1}}" class="ani resize" style="width:300px;height:150px;left:10px;top:8px;z-index:3;" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  >
+        <img src="{{img2}}" class="ani resize" style="width:300px;height:150px;left:10px;top:166px;z-index:3;" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  >
+        <img src="{{img3}}" class="ani resize" style="width:300px;height:150px;left:10px;top:324px;z-index:3;" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.5s" swiper-animate-delay="1s"   >
+   </div>
+
+</script>
+
+
+</body>
+</html>
