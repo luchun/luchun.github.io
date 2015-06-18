@@ -18,47 +18,69 @@ require.config({
     }
 });
 require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swiper, postal) {
+  function whichAnimationEnd() {
+        var t,
+            el = document.createElement("fakeelement");
 
+        var animations = {
+            "animation": "animationend",
+            "OAnimation": "oAnimationEnd",
+            "MozAnimation": "animationend",
+            "WebkitAnimation": "webkitAnimationEnd"
+        }
+
+        for (t in animations) {
+            if (el.style[t] !== undefined) {
+                return animations[t];
+            }
+        }
+    }
+
+    var animationEnd = whichAnimationEnd();
     var channelH = postal.channel("swiperH"),
         channelV = postal.channel("swiperV");
 
     $.fn.showNext = function () {
         var _this = this;
-        _this.isanimation = false;
         _this.parentIndex = this.closest(".swiper-slide").index();
         _this.items = _this.find('li');
         _this.itemslen = _this.find('li').length;
         function shownext() {
-            _this.isanimation = true;
             _this.items = _this.find('li');
-            _this.items.eq(1).find('img').attr('class', 'backinit0');
-            _this.items.eq(2).find('img').attr('class', 'backinit1');
-            _this.items.eq(3).find('img').attr('class', 'backinit2');
-            _this.items.eq(4).find('img').attr('class', 'backinit3');
-            _this.items.eq(5).find('img').attr('class', 'backinit4');
-            setTimeout($.proxy(function () {
-                _this.items.find('img').attr('class', '');
-                _this.items.attr('class', '');
-                var firstLI = _this.items.eq(0).html();
-                _this.items.eq(0).remove();
-                _this.append('<li>' + firstLI + '</li>');
-                _this.isanimation = false;
-            }, _this), _this.itemslen * 300 + 600)
+            _this.itemslen = _this.find('li').length;
+            var templen = _this.itemslen;
+            while (templen > 0) {
+                var sec = Math.round(3 * (_this.itemslen - templen)) / 10;
+                _this.items.eq(templen).find('img').attr('class', 'backinit' + (templen - 1)).css({"animation-delay": "" + sec + "s"});
+                templen--;
+            }
         }
 
         channelH.subscribe("slide" + _this.parentIndex + ".left", function (data) {
-            if (_this.isanimation) return;
             _this.items = _this.find('li');
-            _this.items.eq(0).attr('class', 'hideToleft');
+            var first = _this.items.not(".out").eq(0);
+            first.attr('class', 'hideToleft out');
+            first.one(animationEnd, function () {
+                $(this).attr('class', '');
+                $(this).find("img").attr('class', '').css({"animation-delay": "0s"});
+                $(this).appendTo(_this);
+            });
             shownext();
         });
         channelH.subscribe("slide" + _this.parentIndex + ".right", function (data) {
-            if (_this.isanimation) return;
             _this.items = _this.find('li');
-            _this.items.eq(0).attr('class', 'hideToright');
+            var first = _this.items.eq(0);
+            first.attr('class', 'hideToright out');
+            first.one(animationEnd, function () {
+                $(this).attr('class', '');
+                $(this).find("img").attr('class', '').css({"animation-delay": "0s"});
+                $(this).appendTo(_this);
+            });
+
             shownext();
         });
         channelV.subscribe("slide" + _this.parentIndex + "V", function () {
+
             _this.items.find('img').attr('class', 'goimg');
         })
     };

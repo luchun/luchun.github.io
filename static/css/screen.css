@@ -278,7 +278,6 @@ html, body {
 
 /* line 12, ../sass/screen.scss */
 .product-swiper-wrapper {
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
   border: 1px solid #ccc;
@@ -614,8 +613,8 @@ html, body {
   }
   to {
     opacity: 0;
-    -moz-transform: translate3d(-120%, 0, 0);
-    transform: translate3d(-120%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @-webkit-keyframes hideToleft {
@@ -626,8 +625,8 @@ html, body {
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(-120%, 0, 0);
-    transform: translate3d(-120%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes hideToleft {
@@ -640,10 +639,10 @@ html, body {
   }
   to {
     opacity: 0;
-    -moz-transform: translate3d(-120%, 0, 0);
-    -ms-transform: translate3d(-120%, 0, 0);
-    -webkit-transform: translate3d(-120%, 0, 0);
-    transform: translate3d(-120%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 /* line 98, ../sass/screen.scss */
@@ -664,8 +663,8 @@ html, body {
   }
   to {
     opacity: 0;
-    -moz-transform: translate3d(120%, 0, 0);
-    transform: translate3d(120%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 @-webkit-keyframes hideToright {
@@ -676,8 +675,8 @@ html, body {
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(120%, 0, 0);
-    transform: translate3d(120%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 @keyframes hideToright {
@@ -690,10 +689,10 @@ html, body {
   }
   to {
     opacity: 0;
-    -moz-transform: translate3d(120%, 0, 0);
-    -ms-transform: translate3d(120%, 0, 0);
-    -webkit-transform: translate3d(120%, 0, 0);
-    transform: translate3d(120%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 /* line 115, ../sass/screen.scss */
@@ -731,16 +730,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(2) .backinit0 {
-  -moz-animation: backinit0 0.5s;
-  -webkit-animation: backinit0 0.5s;
-  animation: backinit0 0.5s;
+.template2 li:nth-child(1) .backinit0 {
+  -moz-animation: backinit0 0.3s;
+  -webkit-animation: backinit0 0.3s;
+  animation: backinit0 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 @-moz-keyframes backinit1 {
   from {
@@ -767,16 +766,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(3) .backinit1 {
-  -moz-animation: backinit1 0.5s;
-  -webkit-animation: backinit1 0.5s;
-  animation: backinit1 0.5s;
+.template2 li:nth-child(2) .backinit1 {
+  -moz-animation: backinit1 0.3s;
+  -webkit-animation: backinit1 0.3s;
+  animation: backinit1 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  -moz-animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
 }
 @-moz-keyframes backinit2 {
   from {
@@ -803,16 +802,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(4) .backinit2 {
-  -moz-animation: backinit2 0.5s;
-  -webkit-animation: backinit2 0.5s;
-  animation: backinit2 0.5s;
+.template2 li:nth-child(3) .backinit2 {
+  -moz-animation: backinit2 0.3s;
+  -webkit-animation: backinit2 0.3s;
+  animation: backinit2 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -moz-animation-delay: 2.4s;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 @-moz-keyframes backinit3 {
   from {
@@ -839,16 +838,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(5) .backinit3 {
-  -moz-animation: backinit3 0.5s;
-  -webkit-animation: backinit3 0.5s;
-  animation: backinit3 0.5s;
+.template2 li:nth-child(4) .backinit3 {
+  -moz-animation: backinit3 0.3s;
+  -webkit-animation: backinit3 0.3s;
+  animation: backinit3 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -moz-animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
 }
 @-moz-keyframes backinit4 {
   from {
@@ -875,16 +874,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(6) .backinit4 {
-  -moz-animation: backinit4 0.5s;
-  -webkit-animation: backinit4 0.5s;
-  animation: backinit4 0.5s;
+.template2 li:nth-child(5) .backinit4 {
+  -moz-animation: backinit4 0.3s;
+  -webkit-animation: backinit4 0.3s;
+  animation: backinit4 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -moz-animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 @-moz-keyframes backinit5 {
   from {
@@ -911,16 +910,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(7) .backinit5 {
-  -moz-animation: backinit5 0.5s;
-  -webkit-animation: backinit5 0.5s;
-  animation: backinit5 0.5s;
+.template2 li:nth-child(6) .backinit5 {
+  -moz-animation: backinit5 0.3s;
+  -webkit-animation: backinit5 0.3s;
+  animation: backinit5 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 @-moz-keyframes backinit6 {
   from {
@@ -947,16 +946,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(8) .backinit6 {
-  -moz-animation: backinit6 0.5s;
-  -webkit-animation: backinit6 0.5s;
-  animation: backinit6 0.5s;
+.template2 li:nth-child(7) .backinit6 {
+  -moz-animation: backinit6 0.3s;
+  -webkit-animation: backinit6 0.3s;
+  animation: backinit6 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 3s;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 @-moz-keyframes backinit7 {
   from {
@@ -983,16 +982,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(9) .backinit7 {
-  -moz-animation: backinit7 0.5s;
-  -webkit-animation: backinit7 0.5s;
-  animation: backinit7 0.5s;
+.template2 li:nth-child(8) .backinit7 {
+  -moz-animation: backinit7 0.3s;
+  -webkit-animation: backinit7 0.3s;
+  animation: backinit7 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 3.5s;
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 @-moz-keyframes backinit8 {
   from {
@@ -1019,16 +1018,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(10) .backinit8 {
-  -moz-animation: backinit8 0.5s;
-  -webkit-animation: backinit8 0.5s;
-  animation: backinit8 0.5s;
+.template2 li:nth-child(9) .backinit8 {
+  -moz-animation: backinit8 0.3s;
+  -webkit-animation: backinit8 0.3s;
+  animation: backinit8 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 4s;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -moz-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 @-moz-keyframes backinit9 {
   from {
@@ -1055,16 +1054,16 @@ html, body {
   }
 }
 /* line 131, ../sass/screen.scss */
-.template2 li:nth-child(11) .backinit9 {
-  -moz-animation: backinit9 0.5s;
-  -webkit-animation: backinit9 0.5s;
-  animation: backinit9 0.5s;
+.template2 li:nth-child(10) .backinit9 {
+  -moz-animation: backinit9 0.3s;
+  -webkit-animation: backinit9 0.3s;
+  animation: backinit9 0.3s;
   -moz-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -moz-animation-delay: 4.5s;
-  -webkit-animation-delay: 4.5s;
-  animation-delay: 4.5s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 /*列表的基本样式*/
 /* line 142, ../sass/screen.scss */
