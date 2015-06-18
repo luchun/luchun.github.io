@@ -49,7 +49,7 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($, Mustache, Swipe
             _this.itemslen = _this.find('li').length;
             var templen = _this.itemslen;
             while (templen > 0) {
-                var sec = Math.round(3 * (_this.itemslen - templen)) / 10;
+                var sec = Math.round(2 * (_this.itemslen - templen)) / 10;
                 _this.items.eq(templen).find('img').attr('class', 'backinit' + (templen - 1)).css({
                     "animation-delay": "" + sec + "s"
                 });
