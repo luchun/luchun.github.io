@@ -32,3 +32,27 @@ var buy = function(x, arr){
 };
 
 ```
+
+以下是目前的最优解
+
+```js
+
+var buy = function(sum, arr){
+  var result = null;
+  
+  arr.some(function(item, i) {
+    var id = arr.indexOf(sum - item, i + 1);
+    if (id !== -1) {
+      result = [i, id];
+      return true;
+    }
+  });
+  
+  return result;
+};
+```
+这个解法的优点有：
+    1.使用了some，some在return true时会结束循环
+    2.使用了indexOf，避免了显示的二次循环。
+    
+   比我的for + map高明多了。
