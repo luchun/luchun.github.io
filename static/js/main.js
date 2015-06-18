@@ -46,6 +46,7 @@ require(['jquery', 'Mustache', "swiper", "postal"], function ($,  Mustache, Swip
         _this.items = _this.find('li');
         _this.itemslen = _this.find('li').length;
         function shownext() {
+            alert("shownext")
             _this.items = _this.find('li');
             _this.itemslen = _this.find('li').length;
             var templen = _this.itemslen;
