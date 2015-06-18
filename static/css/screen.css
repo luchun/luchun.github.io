@@ -1235,16 +1235,16 @@ box-sizing: border-box;
     transform: translate3d(0, 0, 0);
   }
   30% {
-    -moz-transform: translate3d(-90%, 0, 0);
-    transform: translate3d(-90%, 0, 0);
+    -moz-transform: translate3d(90%, 0, 0);
+    transform: translate3d(90%, 0, 0);
   }
   60% {
-    -moz-transform: translate3d(-40%, 0, 0);
-    transform: translate3d(-40%, 0, 0);
+    -moz-transform: translate3d(40%, 0, 0);
+    transform: translate3d(40%, 0, 0);
   }
   80% {
-    -moz-transform: translate3d(-70%, 0, 0);
-    transform: translate3d(-70%, 0, 0);
+    -moz-transform: translate3d(70%, 0, 0);
+    transform: translate3d(70%, 0, 0);
   }
 }
 @-webkit-keyframes flz_next {
@@ -1253,16 +1253,16 @@ box-sizing: border-box;
     transform: translate3d(0, 0, 0);
   }
   30% {
-    -webkit-transform: translate3d(-90%, 0, 0);
-    transform: translate3d(-90%, 0, 0);
+    -webkit-transform: translate3d(90%, 0, 0);
+    transform: translate3d(90%, 0, 0);
   }
   60% {
-    -webkit-transform: translate3d(-40%, 0, 0);
-    transform: translate3d(-40%, 0, 0);
+    -webkit-transform: translate3d(40%, 0, 0);
+    transform: translate3d(40%, 0, 0);
   }
   80% {
-    -webkit-transform: translate3d(-70%, 0, 0);
-    transform: translate3d(-70%, 0, 0);
+    -webkit-transform: translate3d(70%, 0, 0);
+    transform: translate3d(70%, 0, 0);
   }
 }
 @keyframes flz_next {
@@ -1273,22 +1273,22 @@ box-sizing: border-box;
     transform: translate3d(0, 0, 0);
   }
   30% {
-    -moz-transform: translate3d(-90%, 0, 0);
-    -ms-transform: translate3d(-90%, 0, 0);
-    -webkit-transform: translate3d(-90%, 0, 0);
-    transform: translate3d(-90%, 0, 0);
+    -moz-transform: translate3d(90%, 0, 0);
+    -ms-transform: translate3d(90%, 0, 0);
+    -webkit-transform: translate3d(90%, 0, 0);
+    transform: translate3d(90%, 0, 0);
   }
   60% {
-    -moz-transform: translate3d(-40%, 0, 0);
-    -ms-transform: translate3d(-40%, 0, 0);
-    -webkit-transform: translate3d(-40%, 0, 0);
-    transform: translate3d(-40%, 0, 0);
+    -moz-transform: translate3d(40%, 0, 0);
+    -ms-transform: translate3d(40%, 0, 0);
+    -webkit-transform: translate3d(40%, 0, 0);
+    transform: translate3d(40%, 0, 0);
   }
   80% {
-    -moz-transform: translate3d(-70%, 0, 0);
-    -ms-transform: translate3d(-70%, 0, 0);
-    -webkit-transform: translate3d(-70%, 0, 0);
-    transform: translate3d(-70%, 0, 0);
+    -moz-transform: translate3d(70%, 0, 0);
+    -ms-transform: translate3d(70%, 0, 0);
+    -webkit-transform: translate3d(70%, 0, 0);
+    transform: translate3d(70%, 0, 0);
   }
 }
 /*左右按钮的样式*/
@@ -1309,6 +1309,7 @@ box-sizing: border-box;
   -moz-animation: flz_prev 1s infinite;
   -webkit-animation: flz_prev 1s infinite;
   animation: flz_prev 1s infinite;
+animation-delay: 1s;
 }
 
 /* line 168, ../sass/screen.scss */
