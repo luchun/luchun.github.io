@@ -282,6 +282,7 @@ html, body {
   height: 100%;
   border: 1px solid #ccc;
   overflow: hidden;
+        box-sizing: border-box;
 }
 /* line 20, ../sass/screen.scss */
 .product-swiper-wrapper .swiper-slide {
