@@ -267,34 +267,34 @@ th {
 }
 
 /* line 3, ../sass/pinkcard.scss */
-body {
-  font-size: 20px;
+html, body {
+  font-size: 16px;
   font-family: 'Microsoft YaHei', Helvetica, STHeiTi, sans-serif;
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
   /* line 3, ../sass/pinkcard.scss */
-  body {
+  html, body {
     font-size: 10px;
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
   /* line 3, ../sass/pinkcard.scss */
-  body {
-    font-size: 15px;
+  html, body {
+    font-size: 12px;
   }
 }
 @media (-webkit-min-device-pixel-ratio: 4) {
   /* line 3, ../sass/pinkcard.scss */
-  body {
-    font-size: 20px;
+  html, body {
+    font-size: 16px;
   }
 }
 
 /* line 16, ../sass/pinkcard.scss */
 .picture {
   border: 1px solid #CCCCCC;
-  margin: 30px;
-  padding: 15px;
+  margin: 2em;
+  padding: 1em;
 }
 /* line 20, ../sass/pinkcard.scss */
 .picture img {
@@ -325,13 +325,13 @@ body {
 /* line 39, ../sass/pinkcard.scss */
 .account {
   width: 100%;
-  padding-top: 35px;
+  padding-top: 2em;
   background: #F1F1F1;
 }
 
 /* line 44, ../sass/pinkcard.scss */
 .title {
-  font-size: 28px;
+  font-size: 1.75rem;
   margin-left: 5%;
   color: #333;
 }
@@ -339,7 +339,7 @@ body {
 /* line 49, ../sass/pinkcard.scss */
 .input_bg {
   width: 90%;
-  margin: 35px auto 0;
+  margin: 2rem auto 0;
   background: #fff;
 }
 
@@ -354,40 +354,42 @@ body {
   outline: none;
   border: none;
   color: #333333;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 90%;
-  height: 180px;
-  line-height: 30px;
+  min-height: 180px;
+  line-height: 1.875rem;
   background: #fff;
-  padding-left: 15px;
-  padding-top: 20px;
+  padding-left: 1rem;
+  padding-top: 1.250rem;
 }
 
 /* line 70, ../sass/pinkcard.scss */
 .btn {
   color: #fff;
-  font-size: 38px;
+  font-size: 2rem;
   display: block;
   background: #FA5E5F;
   text-align: center;
-  line-height: 108px;
-  height: 108px;
-  margin: 40px 0 auto 0;
+  line-height: 4rem;
+  height: 4rem;
+  margin: 2rem 0 auto 0;
   width: 100%;
   cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.2em;
 }
 
-/* line 82, ../sass/pinkcard.scss */
+/* line 84, ../sass/pinkcard.scss */
 .input_text {
   outline: none;
   border: none;
   color: #333333;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 90%;
-  height: 80px;
-  line-height: 80px;
+  height: 5rem;
+  line-height: 5rem;
   background: #fff;
-  padding-left: 15px;
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=pinkcard.css.map */
