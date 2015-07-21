@@ -14,6 +14,20 @@
         
         <!-- jQuery -->
         <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <style>
+            html,body{
+                height:100%;
+                overflow: hidden;
+            }
+            #container{
+                height: 100%;
+                overflow: auto;
+            }
+            #button{
+                position: absolute;
+                bottom: 0;
+            }
+        </style>
     </head>
     <body>
         <!-- Pushy Menu -->
@@ -41,7 +55,9 @@
             <p>Praesent id metus imperdiet, congue leo sed, eleifend purus. Donec congue scelerisque tempus. Maecenas eget nunc pharetra, laoreet enim sed, dictum odio. Sed non mollis purus. Aliquam aliquet, risus eget dictum commodo, neque mi dapibus ipsum, tempus iaculis elit lorem pharetra mauris. Vivamus pulvinar scelerisque lectus a congue. Sed vitae odio massa. Pellentesque condimentum sit amet arcu in convallis.</p>
 
             <p>Etiam dapibus nisl nibh, et commodo nisi euismod vehicula. In consectetur eleifend felis, eget iaculis lectus scelerisque vel. Mauris non nibh nec sem consequat dapibus sed at tellus. Nunc egestas ac diam sed pretium. Praesent ultrices malesuada nisi at ornare. Aliquam arcu eros, pellentesque vitae fringilla ac, rhoncus id urna. Curabitur sit amet tortor eu neque sollicitudin congue. Proin mattis, diam quis ullamcorper iaculis, metus lectus vulputate tellus, id imperdiet nibh ante vel risus. Nam ut mi libero. Suspendisse auctor neque at pulvinar vestibulum. Suspendisse potenti. Cras molestie eros at feugiat gravida.</p>
-
+            <p id="button">
+                <button>按钮一</button>
+            </p>
         </div>
 
         <!-- Pushy JS -->
