@@ -25,6 +25,7 @@ function descendingOrder(n){
 
 
 今天尝试使用Ruby解决这个问题，我是Ruby的初学者，好在这道题考察的是语言的基础，而Ruby和Javascript都是动态性语言，很多方法都是同名的。
+
 ``` 
 
 def descending_order(n)
