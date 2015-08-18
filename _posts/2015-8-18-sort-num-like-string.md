@@ -21,6 +21,7 @@ function descendingOrder(n){
 }
 
 ```
+
 将数字转换为字符串，再用split()拆分为数组，然后排序，重新用join组装为数字，一气呵成。
 
 
@@ -34,6 +35,7 @@ end
 p descending_order(123)
 
 ```
+
 我的思路基本与javascript的一致
 
 看了下别人的答案，如下
@@ -45,6 +47,7 @@ def descending_order(n)
 end
 
 ```
+
 查了下文档 chars方法就是将字符串每个字节转为数组键值
 
 Returns an array of characters in str. This is a shorthand for str.each_char.to_a.
