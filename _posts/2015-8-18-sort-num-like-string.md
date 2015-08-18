@@ -24,8 +24,8 @@ function descendingOrder(n){
 将数字转换为字符串，再用split()拆分为数组，然后排序，重新用join组装为数字，一气呵成。
 
 
-今天尝试使用RUby解决这个问题，我是Ruby的初学者，好在这道题考察的是语言的基础，而Ruby和Javascript都是动态性语言，很多方法都是同名的。
-```ruby
+今天尝试使用Ruby解决这个问题，我是Ruby的初学者，好在这道题考察的是语言的基础，而Ruby和Javascript都是动态性语言，很多方法都是同名的。
+``` 
 
 def descending_order(n)
   n.to_s.split("").sort{|a,b| b<=>a}.join("").to_i
@@ -37,7 +37,7 @@ p descending_order(123)
 
 看了下别人的答案，如下
 
-```ruby
+```
 
 def descending_order(n)
  n.to_s.chars.sort.reverse.join.to_i
