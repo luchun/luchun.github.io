@@ -57,11 +57,12 @@
   background: #fc5d86;
   color: white;
   position: relative;
+  z-index: 2;
   margin-bottom: 0.28571em;
   padding: 0.71429em 1.07143em;
   font-size: 0.875em;
 }
-/* line 71, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .hl-article .hl-title::before {
   content: " ";
   display: block;
@@ -76,7 +77,7 @@
   border-bottom: 1.28571em solid rgba(255, 255, 255, 0);
   box-sizing: border-box;
 }
-/* line 87, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .hl-article .hl-title::after {
   content: " ";
   display: block;
@@ -91,26 +92,26 @@
   border-bottom: none;
   box-sizing: border-box;
 }
-/* line 104, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .hl-article .hl-operate {
   float: right;
 }
-/* line 106, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .hl-article .hl-operate .hl-circle {
   display: inline-block;
   border-radius: 0.5em;
   background: rgba(232, 61, 102, 0.6);
   vertical-align: middle;
 }
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .hl-article .hl-con {
   background: white;
   font-size: 0.8125em;
   padding: 0 0.76923em;
   margin: 0 0.30769em;
-  -moz-box-shadow: 3px 3px 0 #ffb5b4;
-  -webkit-box-shadow: 3px 3px 0 #ffb5b4;
-  box-shadow: 3px 3px 0 #ffb5b4;
+  -moz-box-shadow: 1.5px 1.5px 0 #ffb5b4, 1.5px -1.5px 0 #ffb5b4;
+  -webkit-box-shadow: 1.5px 1.5px 0 #ffb5b4, 1.5px -1.5px 0 #ffb5b4;
+  box-shadow: 1.5px 1.5px 0 #ffb5b4, 1.5px -1.5px 0 #ffb5b4;
 }
 /* line 120, ../sass/screen.scss */
 .hl-article .hl-con ul {
@@ -120,6 +121,68 @@
 /* line 123, ../sass/screen.scss */
 .hl-article .hl-con ul li {
   list-style: none;
+  padding: 1em 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+/* line 127, ../sass/screen.scss */
+.hl-article .hl-con ul li:last-child {
+  border-bottom: none;
+}
+/* line 132, ../sass/screen.scss */
+.hl-article .hl-con .hl-count {
+  color: #fc5d86;
+}
+/* line 135, ../sass/screen.scss */
+.hl-article .hl-con .hl-total {
+  float: right;
+}
+/* line 138, ../sass/screen.scss */
+.hl-article .hl-con .hl-chief {
+  font-weight: 800;
+}
+/* line 142, ../sass/screen.scss */
+.hl-article .hl-con-2 {
+  position: relative;
+  -moz-box-shadow: 1.5px 1.5px 0 #ffb5b4;
+  -webkit-box-shadow: 1.5px 1.5px 0 #ffb5b4;
+  box-shadow: 1.5px 1.5px 0 #ffb5b4;
+}
+/* line 145, ../sass/screen.scss */
+.hl-article .hl-con-2::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  background-image: linear-gradient(90deg, #bbbbbb 70%, rgba(0, 0, 0, 0) 0%);
+  background-size: 1.5em 1px;
+}
+/* line 158, ../sass/screen.scss */
+.hl-article .hl-con-circle {
+  position: relative;
+}
+/* line 160, ../sass/screen.scss */
+.hl-article .hl-con-circle::before, .hl-article .hl-con-circle::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffd1d0;
+  z-index: 2;
+  border-radius: 10px;
+}
+/* line 171, ../sass/screen.scss */
+.hl-article .hl-con-circle::before {
+  left: -10px;
+}
+/* line 175, ../sass/screen.scss */
+.hl-article .hl-con-circle::after {
+  right: -10px;
 }
 
 /*# sourceMappingURL=screen.css.map */
