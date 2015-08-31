@@ -10,10 +10,9 @@ require.config({
 require(['jquery','window'],function($,hlw){
 
     var pageWindow = new hlw.HlWindow();
-    //pageWindow.alert({
-    //    content:"每周最多记录10堂美容课哦！"
-    //});
-    console.log("hl-operate")
+    pageWindow.alert({
+        content:"每周最多记录10堂美容课哦！"
+    });
     var pkdata =  {
         "pklist":
             [
