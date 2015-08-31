@@ -192,9 +192,9 @@
   width: 100%;
   height: 1px;
   background-color: white;
-  background-image: -webkit-linear-gradient(90deg, #bbbbbb 70%, transparent 0%);
-  background-image: -moz-linear-gradient(90deg, #bbbbbb 70%, transparent 0%);
-  background-image: linear-gradient(90deg, #bbbbbb 70%, rgba(0, 0, 0, 0) 0%);
+  background-image: -webkit-linear-gradient(right, #bbbbbb 70%, transparent 0%);
+  background-image: -moz-linear-gradient(right, #bbbbbb 70%, transparent 0%);
+  background-image: linear-gradient(to left, #bbbbbb 70%, rgba(0, 0, 0, 0) 0%);
   background-size: 1.5em 1px;
 }
 /* line 192, ../sass/screen.scss */
@@ -437,7 +437,6 @@
   z-index: 99;
   -moz-animation: plus_one 1s linear 0s;
   -webkit-animation: plus_one 1s linear 0s;
-  animation: plus_one 1s linear 0s;
   animation: plus_one 1s linear 0s;
 }
 
