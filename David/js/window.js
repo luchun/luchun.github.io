@@ -88,7 +88,7 @@ define(['widget','jquery'], function(widget,$){
         renderUI:function(){
 
             var UIheader = $( '<div class="hl-title"><span class="hl-icon icon-crwon"></span> 区域PK榜</div>' );
-            var UIcontainer = $( '<div class="hl-con hl-con-circle"></div>');
+            var UIcontainer = $( '<div class="hl-con"></div>');
             var UIlist =  $('<ul></ul>');
 
             this.data.pklist.map(function(obj){
@@ -96,8 +96,8 @@ define(['widget','jquery'], function(widget,$){
                 UIlist.append(listitem);
             })
 
-            this.boundingBox = $('<section class="hl-section"></section>');
-
+            this.boundingBox = $('<section class="hl-section hl-section-fixed"></section>');
+            $("body").addClass("hl_window_open")
             this.boundingBox
                 .append(UIheader)
                 .append(UIcontainer.append(UIlist))
@@ -114,10 +114,15 @@ define(['widget','jquery'], function(widget,$){
             this.boundingBox.css({
             })
         },
+        destructor:function(){
+            $("body").removeClass("hl_window_open");
+        },
         hide:function(){
-            this.boundingBox.hide()
+            $("body").removeClass("hl_window_open");
+            this.boundingBox.hide();
         },
         show:function(){
+            $("body").addClass("hl_window_open");
             this.boundingBox.show()
         }
 

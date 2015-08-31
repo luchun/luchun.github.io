@@ -28,7 +28,84 @@ require(['jquery','window'],function($,hlw){
                 {
                     "family": "江南",
                     "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
+                },
+                {
+                    "family": "江南",
+                    "total": "99%"
                 }
+
             ]
     }
     $(".hl-operate").one('click',function(e) {
@@ -41,11 +118,7 @@ require(['jquery','window'],function($,hlw){
         }.bind(pklist));
     })
     $(".hl-button").on("click",function(){
-        var plus = $("<span class='hl_plus_one'>+1</span>");
-
-        $(this).addClass("done");
-        $(this).before(plus);
-        setTimeout($.proxy(plus.remove,plus),1000)
+        plusOne.apply(this);
         console.log($(this).position())
         pageWindow.confirm({
             content:"<div>你的美容课次数已经打败全国 <span class='hlw_num'>50%</span> 的姐妹 <br>"+
@@ -56,4 +129,10 @@ require(['jquery','window'],function($,hlw){
             y:$(this).position().top +20+"px"
         });
     })
+    //+1的动画
+    function plusOne(){
+        var plus = $("<span class='hl_plus_one'>+1</span>");
+        $(this).addClass("done").before(plus);
+        setTimeout($.proxy(plus.remove,plus),1000)
+    }
 })
