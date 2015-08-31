@@ -1,16 +1,53 @@
 /**
  * Created by lu7965 on 2015/8/28.
  */
-define(['widget','jquery'], function(widget,$){
+define(['jquery'], function($){
+
+    function Widget(){
+        this.boundingBox = null;
+    }
+    Widget.prototype = {
+        on:function(type, handler){
+            if(typeof this.handlers[type] === undefined){
+                this.handlers[type] = [];
+            }
+            this.handlers[type].push(handler);
+            return this;
+        },
+        fire:function(type,data){
+            if(this.handlers[type] instanceof  Array){
+                var handlers = this.handlers[type];
+                for( var i = 0,len = handlers.length;i<len;i++){
+                    handlers[i](data)
+                }
+            }
+        },
+        render:function(container){
+            this.renderUI();
+            this.handlers = {};
+            this.bindUI();
+            this.syncUI();
+            $(container || document.body).append(this.boundingBox);
+        },
+        destory:function(){
+            this.destructor();
+            this.boundingBox.off();
+            this.boundingBox.remove();
+        },
+        renderUI:function(){},
+        bindUI:function(){},
+        syncUI:function(){},
+        destructor:function(){}
+    }
+
     function hlWindow (){
         this.cfg = {
             hasMask:true,
             x:null,
             y:null
         }
-        console.log("here 1")
     }
-    hlWindow.prototype = $.extend({},new widget.Widget(),{
+    hlWindow.prototype = $.extend({},new Widget(),{
 
         renderUI:function(){
             this.boundingBox = $(
@@ -24,19 +61,14 @@ define(['widget','jquery'], function(widget,$){
                 $("body").addClass("hl_window_open")
                 this._mask.appendTo('body');
             }
-            if(this.cfg.winType == "showDetail"){//如果是查看区域PK榜
-
-            }
             this.boundingBox.appendTo('body')
         },
         bindUI:function(){
-
-            //if(this.cfg.winType == 'alert'){
-                //setTimeout($.proxy(this.destory(),this),2000)
-            //}
+            if(this.cfg.winType == 'alert'){
+                setTimeout($.proxy(this.destory,this),2000)
+            }
         },
         syncUI:function(){
-            console.log(this.cfg.x,this.cfg.y)
             this.boundingBox.css({
                 left:this.cfg.x,
                 top:this.cfg.y
@@ -46,7 +78,6 @@ define(['widget','jquery'], function(widget,$){
             this._mask && this._mask.remove() &&  $("body").removeClass("hl_window_open");
         },
         alert:function(cfg){
-            console.log("here")
             $.extend(this.cfg,cfg,{winType:'alert'});
             this.render();
             return this;
@@ -55,82 +86,20 @@ define(['widget','jquery'], function(widget,$){
             $.extend(this.cfg,cfg,{winType:'confirm'});
             this.render();
             return this;
+        },
+        update:function(obj){
+            var blw_pk_num = this.boundingBox.find(".blw_pk_num"),
+                blw_lessons_num = this.boundingBox.find(".blw_lessons_num");
+
+                blw_pk_num.html(obj.pknum);
+                blw_lessons_num.html(obj.lessonsnum);
+
+            return this;
         }
-    })
-
-    //ShowDetail 展示区域PK榜
-    function ShowDetail (data){
-    /* data 格式
-        data:{
-            "pklist":
-            [
-                {
-                    "family": "江南",
-                    "total": "99%"
-                },
-                {
-                    "family": "江南",
-                    "total": "99%"
-                },
-                {
-                    "family": "江南",
-                    "total": "99%"
-                }
-            ]
-        }*/
-        this.data = data;
-        if(! this.data.pklist instanceof Array){
-            throw Error("JSON formate error")
-        }
-        this.render();
-    }
-    ShowDetail.prototype = $.extend({},new widget.Widget(),{
-        renderUI:function(){
-
-            var UIheader = $( '<div class="hl-title"><span class="hl-icon icon-crwon"></span> 区域PK榜</div>' );
-            var UIcontainer = $( '<div class="hl-con"></div>');
-            var UIlist =  $('<ul></ul>');
-
-            this.data.pklist.map(function(obj){
-                var listitem = $( '<li><span class="hl-chief">'+obj.family+'</span> 首席区域完成率 <span class="hl-total">'+obj.total+'</span></li>');
-                UIlist.append(listitem);
-            })
-
-            this.boundingBox = $('<section class="hl-section hl-section-fixed"></section>');
-            $("body").addClass("hl_window_open")
-            this.boundingBox
-                .append(UIheader)
-                .append(UIcontainer.append(UIlist))
-                .appendTo('body')
-        },
-        bindUI:function(){
-            var that = this;
-            this.boundingBox.on('click','.hl-title',function(){
-                that.fire('titleclick');
-                that.hide();
-            });
-        },
-        syncUI:function(){
-            this.boundingBox.css({
-            })
-        },
-        destructor:function(){
-            $("body").removeClass("hl_window_open");
-        },
-        hide:function(){
-            $("body").removeClass("hl_window_open");
-            this.boundingBox.hide();
-        },
-        show:function(){
-            $("body").addClass("hl_window_open");
-            this.boundingBox.show()
-        }
-
     })
 
     //返回两个构造函数
     return {
-        HlWindow:hlWindow,
-        ShowDetail:ShowDetail
+        HlWindow:hlWindow
     }
 });
