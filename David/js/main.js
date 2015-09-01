@@ -3,21 +3,11 @@
  */
 require.config({
     paths:{
-        jquery:'../bower_components/jquery/dist/jquery'
+        jquery:'../bower_components/jquery/dist/jquery.min'
     }
 })
 
 require(['jquery','window'],function($,hlw){
-
-    //g个人课程信息对象
-    //var pageWindow = new hlw.HlWindow();
-    //pageWindow.confirm({
-    //    content:"<div>你的美容课次数已经打败全国 <span class='hlw_num blw_pk_num'>50%</span> 的姐妹 <br>"+
-    //    " 太棒了，你共完成了 <span class='hlw_num blw_lessons_num'> 50堂</span> 美容课！"+
-    //    " </div>",
-    //    hasMask:false,
-    //    y:$('.hl-button').position().top +20+"px"
-    //});
 
     //记录一堂美容课相关事件
     $(".hl-button").on("click",function(){
