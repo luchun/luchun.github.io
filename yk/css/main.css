@@ -28,3 +28,98 @@ img{width:100%;border:none}
     font-size: 1.1em;
     line-height: 1.4em;
 }
+
+.card{
+    margin-left: 0.8333em;
+    margin-right: 0.8333em;
+    border-radius: .5em;
+    overflow: hidden;
+    border: 2px solid #f789ac;
+}
+.card *{
+    margin: 0;
+}
+.card-header{
+    background: #f789ac;
+}
+.card-title{
+    padding: 0.875em;
+    color: white;
+}
+.card-title-icon{
+    width: 2em;
+    height: 2em;
+    background: url("../images/card-icon.png") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+}
+.card-body{
+    font-size: 0.875em;
+    padding: 0.8571em;
+    line-height: 1.85714;
+}
+.name, .phone-num{
+    color: #f789ac;
+}
+.card-footer{
+    padding: 0.875em;
+}
+.card-footer table{
+    float: right;
+    color: #666;
+    font-size: 0.75em;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.btn{
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #3ec576;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #3ec576;
+    padding: 0.6667em 3em;
+    font-size: 0.9375em;
+    /*width: 11.33333em;*/
+}
+.callout{
+    background: url("../images/icon-callout.png");
+    display: block;
+    width: 1.416667em;
+    height: 1.416667em;
+    -webkit-background-size:100% 100%;
+    background-size: 100% 100%;
+}
+.icon-sms{
+    background: url("../images/icon-bubble.png");
+    width: 1.5em;
+    height: 1.416667em;
+    display: block;
+    -webkit-background-size: 100% 100%;
+    background-size:100% 100%;
+}
+.middle-line{
+    height: 2em;
+    margin: auto 0.4em;
+    display: block;
+    width: 1px;
+    background: #e5e5e5;
+}
+.card-footer .callout,.card-footer .icon-sms{margin: 0 auto .5em}
+
