@@ -3,7 +3,7 @@
 body{margin:0;font-family:"Arial";color:#000}
 img{width:100%;border:none}
 .top{width:100%;height:6em;background-image:url(../images/title_bg.gif);background-repeat:no-repeat;background-position:bottom;background-size:100%}
-.foot{width:90%;text-align:right;margin-left:5%;color:#ff8686;font-size:0.9em;padding:1em 0 2em;line-height:1.4em}
+.foot{width:90%;text-align:right;margin-left:5%;color:#ff8686;font-size:0.9em;padding:1em 0;line-height:1.4em}
 .highl{color:#ff8686;}
 .top_txt{padding-top:4.5em;width:70%;text-align:right;font-size:0.7em;margin-left:2%;line-height:1.4em}
 .title{width:90%;margin-left:5%;color:#ff8686;font-size:1.1em;padding:0.8em 0 0.4em;line-height:1.4em}
@@ -20,18 +20,16 @@ img{width:100%;border:none}
 
 /*add 2015/9/7*/
 .top_title{
-    padding-top: 3em;
+    padding-top: 2.75em;
     width: 70%;
-    padding-left: 2%;
-    margin-left: 5%;
-    color: #ff8686;
-    font-size: 1.1em;
+    padding-left: 1em;
+    color: #333333;
+    font-size: 1.125em;
     line-height: 1.4em;
 }
 
 .card{
-    margin-left: 0.8333em;
-    margin-right: 0.8333em;
+    margin: 1em  0.8333em;
     border-radius: .5em;
     overflow: hidden;
     border: 2px solid #f789ac;
@@ -39,32 +37,77 @@ img{width:100%;border:none}
 .card *{
     margin: 0;
 }
+.card a,.card a:focus,.card a:active{
+    outline: none;
+    text-decoration: none;
+    color: #666666;
+}
 .card-header{
     background: #f789ac;
 }
-.card-title{
-    padding: 0.875em;
+.card-header .card-title{
+    padding: 0.625em 0.875em;
     color: white;
+    font-size: 1em;
+    white-space:nowrap;
 }
-.card-title-icon{
+.card-header .card-title-icon{
     width: 2em;
     height: 2em;
     background: url("../images/card-icon.png") no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
     vertical-align: middle;
     display: inline-block;
+    margin-right: .25em;
+}
+.card-header .card-header-body{
+    font-size: .75em;
+    line-height: 1.5;
+    color: white;
+    padding: .5em  1.166667em;
+    border-top: 1px solid #f47096;
 }
 .card-body{
     font-size: 0.875em;
     padding: 0.8571em;
     line-height: 1.85714;
 }
-.name, .phone-num{
+.card-body .name,.card-body .phone-num{
     color: #f789ac;
 }
+.card-body .user-list{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 11em;
+    display: block;
+}
+.card-body .user-avatar{
+    display: block;
+    border-radius: 1.8125em;
+    background: #c9c9c9;
+    width: 2em;
+    height:2em;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    margin-right: .1em;
+}
+.card-body .user-avatar img{max-width: 100%;}
+.card-body .user-name{color: #f95086;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 6em;
+    display: block;
+    font-size: .92857em;}
+.card-body .user-status{
+    font-size: .85714em;color: #333333;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+.card-body .user-date{color: #999999;
+    font-size: .85714em;}
 .card-footer{
-    padding: 0.875em;
+   padding:  0 .75em .75em;
 }
 .card-footer table{
     float: right;
@@ -73,7 +116,7 @@ img{width:100%;border:none}
     border-collapse: collapse;
     border-spacing: 0;
 }
-.btn{
+.card-footer .btn{
     display: inline-block;
     zoom: 1;
     line-height: normal;
@@ -98,7 +141,7 @@ img{width:100%;border:none}
     font-size: 0.9375em;
     /*width: 11.33333em;*/
 }
-.callout{
+.card-footer .callout{
     background: url("../images/icon-callout.png");
     display: block;
     width: 1.416667em;
@@ -106,7 +149,7 @@ img{width:100%;border:none}
     -webkit-background-size:100% 100%;
     background-size: 100% 100%;
 }
-.icon-sms{
+.card-footer .icon-sms{
     background: url("../images/icon-bubble.png");
     width: 1.5em;
     height: 1.416667em;
@@ -114,7 +157,7 @@ img{width:100%;border:none}
     -webkit-background-size: 100% 100%;
     background-size:100% 100%;
 }
-.middle-line{
+.card-footer .middle-line{
     height: 2em;
     margin: auto 0.4em;
     display: block;
@@ -122,4 +165,6 @@ img{width:100%;border:none}
     background: #e5e5e5;
 }
 .card-footer .callout,.card-footer .icon-sms{margin: 0 auto .5em}
+.card-footer .about-more{color: #999999;
+    font-size: .75em;}
 

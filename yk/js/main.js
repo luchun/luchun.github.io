@@ -12,14 +12,15 @@ var rs=function(){
 	var rh = $(".top_title").height();
 	if(rh>wh){
 		$(".top_title").css({
-			"padding-top": "3.5em",
-			"font-size": "0.9em",
+			"padding-top": "2.8em",
+			"font-size": "1em",
 			"line-height": "2.2em"
 		})
 		if($(".top_title").html().match("<br>")){
 			$(".top_title").css({
-				"padding-top": "3.2em",
-				"line-height": "1.3em"
+				"font-size": "1.1em",
+				"padding-top": "2em",
+				"line-height": "1.5em"
 			})
 		}
 	}
