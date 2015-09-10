@@ -308,8 +308,9 @@ img{width:100%;border:none}
 }
 .my-card-tabs a.active,.my-card-tabs a.active:focus,.my-card-tabs a.active:active{
     font-size: .9375em;
-    line-height: 2.5;
+    line-height: 2.225;
     color: #333333;
+    padding-top: .2em;
     border-bottom: .2em solid #222;
 }
 .my-card-tabs a:before{
