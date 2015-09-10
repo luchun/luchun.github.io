@@ -452,7 +452,7 @@ img{width:100%;border:none}
     color: #666;
 }
 .cards-section-used .card-item::after,
-.cards-section-expired .card-item::after,{
+.cards-section-expired .card-item::after{
     background-image:-webkit-radial-gradient(transparent 40%, #ccc 0%);
     background-image:-moz-radial-gradient(transparent 40%,  #ccc 0%);
     background-image:radial-gradient(transparent 40%, #ccc 0%);
