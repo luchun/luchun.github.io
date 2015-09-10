@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* 全局 */
 body{margin:0;font-family:"Arial";color:#000}
+html,body{min-height: 100%;}
 img{width:100%;border:none}
 .top{width:100%;height:6em;background-image:url(../images/title_bg.gif);background-repeat:no-repeat;background-position:bottom;background-size:100%;
     margin-bottom: 1em;}
@@ -52,7 +53,7 @@ img{width:100%;border:none}
     font-size: 1em;
     white-space:nowrap;
 }
-.card-header .card-title-icon{
+ .card-title-icon{
     width: 2em;
     height: 2em;
     background: url("../images/card-icon.png") no-repeat;
@@ -142,6 +143,10 @@ img{width:100%;border:none}
     font-size: 0.9375em;
     /*width: 11.33333em;*/
 }
+.card-footer .btn.btn-done{    padding: 0.6667em 1.9em;
+    background-color: #ffa200;
+    border-color: #ffa200;
+}
 .card-footer .callout{
     background: url("../images/icon-callout.png");
     display: block;
@@ -168,4 +173,236 @@ img{width:100%;border:none}
 .card-footer .callout,.card-footer .icon-sms{margin: 0 auto .5em}
 .card-footer .about-more{color: #999999;
     font-size: .75em;}
+/*悬浮的列表*/
+.cards-con{  position: fixed;bottom: 0;left: 0;right: 0;}
+.cards-con *{margin: 0;}
+.card-con-switch{  font-size: .75em;  width: 16em;margin: 0 auto;text-align: center;
+    background: #f8a4bf;border-radius:2em 2em 0 0;color: #fff;padding: .5em}
+.cards-con .icon-switch-down{  background: url("../images/icon_arrow_down@2x.png") no-repeat;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+.cards-con .icon-switch-up{ background: url("../images/icon_arrow_up@2x.png") no-repeat;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;}
+.card-con-header{padding: 0.9375em;background: #f789ac;color: #fff;}
+.card-con-header .card-title-icon{  width: 2.25em;  height: 2.25em;  float: left;  margin-right: .75em;}
+.card-con-header .card-title{  font-size: 1em;  margin-bottom: .25em;}
+.card-con-header .card-title-des{  font-size: .75em;}
+.card-con-body{  background: #ffffff;}
+.card-con-body .user-list{  height: 13.5em;}
+.card-con-footer{  background: #fef9f1;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;}
+.card-con-footer *{margin: 0}
+.card-con-footer .about-more{color: #777777;  font-size: .75em;}
+.icon-volume{display: block;  float: left;
+    background: url("../images/icon-volume.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 1em;  height: 1em;  margin-top: .25em;  margin-right: .25em;
+}
+.list-nothing{text-align: center;    padding-top: 1em;  padding-bottom: 1em;}
+.list-nothing img{width: 65%}
 
+/*单独的列表页*/
+.cards-detail{
+    min-height: 100%;
+}
+.cards-header{
+    border-bottom: 1px solid #bfbfbf;
+    overflow: hidden;
+    padding: .625em .8333em;
+}
+.cards-header:after{
+    display: block;
+    content: " ";
+    clear: both;
+
+}
+.right{
+    float: right;
+    color: #666666;
+    font-size: .75em;
+}
+.header-logo{
+    background: url("../images/mklogo.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 5.3125em;
+    height: .84275em;
+    display: block;
+}
+.cards-detail .card-body .user-list{
+    height: auto;
+}
+.cards-detail .card-con-footer{
+    position: absolute;
+    bottom: 0;
+}
+/*生成邀约卡*/
+.card-generate-body{  background: #eeeeee;  }
+.card-generate{  background: white;margin: 0 0 .6em;padding:.5em 1em}
+.card-g-header{text-align: center;border-bottom: 1px solid #e1e1e1;}
+.card-g-header h5{    margin: .8em 0 1.5em;}
+.card-check{  width: 2em;  height: 2em;  display: block;  margin: 1em auto .8em;
+    background: url("../images/check.png") no-repeat;
+    -webkit-background-size: 100% 100%;  background-size: 100% 100%;  }
+.contacts-info {color: #333;  font-size: .75em;  padding-top: 1em;}
+.contacts-info p{margin: 0;line-height: 2;}
+.period-of-use{color: #999999}
+.icon-callout-red{  background: url("../images/icon-callout-red.png") no-repeat;
+    margin-left: 1.5em; }
+.icon-bubble-red{  background: url("../images/icon-bubble-red.png") no-repeat;
+    margin-left: .75em; }
+.icon-callout-red,.icon-bubble-red{  width: 2em;  height: 2em;display: inline-block;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.wechat-attention{  background: white;padding:.5em 1em}
+.wechat-des{color: #333333;  font-size: .8125em;text-align: center}
+.wechat-code{width: 75%;display: block;margin: 0 auto;}
+.text-red{color: #f95086;}
+.text-black{color: #8c8c8c;}
+.wechat-attention .about-more{  font-size: .75em;  color: #999999;  }
+/*我的邀约卡列表*/
+.my-card-list{
+    background: #eeeeee;
+}
+.my-card-list *{
+    margin: 0;
+}
+.my-card-list .cards-header{
+    background: #ff729f;
+    border-bottom-color: #ff729f;
+}
+.my-card-list .cards-header .right{
+    color: #fff;
+}
+.my-card-list .header-logo{
+    background-image: url("../images/mklogo-white.png");
+}
+.my-card-tabs{}
+.my-card-tabs:after{
+    clear: both;
+    display: block;
+    content: " ";
+}
+.my-card-tabs a,.my-card-tabs a:focus,.my-card-tabs a:active{
+    color: #666666;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    width: 33.33%;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: .875em;
+    position: relative;
+    line-height: 2.5;
+    border-bottom: 1px solid #bfbfbf;
+    background: #ffffff;
+}
+.my-card-tabs a:before{
+    position: absolute;
+    content: " ";
+    right: 0;
+    top: .75em;
+    height: 1em;
+    width: 1px;
+    background-color: #ccc;
+}
+.my-card-tabs a:last-child:before{
+    background-color: #fff;
+}
+.my-card-tabs a.active:after{
+    position: absolute;
+    content: " ";
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    width:100% ;
+    background-color: #222;
+}
+.detail-link{
+    text-align: right;
+    padding: .625em;
+}
+.detail-link a,
+.detail-link a:focus,
+.detail-link a:active{
+    color: #ff3676;
+    text-decoration: none;
+    outline: none;
+    font-size: .75em;
+}
+.card-item{
+    position: relative;
+    background: #ffffff;
+    border-radius: .25em;
+    box-shadow: 0 .125em .125em #ccc;
+    margin:0 .75em 1em;
+    padding: 1.5em .75em 1.125em;
+}
+.card-item::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    display:block;
+    font-size:0.75em;
+    height:.5em;
+    background-color:#fff;
+    background-image:-webkit-radial-gradient(transparent 40%, #F7B0B0 0%);
+    background-image:-moz-radial-gradient(transparent 40%, #F7B0B0 0%);
+    background-image:radial-gradient(transparent 40%, #F7B0B0 0%);
+    -moz-background-size:1em 1em;
+    -o-background-size:1em 1em;
+    -webkit-background-size:1em 1em;
+    background-size:1em 1em;
+    background-position:left top;
+    width:100%;
+    top:0;
+    left: 0;
+    border-top-left-radius:.35em;
+    border-top-right-radius:.35em;
+}
+.card-item .card-info{
+    color: #333333;
+}
+.card-item .card-info h4{
+    font-size: .875em;
+    padding-bottom: .5em;
+}
+.card-item .card-info p{
+    font-size: .75em;
+    line-height: 1.5;
+}
+.card-item .card-img{
+    width: 4.6875em;
+    height: 3.6em;
+    float: left;
+    line-height: 3.6;
+    padding-right: .3em;
+    margin-right: .3em;
+}
+.cards-section{
+    visibility: hidden;
+    display: none;
+}
+.cards-section.active{
+    visibility: visible;
+    display: block;
+}
+.cards-section-used .card-item,.cards-section-expired .card-item{
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: left bottom;
+    -webkit-background-size: 3.5em 3.5em;
+    background-size: 3.5em 3.5em;
+}
+.cards-section-used .card-item{
+    background-image: url("../images/used-bg.png");
+}
+.cards-section-expired .card-item{
+    background-image: url("../images/expired-bg.png");
+}
