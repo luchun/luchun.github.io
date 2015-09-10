@@ -359,7 +359,7 @@ img{width:100%;border:none}
     -o-background-size:1em 1em;
     -webkit-background-size:1em 1em;
     background-size:1em 1em;
-    background-position:left top;
+    background-position:3px top;
     width:100%;
     top:0;
     left: 0;
@@ -384,6 +384,24 @@ img{width:100%;border:none}
     line-height: 3.6;
     padding-right: .3em;
     margin-right: .3em;
+}
+.card-item .card-status{
+    position: absolute;
+    left: -1em;
+    top: 0;
+    font-size: .75em;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em .83333em .5em .5em;
+    z-index: 2;
+    border-radius: 0 1em 1em 0;
+    box-shadow: 0  1px 1px #ccc;
+}
+.card-status-danger{
+    background-color: #ff8828;
+}
+.card-status-new{
+    background-color: #22ac38;
 }
 .cards-section{
     visibility: hidden;

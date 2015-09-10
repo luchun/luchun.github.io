@@ -35,6 +35,9 @@
                 <p>服务内容：事业机会介绍</p>
                 <p>美容顾问：张兰兰 13588669999</p>
             </div>
+            <div class="card-status card-status-new">
+                近期领取
+            </div>
         </div>
         <div class="card-item ">
             <div class="card-img">
@@ -54,6 +57,9 @@
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
                 <p>美容顾问：张兰兰 13588669999</p>
+            </div>
+            <div class="card-status card-status-danger">
+                即将过期
             </div>
         </div>
     </div>
@@ -85,11 +91,9 @@
 </div>
 <script>
     jQuery.fn.tabs = function (control) {
-        console.log("tabs")
         var element = $(this);
         control = $(control);
-        element.on("click", "a", function () {
-            console.log("click")
+        element.on("touchstart", "a", function () {
          var tabName = $(this).attr("data-tab");
 
             element.trigger("change.tabs", tabName);  });
