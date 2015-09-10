@@ -304,13 +304,15 @@ img{width:100%;border:none}
     text-align: center;
     font-size: .875em;
     position: relative;
-    line-height: 2.5;
     background: #ffffff;
+    line-height: 2.6;
+    height: 2.6em;
 }
 .my-card-tabs a.active,.my-card-tabs a.active:focus,.my-card-tabs a.active:active{
     font-size: .9375em;
     color: #333333;
     border-bottom: .2em solid #222;
+    margin-bottom: -1px;
 }
 .my-card-tabs a:before{
     position: absolute;
