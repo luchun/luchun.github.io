@@ -33,7 +33,7 @@
             <div class="card-info">
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：张兰兰 13588669999</p>
+                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
             </div>
             <div class="card-status card-status-new">
                 近期领取
@@ -46,7 +46,7 @@
             <div class="card-info">
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：张兰兰 13588669999</p>
+                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
             </div>
         </div>
         <div class="card-item">
@@ -56,7 +56,7 @@
             <div class="card-info">
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：张兰兰 13588669999</p>
+                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
             </div>
             <div class="card-status card-status-danger">
                 即将过期
@@ -71,7 +71,7 @@
             <div class="card-info">
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：张兰兰 13588669999</p>
+                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
             <div class="card-info">
                 <h4>“美美哒”美丽服务邀约卡</h4>
                 <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：张兰兰 13588669999</p>
+                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
         control = $(control);
         element.on("touchstart", "a", function () {
          var tabName = $(this).attr("data-tab");
-
+            alert($(this).height())
             element.trigger("change.tabs", tabName);  });
 
             element.on("change.tabs", function (e, tabName) {

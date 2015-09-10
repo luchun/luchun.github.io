@@ -284,7 +284,8 @@ img{width:100%;border:none}
 .my-card-list .header-logo{
     background-image: url("../images/mklogo-white.png");
 }
-.my-card-tabs{}
+.my-card-tabs{
+    background: #FFFFFF;}
 .my-card-tabs:after{
     clear: both;
     display: block;
@@ -295,7 +296,7 @@ img{width:100%;border:none}
     text-decoration: none;
     outline: none;
     box-sizing: border-box;
-    width: 33.33%;
+    width: 33.3333%;
     float: left;
     display: block;
     text-align: center;
