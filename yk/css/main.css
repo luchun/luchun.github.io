@@ -384,12 +384,28 @@ img{width:100%;border:none}
     line-height: 3.6;
     padding-right: .3em;
     margin-right: .3em;
+    position: relative;
+}
+.card-item .card-img::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #FFF;
+    background-image:-webkit-linear-gradient(bottom, #dfdfdf 70%, transparent 0%);
+    background-image:-moz-linear-gradient(bottom, #dfdfdf 70%, transparent 0%);
+    background-image:linear-gradient(to bottom, #dfdfdf 70%,rgba(0,0,0,0) 0%);
+    -webkit-background-size: 1px .5em ;
+    background-size: 1px .5em;
 }
 .card-item .card-status{
     position: absolute;
     left: -1em;
     top: 0;
-    font-size: .75em;
+    font-size: .625em;
     color: #fff;
     font-weight: bold;
     padding: .5em .83333em .5em .5em;
