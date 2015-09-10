@@ -95,7 +95,6 @@
         control = $(control);
         element.on("touchstart", "a", function () {
          var tabName = $(this).attr("data-tab");
-            alert($(this).height())
             element.trigger("change.tabs", tabName);  });
 
             element.on("change.tabs", function (e, tabName) {
