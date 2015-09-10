@@ -364,14 +364,12 @@ img{width:100%;border:none}
     font-size:0.75em;
     height:.5em;
     background-color:#fff;
-    background-image:-webkit-radial-gradient(transparent 40%, #ffc1d5 0%);
-    background-image:-moz-radial-gradient(transparent 40%, #ffc1d5 0%);
-    background-image:radial-gradient(transparent 40%, #ffc1d5 0%);
-    -moz-background-size:1em 1em;
-    -o-background-size:1em 1em;
-    -webkit-background-size:1em 1em;
-    background-size:1em 1em;
-    background-position:3px top;
+    background-image: url("../images/after-bg.jpg");
+    -moz-background-size:1em .5em;
+    -o-background-size:1em .5em;
+    -webkit-background-size:1em .5em;
+    background-size:1em .5em;
+    background-position:left top;
     width:100%;
     top:0;
     left: 0;
@@ -411,8 +409,8 @@ img{width:100%;border:none}
     background-image:-webkit-linear-gradient(bottom, #dfdfdf 60%, transparent 0%);
     background-image:-moz-linear-gradient(bottom, #dfdfdf 60%, transparent 0%);
     background-image:linear-gradient(to bottom, #dfdfdf 60%,rgba(0,0,0,0) 0%);
-    -webkit-background-size: 1px .375em ;
-    background-size: 1px .375em;
+    -webkit-background-size: 1px .4em ;
+    background-size: 1px .4em;
 }
 .card-item .card-status{
     position: absolute;
@@ -453,9 +451,7 @@ img{width:100%;border:none}
 }
 .cards-section-used .card-item::after,
 .cards-section-expired .card-item::after{
-    background-image:-webkit-radial-gradient(transparent 40%, #ccc 0%);
-    background-image:-moz-radial-gradient(transparent 40%,  #ccc 0%);
-    background-image:radial-gradient(transparent 40%, #ccc 0%);
+    background-image: url("../images/after-bg-dis.jpg");
 }
 .cards-section-used .card-item{
     background-image: url("../images/used-bg.png");
