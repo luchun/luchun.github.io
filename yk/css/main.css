@@ -304,14 +304,12 @@ img{width:100%;border:none}
     text-align: center;
     font-size: .875em;
     position: relative;
-    line-height: 2.8;
+    line-height: 2.5;
     background: #ffffff;
 }
 .my-card-tabs a.active,.my-card-tabs a.active:focus,.my-card-tabs a.active:active{
     font-size: .9375em;
-    line-height: 2.225;
     color: #333333;
-    padding-top: .2em;
     border-bottom: .2em solid #222;
 }
 .my-card-tabs a:before{
@@ -326,7 +324,7 @@ img{width:100%;border:none}
 }
 .my-card-tabs a.active:before{
     height: 1.1em;
-    top: 0.95em;
+    top: 0.9em;
 }
 .my-card-tabs a:last-child:before{
     background-color: #fff;
