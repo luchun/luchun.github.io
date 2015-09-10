@@ -285,7 +285,9 @@ img{width:100%;border:none}
     background-image: url("../images/mklogo-white.png");
 }
 .my-card-tabs{
-    background: #FFFFFF;}
+    border-bottom: 1px solid #bfbfbf;
+    background: #FFFFFF;
+}
 .my-card-tabs:after{
     clear: both;
     display: block;
@@ -303,7 +305,6 @@ img{width:100%;border:none}
     font-size: .875em;
     position: relative;
     line-height: 2.8;
-    border-bottom: 1px solid #bfbfbf;
     background: #ffffff;
 }
 .my-card-tabs a.active,.my-card-tabs a.active:focus,.my-card-tabs a.active:active{
