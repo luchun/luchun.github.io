@@ -364,9 +364,9 @@ img{width:100%;border:none}
     font-size:0.75em;
     height:.5em;
     background-color:#fff;
-    background-image:-webkit-radial-gradient(transparent 40%, #F7B0B0 0%);
-    background-image:-moz-radial-gradient(transparent 40%, #F7B0B0 0%);
-    background-image:radial-gradient(transparent 40%, #F7B0B0 0%);
+    background-image:-webkit-radial-gradient(transparent 40%, #ffc1d5 0%);
+    background-image:-moz-radial-gradient(transparent 40%, #ffc1d5 0%);
+    background-image:radial-gradient(transparent 40%, #ffc1d5 0%);
     -moz-background-size:1em 1em;
     -o-background-size:1em 1em;
     -webkit-background-size:1em 1em;
