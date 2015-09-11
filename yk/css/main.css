@@ -468,3 +468,98 @@ img{width:100%;border:none}
 .cards-section-expired .text-red{
     color: #666666;
 }
+
+/*邀约卡详情页*/
+.card-detail-body{
+    background: #eeeeee;
+}
+.card-detail-body *{
+    margin: 0;
+}
+.card-detail-body .card-detail{
+    background: #FFFFFF;
+    margin-bottom: .625em;
+}
+.card-detail-body .card-d-header{
+    background: #f789ac;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+.card-detail-body .card-d-header::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    display:block;
+    height:.1875em;
+    background-image: url("../images/after-bg-red.jpg");
+    -moz-background-size:.6875em .1875em;
+    -webkit-background-size:.6875em .1875em;
+    background-size:.6875em .1875em;
+    background-position:left bottom;
+    width:100%;
+    left: 0;
+}
+.card-detail-body .card-d-header h2{
+    font-size: 1.3125em;
+    margin: 0 1.5em;
+    border-bottom: 1px solid #fab8cd;
+    line-height: 1;
+    padding: 1.625em 0 1em;
+}
+.card-detail-body .card-d-header p{
+    font-size: .75em;
+    padding:1.25em 0 1.8em;
+}
+.card-detail-body .contacts-info{
+    font-size: .875em;
+    margin-left: 1em;
+    padding-top: 0;
+    color: #666666;
+}
+.card-detail-body .contacts-info .info-title{
+    display: inline-block;
+    width: 8.2em;
+    color: #333;
+    padding-left: .2em;
+}
+.card-detail-body .contacts-info p{
+    line-height: 3.15;
+    border-bottom: 1px solid #e1e1e1;
+}
+.card-detail-body .period-of-use{
+    font-size: .6875em;
+}
+.card-detail-body .contacts-info p.period-of-use{
+    border-bottom: none;
+}
+.card-detail-body .period-of-use .info-title{
+    color: #999999;
+    width: 9.75em;
+}
+.card-detail-body .icon-callout-red{
+    margin-left: 1em;}
+.card-detail-body .icon-bubble-red{
+    margin-left: .5em;
+}
+.card-detail-body .qrcode-con{
+    width: 31.25%;
+    margin: 1em auto;
+}
+.card-detail-body .use-des{
+    color: #999999;
+    font-size: .6875em;
+    line-height: 1.4;
+
+}
+.card-detail-body .more-link,
+.card-detail-body .more-link:hover,
+.card-detail-body .more-link:active,
+.card-detail-body .more-link:focus{
+    display: block;
+    outline: none;
+    text-decoration: none;
+    color: #f95086;
+    text-align: center;
+    margin: .5em 0;
+}
