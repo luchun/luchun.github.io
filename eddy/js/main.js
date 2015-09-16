@@ -4,7 +4,7 @@ require.config({
         'crousel': ["jquery"]
     },
     paths:{
-        jquery:'../bower_components/jquery/dist/jquery.min'
+        jquery:'./jquery.min'
     }
 });
 
@@ -15,10 +15,12 @@ require(['jquery','plugins','crousel'],function($,pl){
     $(".vd-intro-imgs").on("touchstart",function(e){
         e.stopPropagation();
         e.preventDefault();
+        //owl.jumpTo(2);
+        console.log(owl)
         $("body").css("overflow","hidden");
         $(".slider").show();
     });
-    $(".slider").on("touchstart",function(){
+    $(".slider").on("click",function(){
         $(this).hide();
         $("body").css("overflow","")
     });
@@ -37,6 +39,9 @@ require(['jquery','plugins','crousel'],function($,pl){
     $(".pure-button-share").on("touchstart",function(){
         new pl.sharenotice()
     });
+
+    //加载更多选手
+
 
 var loading = new pl.loading();
 setTimeout($.proxy(loading.destroy, loading), 2000);

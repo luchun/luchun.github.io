@@ -577,7 +577,7 @@ if (typeof Object.create !== "function") {
             }
 
             function dragStart(event) {
-                event.stopPropagation();
+               // event.stopPropagation();
                 var ev = event.originalEvent || event || window.event,
                     position;
 

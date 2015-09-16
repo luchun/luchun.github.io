@@ -22,6 +22,9 @@ body{
   .hd-data{
     color: #333333;
   }
+  .pure-img{
+    width: 100%;
+  }
 }
 
 .vote-body{
@@ -36,6 +39,11 @@ body{
     background: white;
     padding: .375em .625em;
     text-align: center;
+    display: block;
+    &,&:hover,&:focus,&:active{
+      outline: none;
+      text-decoration: none;
+    }
     .name{
       color: #000000;
       font-size: (30em/32);
@@ -188,13 +196,13 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
+  border-top: 1px solid #dadada;
   .pure-button{
     display: block;
     color: #666666;
     font-size: .9375em;
     padding: 1em;
     border-radius: 0;
-    border-top: 1px solid #dadada;
   }
   .pure-button-vote{
     color: white;
@@ -275,7 +283,6 @@ body{
       outline: none;
     }
   }
-
 }
 //分享浮层
 .share{
