@@ -90,6 +90,12 @@ define(['jquery'], function($){
                 "</div>" +
                 "</div>")
         },
+        syncUI: function () {
+            $('body').addClass("alert-open");
+        },
+        destructor: function () {
+            $('body').removeClass("alert-open");
+        },
         bindUI:function(){
             setTimeout($.proxy(this.destory,this),2000)
         }
@@ -105,6 +111,12 @@ define(['jquery'], function($){
                 '<span>点击右上角发送给指定朋友 <br/>或者分享到朋友圈</span>'+
                 '</div>'+
                 '</div>')
+        },
+        syncUI: function () {
+            $('body').addClass("notice-open");
+        },
+        destructor: function () {
+            $('body').removeClass("notice-open");
         },
         bindUI:function(){
             var _ = this;

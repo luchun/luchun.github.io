@@ -361,8 +361,12 @@ body {
   color: white;
   font-size: .8125em;
 }
+/* line 305, ../sass/screen.scss */
+.notice-open {
+  overflow: hidden;
+}
 
-/* line 306, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 .slider {
   display: none;
   position: fixed;
@@ -373,12 +377,12 @@ body {
   background: rgba(0, 0, 0, 0.8);
   z-index: 3;
 }
-/* line 315, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 .slider .pure-img {
   width: 100%;
 }
 
-/* line 319, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .owl-carousel {
   display: none;
   position: absolute;
@@ -387,12 +391,12 @@ body {
   right: 0;
   top: 50%;
 }
-/* line 326, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
 .owl-carousel .owl-wrapper {
   display: none;
   position: relative;
 }
-/* line 329, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .owl-carousel .owl-wrapper::after {
   clear: both;
   content: ".";
@@ -401,31 +405,31 @@ body {
   line-height: 0;
   visibility: hidden;
 }
-/* line 338, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .owl-carousel .owl-wrapper-outer {
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-/* line 343, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .owl-carousel .owl-item {
   float: left;
 }
-/* line 347, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .owl-controls {
   -moz-user-select: none;
 }
-/* line 349, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 .owl-controls .owl-page, .owl-controls .owl-buttons div {
   cursor: pointer;
 }
-/* line 354, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 .owl-carousel .owl-wrapper, .owl-carousel .owl-item {
   backface-visibility: hidden;
   transform: translate3d(0px, 0px, 0px);
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 .owl-theme .owl-controls {
   position: fixed;
   bottom: .5em;
@@ -434,7 +438,7 @@ body {
   margin-top: 10px;
   text-align: center;
 }
-/* line 368, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .owl-theme .owl-controls .owl-buttons div {
   background: #869791 none repeat scroll 0 0;
   border-radius: 30px;
@@ -445,11 +449,11 @@ body {
   opacity: 0.5;
   padding: 3px 10px;
 }
-/* line 378, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .owl-theme .owl-controls .owl-page {
   display: inline-block;
 }
-/* line 380, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .owl-theme .owl-controls .owl-page span {
   background: #5e5353;
   border-radius: 1em;
@@ -459,18 +463,18 @@ body {
   opacity: 0.5;
   width: .5em;
 }
-/* line 390, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover {
   opacity: 1;
   text-decoration: none;
 }
-/* line 394, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
   opacity: 1;
   background: #fff;
 }
 
-/* line 401, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 .loading {
   z-index: 1050;
   position: absolute;
@@ -482,11 +486,11 @@ body {
   width: 25px;
   height: 25px;
 }
-/* line 411, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 .loading img {
   max-width: 100%;
 }
-/* line 415, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .loading-backdrop {
   background-color: #000;
   bottom: 0;
@@ -499,12 +503,12 @@ body {
   transition: opacity 0.15s linear 0s;
 }
 
-/* line 426, ../sass/screen.scss */
+/* line 431, ../sass/screen.scss */
 .loading-open {
   overflow: hidden;
 }
 
-/* line 432, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .alert {
   position: fixed;
   top: 0;
@@ -514,7 +518,7 @@ body {
   background: transparent;
   z-index: 4;
 }
-/* line 441, ../sass/screen.scss */
+/* line 446, ../sass/screen.scss */
 .alert .alert-box {
   position: absolute;
   top: 50%;
@@ -529,6 +533,10 @@ body {
   line-height: 5.6;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
+}
+/* line 462, ../sass/screen.scss */
+.alert-open {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=screen.css.map */

@@ -55,8 +55,8 @@ body{
     }
   }
   .headpic{
-    width: 8.125em;
-    height: 7.8125em;
+    //width: 8.125em;
+    //height: 7.8125em;
     margin: 0 auto;
   }
 }
@@ -301,6 +301,11 @@ body{
       font-size: .8125em;
     }
   }
+  @at-root {
+    .notice-open{
+      overflow: hidden;
+    }
+  }
 }
 //相册
 .slider{
@@ -452,5 +457,10 @@ body{
     line-height: 5.6;
     text-align: center;
     background: rgba(0, 0, 0, .8);
+  }
+  @at-root {
+    .alert-open{
+      overflow: hidden;
+    }
   }
 }
