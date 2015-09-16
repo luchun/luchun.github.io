@@ -38,10 +38,10 @@ require(['jquery','plugins','crousel'],function($,pl){
         new pl.sharenotice()
     });
 
-//var loading = new pl.loading();
-//setTimeout($.proxy(loading.destroy, loading), 2000);
+var loading = new pl.loading();
+setTimeout($.proxy(loading.destroy, loading), 2000);
 
-//setTimeout(function(){new pl.alert("您已经投过两票啦")},2000);
-//setTimeout(function(){userselect.show()},6000);
+setTimeout(function(){new pl.alert("您已经投过两票啦")},2000);
+setTimeout(function(){userselect.show()},6000);
 
 })
