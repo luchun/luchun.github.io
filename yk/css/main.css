@@ -101,6 +101,9 @@ img{width:100%;border:none}
     width: 7.8em;
     display: block;
     font-size: .92857em;}
+.card-body .user-list-sm .user-name{
+    width: 6em;
+}
 .card-body .user-status{
     font-size: .85714em;color: #333333;
     margin-right: .5em;
