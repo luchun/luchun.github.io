@@ -98,7 +98,7 @@ img{width:100%;border:none}
 .card-body .user-name{color: #f95086;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 6em;
+    width: 7.8em;
     display: block;
     font-size: .92857em;}
 .card-body .user-status{
@@ -177,7 +177,7 @@ img{width:100%;border:none}
 .cards-con{  position: fixed;bottom: 0;left: 0;right: 0;}
 .cards-con *{margin: 0;}
 .card-con-switch{  font-size: .6875em;  width: 16em;margin: 0 auto;text-align: center;
-    background: #f8a4bf;border-radius:2em 2em 0 0;color: #fff;padding: .5em}
+    background: #f8a4bf;border-radius:2em 2em 0 0;color: #fff;padding: .35em}
 .cards-con .icon-switch-down{  background: url("../images/icon_arrow_down@2x.png") no-repeat;
     display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
     -webkit-background-size: 100% 100%;
@@ -199,7 +199,7 @@ img{width:100%;border:none}
     background: url("../images/icon-volume.png") no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    width: 1em;  height: 1em;  margin-top: .25em;  margin-right: .25em;
+    width: 1em;  height: 1em;  margin-top: .5em;  margin-right: .25em;
 }
 .list-nothing{text-align: center;    padding-top: 1em;  padding-bottom: 1em;}
 .list-nothing img{width: 65%}
