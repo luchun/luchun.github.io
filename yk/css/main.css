@@ -204,7 +204,8 @@ img{width:100%;border:none}
 }
 .list-nothing{text-align: center;    padding-top: 2em;  padding-bottom: 2em;}
 .list-nothing img{width: 65%}
-.list-nothing span{color: #999;}
+.list-nothing span{color: #999;
+    font-size: .75em;}
 /*单独的列表页*/
 .cards-detail{
     min-height: 100%;
