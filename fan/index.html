@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+<meta charset="UTF-8">
+<title>WE杂志</title>
+<link rel="stylesheet" href="css/main.css">
+<style type="text/css">
+#hideimg{position:absolute;font-size:0;width:1px;height:1px;filter:alpha(opacity=0);-moz-opacity:0;opacity:0}
+#loadingbg{position:absolute;background:#cdcece;height:0.4em;width:80%;left:10%}
+#loading{background-image:url(images/loading.gif);background-size:100% 100%;height:0.4em;width:0}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+//锁屏方法
+var touchClock=function(event){event.preventDefault();}
+$(function(){document.body.addEventListener('touchmove',touchClock,false);});
+//调整布局
+$(function(){
+	rs();
+});
+$(window).resize(function(){rs();});
+var rs=function(){
+	var dw=document.documentElement.clientWidth;
+	var dh=document.documentElement.clientHeight;
+	if(0.75*dw>dh){$("#attention").show();}else{$("#attention").hide();}
+	$("body").css({"font-size":1*dw/360+"em"});
+	$("#loadingbg").css({"top":(dh/2)-30*dw/640+"px"});
+};
+var imgs=[
+	"images/cover_bg.jpg",
+	"images/cover_logo.png",
+	"images/fail_img.png",
+	"images/fail_txt.png",
+	"images/game_bg.jpg",
+	"images/gift_but.png",
+	"images/goon.png",
+	"images/i0.png",
+	"images/i1.png",
+	"images/i2.png",
+	"images/i3.png",
+	"images/i4.png",
+	"images/i5.png",
+	"images/i6.png",
+	"images/i7.png",
+	"images/i8.png",
+	"images/index_bg.jpg",
+	"images/index_titile.png",
+	"images/info_1.png",
+	"images/info_2.png",
+	"images/info_3.png",
+	"images/pause.png",
+	"images/pause_un.png",
+	"images/playagain.png",
+	"images/restart.png",
+	"images/restart_un.png",
+	"images/rule_but.png",
+	"images/s_down.png",
+	"images/s_title.png",
+	"images/sf_1.png",
+	"images/sf_2.png",
+	"images/sf_3.png",
+	"images/sf_t1.png",
+	"images/sf_t1s.png",
+	"images/sf_t2.png",
+	"images/sf_t2s.png",
+	"images/sf_t3.png",
+	"images/sf_t3s.png",
+	"images/share.png",
+	"images/start_but.png",
+	"images/stop_ico.png",
+	"images/success_bg.jpg",
+	"images/timeboard.png",
+	"images/timerbg.png",
+	"images/timernow.png",
+	"images/timetip.png",
+	"images/tryagain.png",
+	"images/wechat_sf1.png",
+	"images/wechat_sf1c.png",
+	"images/wechat_sf2.png",
+	"images/wechat_sf2c.png",
+	"images/wechat_sf3.png",
+	"images/wechat_sf3c.png",
+];
+$(function(){
+	var i=0;
+	var timer=setInterval(function(){
+		$("#hideimg").append("<img src='"+imgs[i]+"'/>");
+		try{
+			$("#loading").stop();
+		}catch(e){}
+		$("#loading").animate({"width":parseInt(i/(imgs.length-1)*100)+"%"},50);
+		if(i<imgs.length){
+			i++;
+		}
+		if(i==(imgs.length-1)){
+			clearInterval(timer);
+			$("#loadingbg").fadeOut(400,function(){
+				location.replace("index_wechat.html");
+			});
+		}
+	},50);
+});
+</script>
+</head>
+
+<body style="background-image:url(images/game_bg.jpg);background-repeat:no-repeat;background-size:100%">
+<div id="hideimg"></div>
+<div id="loadingbg">
+	<div id="loading"></div>
+</div>
+<!--横屏提示-->
+<div id="attention">
+<table width="100%" style="height:100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td style="height:100%" align="center"><img src="images/exchange.png" style="width:30px;vertical-align:middle"/>　请保持竖屏以达到更好浏览体验</td></tr>
+</table>
+</div>
+</body>
+</html>
