@@ -176,7 +176,7 @@ img{width:100%;border:none}
 /*悬浮的列表*/
 .cards-con{  position: fixed;bottom: 0;left: 0;right: 0;}
 .cards-con *{margin: 0;}
-.card-con-switch{  font-size: .75em;  width: 16em;margin: 0 auto;text-align: center;
+.card-con-switch{  font-size: .6875em;  width: 16em;margin: 0 auto;text-align: center;
     background: #f8a4bf;border-radius:2em 2em 0 0;color: #fff;padding: .5em}
 .cards-con .icon-switch-down{  background: url("../images/icon_arrow_down@2x.png") no-repeat;
     display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
@@ -195,7 +195,7 @@ img{width:100%;border:none}
 .card-con-footer{  background: #fef9f1;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;}
 .card-con-footer *{margin: 0}
 .card-con-footer .about-more{color: #777777;  font-size: .75em;}
-.icon-volume{display: block;  float: left;
+.card-con-footer .icon-volume{display: block;  float: left;
     background: url("../images/icon-volume.png") no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
@@ -234,6 +234,9 @@ img{width:100%;border:none}
 }
 .cards-detail .card-body .user-list{
     height: auto;
+}
+.cards-detail .card-body .user-name{
+    width: 7.2em;
 }
 .cards-detail .card-con-footer{
     position: absolute;
@@ -562,4 +565,60 @@ img{width:100%;border:none}
     color: #f95086;
     text-align: center;
     margin: .5em 0;
+}
+
+/*最近邀约  我的邀约卡列表*/
+.recent-header{
+    padding: .7em .8333em;
+    background: #FFFFFF;
+    border-bottom: 1px solid #bfbfbf;
+}
+.recent-header h4{
+    float: left;
+    color: #333333;
+    font-size: .9375em;
+    font-weight: normal;
+}
+.recent-list .headpic{
+    width: 2em;
+    height: 2em;
+    display: block;
+    float: left;
+    margin-right: .625em;
+}
+.recent-list .recent-item{
+    background: #FFFFFF;
+    margin-bottom: .5em;
+    padding: 0 .8333em;
+}
+.recent-item-header::after{ clear: both;display: block;content: " ";}
+.recent-item-header{
+    padding: .226em 0;
+    position: relative;
+}
+.recent-item-header::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    background-image: -webkit-linear-gradient(right, #e5e5e5 70%, transparent 0%);
+    background-image: -moz-linear-gradient(right, #e5e5e5 70%, transparent 0%);
+    background-image: linear-gradient(to left, #e5e5e5 70%,rgba(0,0,0,0) 0%);
+    -webkit-background-size: .5em 1px;
+    background-size: .5em 1px;
+}
+.recent-item-header .name{
+    color: #333333;
+    font-size: .9375em;
+    line-height: 2;
+}
+.recent-item-body{
+    color: #999999;
+    font-size: .75em;
+    line-height: 1.5;
+    padding: .4em 0;
 }
