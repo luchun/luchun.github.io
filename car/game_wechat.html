@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+<title>玫琳凯翻翻乐</title>
+<link rel="stylesheet" href="css/main.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/rotate3di.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8">
+//锁屏方法
+var touchClock=function(event){event.preventDefault();}
+$(function(){document.body.addEventListener('touchmove',touchClock,false);});
+//调整布局
+$(window).resize(function(){rs();});
+function rs(){
+	var dw=document.documentElement.clientWidth;
+	var dh=document.documentElement.clientHeight;
+	if(0.75*dw>dh){$("#attention").show();}else{$("#attention").hide();}
+	$("body").css({"font-size":1*dw/360+"em"});
+	$("#loadingbg").css({"margin-top":(dh/2)-30*dw/640+"px"});
+	var nw=0.96;
+	if(dh*720/dw/1136<0.96){
+		nw=dh*720/dw/1136;
+	}
+	$("#nav-list-example").css({"width":nw*100+"%","height":dw*0.96*nw+"px"});
+	$("#nav-list-example li").css({"height":dw*0.24*dh*720/dw/1136+"px"});
+	$("#game_head").css({"height":(dh-dw*nw)/2+"px"});
+	$("#game_foot").css({"height":(dh-dw*nw)/2+"px"});
+	$("#advideo").css({"height":(dw*0.8)/16*9+"px"});
+};
+var imgs=[
+	"images/cover_bg.jpg",
+	"images/cover_logo.png",
+	"images/fail_img.png",
+	"images/fail_txt.png",
+	"images/game_bg.jpg",
+	"images/gift_but.png",
+	"images/goon.png",
+	"images/i0.png",
+	"images/i1.png",
+	"images/i2.png",
+	"images/i3.png",
+	"images/i4.png",
+	"images/i5.png",
+	"images/i6.png",
+	"images/i7.png",
+	"images/i8.png",
+	"images/index_bg.jpg",
+	"images/index_titile.png",
+	"images/info_1.png",
+	"images/info_2.png",
+	"images/info_3.png",
+	"images/pause.png",
+	"images/pause_un.png",
+	"images/playagain.png",
+	"images/restart.png",
+	"images/restart_un.png",
+	"images/rule_but.png",
+	"images/s_down.png",
+	"images/s_title.png",
+	"images/sf_1.png",
+	"images/sf_2.png",
+	"images/sf_3.png",
+	"images/sf_t1.png",
+	"images/sf_t1s.png",
+	"images/sf_t2.png",
+	"images/sf_t2s.png",
+	"images/sf_t3.png",
+	"images/sf_t3s.png",
+	"images/share.png",
+	"images/start_but.png",
+	"images/stop_ico.png",
+	"images/success_bg.jpg",
+	"images/timeboard.png",
+	"images/timerbg.png",
+	"images/timernow.png",
+	"images/timetip.png",
+	"images/tryagain.png",
+	"images/wechat_sf1.png",
+	"images/wechat_sf1c.png",
+	"images/wechat_sf2.png",
+	"images/wechat_sf2c.png",
+	"images/wechat_sf3.png",
+	"images/wechat_sf3c.png",
+];
+$(function(){
+	var dw=document.documentElement.clientWidth;
+	var dh=document.documentElement.clientHeight;
+	$("#loadingbg").css({"margin-top":(dh/2)-30*dw/640+"px"});
+	var i=0;
+	var timer=setInterval(function(){
+		$("#hideimg").append("<img src='"+imgs[i]+"'/>");
+		try{
+			$("#loading").stop();
+		}catch(e){}
+		$("#loading").animate({"width":parseInt(i/(imgs.length-1)*100)+"%"},50);
+		if(i<imgs.length){
+			i++;
+		}
+		if(i==(imgs.length-1)){
+			clearInterval(timer);
+			$("#loadingframe").fadeOut(400);
+			$("#loadingbg").fadeOut(400,function(){
+				gameinit();
+			});
+		}
+	},50);
+});
+//加载时运行
+$(function(){
+	//游戏初始化
+
+});
+//游戏初始化
+var icocont=16;//图标总数
+var icosort=8;//图标种类
+var icotemp=1;//图标起点（必须小于icosort）
+var icostep=0;//游戏进行中的游戏步数
+var fs=0;//当前翻牌状态
+function gameinit(){
+	var ico=new Array(icocont);//建立临时数组
+	//填充数组（所有图标出现次数为双数）
+	for(var n=0;n<ico.length;n++){
+		if(n%2==0){
+			ico[n]=icotemp;
+			if(icotemp<icosort){icotemp++;}
+			else{icotemp=1;}
+		}else{
+			ico[n]=ico[n-1];
+		}
+	}
+	//数组乱序
+	ico=ico.sort(function(){return Math.random()>0.5?-1:1;});
+	//根据数组填充图片
+	var str=""
+	for(var n=0;n<ico.length;n++){
+		str=str+'<li class="i'+ico[n]+'">';
+        	str=str+'<div class="front"><img src="images/i0.png"/></div>';
+        	str=str+'<div class="back"><img src="images/i'+ico[n]+'.png"/></div>';
+        str=str+'</li>';
+	}
+	$("#nav-list-example").html(str);
+	$('#nav-list-example li div.back').hide().css('left', 0);
+	//重置样式
+	rs();
+	//准备开始游戏
+	gameready();
+}
+//游戏准备
+function gameready(){
+	$("#timer_txt").html(3);
+	$("#timer").animate({"bottom":"0.5em"},500,function(){
+		setTimeout(function(){
+			$("#timer_txt").animate({"opacity":"0"},500,function(){
+				$("#timer_txt").html(2);
+				$("#timer_txt").css({"opacity":"1"});
+				setTimeout(function(){
+					$("#timer_txt").animate({"opacity":"0"},500,function(){
+						$("#timer_txt").html(1);
+						$("#timer_txt").css({"opacity":"1"});
+						setTimeout(function(){
+							$("#timer_txt").animate({"opacity":"0"},500,function(){
+								$("#timer").animate({"left":"8%"},500,function(){
+									$("#game_foot").fadeIn(500);
+									$("#timetxt").fadeIn(500,function(){
+										//游戏初始化
+										gamestart();
+										$("#timer_txt").animate({"opacity":"0"},500,function(){
+											$("#timer_txt").html(3);
+											$("#timer_txt").css({"opacity":"1"});
+											setTimeout(function(){
+												$("#timer_txt").animate({"opacity":"0"},500,function(){
+													$("#timer_txt").html(2);
+													$("#timer_txt").css({"opacity":"1"});
+													setTimeout(function(){
+														$("#timer_txt").animate({"opacity":"0"},500,function(){
+														$("#timer_txt").html(1);
+														$("#timer_txt").css({"opacity":"1"});
+														setTimeout(function(){
+															$("#timer_txt").html("");
+															$("#timetxt").fadeOut(250,function(){
+																$("#tline").fadeIn(250,function(){
+																	timerstart();
+																});
+															});
+														},500);
+													});
+													},500);
+												});
+											},500);
+										});
+									});
+								});
+							});
+						},500);
+					});
+				},500);
+			});
+		},500);
+	});
+}
+//游戏开始
+function gamestart(){
+	$("#nav-list-example li div").rotate3Di('flip',250,{direction:'clockwise',sideChange:mySideChange});
+	setTimeout(function(){
+		$("#nav-list-example li div").rotate3Di('unflip',250,{sideChange:mySideChange});
+		//绑定翻牌事件
+		bindturning();
+	},3300);
+}
+//绑定翻牌事件
+function bindturning(){
+	for(var n=0;n<icocont;n++){
+		if($("#nav-list-example li:eq("+n+")")[0].className!=="i0"){
+			$("#nav-list-example li:eq("+n+")")[0].addEventListener('touchstart',turning,false);
+		}
+	}
+}
+//解绑翻牌事件
+function unbindturning(){
+	for(var n=0;n<icocont;n++){
+		try{$("#nav-list-example li:eq("+n+")")[0].removeEventListener('touchstart',turning,false);}catch(e){}
+	}
+}
+//翻牌事件
+function turning(){
+	//触摸生效情况下进行操作
+	if(event.touches.length===1){
+		if(fs==0){
+			$(this)[0].removeEventListener('touchstart',turning,false);
+			$(this).find('div').stop().rotate3Di('flip',250,{direction:'clockwise',sideChange:mySideChange});
+			fs=parseInt($(this)[0].className.replace("i",""));
+		}else{
+			$(this).find('div').stop().rotate3Di('flip',250,{direction:'clockwise',sideChange:mySideChange});
+			//禁止触摸进入判断程序
+			unbindturning();
+			var n1=fs;
+			var n2=parseInt($(this)[0].className.replace("i",""));
+			setTimeout(function(){checkturning(n1,n2)},250);
+		}
+	}
+}
+//翻牌策略
+function mySideChange(front) {
+	if(!front){
+		$(this).parent().find('div.front').hide();
+		$(this).parent().find('div.back').show();
+	}else{
+		$(this).parent().find('div.front').show();
+		$(this).parent().find('div.back').hide();
+	}
+}
+//判断程序
+var overstop=0;//如果最后翻到广告的结束判断标识
+function checkturning(num1,num2){
+	if(num1==num2){
+		//相同情况
+		for(var i=0;i<$("#nav-list-example li").length;i++){
+			if(parseInt($("#nav-list-example li:eq("+i+")")[0].className.replace("i",""))==num1){
+				$("#nav-list-example li:eq("+i+")")[0].className="i0";
+			}
+		}
+		fs=0;
+		icostep++;
+		bindturning();
+		//显示广告
+		if(num1==1||num1=="1"){
+			unbindturning();
+			try{clearInterval(timer)}catch(e){}
+			$("#ad1").show();$("#ad2").hide();$("#ad3").hide();
+			if(icostep==8){
+				overstop=1;
+				$("#ad1_txt").html("挑战成功>>");
+				$("#ad1_txt")[0].className="ad_over";
+				$("#ad1_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						location.replace("success_wechat.html?timeleft="+timercont);
+					});
+				},false);
+			}else{
+				$("#ad1_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						timerstart();
+						bindturning();
+					});
+				},false);
+			}
+			$("#ad").fadeIn(400);
+		}
+		if(num1==2||num1=="2"){
+			unbindturning();
+			try{clearInterval(timer)}catch(e){}
+			$("#ad2").show();$("#ad1").hide();$("#ad3").hide();
+			if(icostep==8){
+				overstop=1;
+				$("#ad2_txt").html("挑战成功>>");
+				$("#ad2_txt")[0].className="ad_over";
+				$("#ad2_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						location.replace("success_wechat.html?timeleft="+timercont);
+					});
+				},false);
+			}else{
+				$("#ad2_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						timerstart();
+						bindturning();
+					});
+				},false);
+			}
+			$("#ad").fadeIn(400);
+		}
+		if(num1==3||num1=="3"){
+			unbindturning();
+			try{clearInterval(timer)}catch(e){}
+			$("#ad3").show();$("#ad1").hide();$("#ad2").hide();
+			if(icostep==8){
+				overstop=1;
+				$("#ad3_txt").html("挑战成功>>");
+				$("#ad3_txt")[0].className="ad_over";
+				$("#ad3_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						location.replace("success_wechat.html?timeleft="+timercont);
+					});
+				},false);
+			}else{
+				$("#ad3_txt")[0].addEventListener('touchstart',function(){
+					$("#ad").fadeOut(400,function(){
+						timerstart();
+						bindturning();
+					});
+				},false);
+			}
+			$("#ad").fadeIn(400);
+		}
+		//游戏胜利
+		if(icostep==8&&overstop==0){try{clearInterval(timer)}catch(e){}location.replace("success_wechat.html?timeleft="+timercont);}
+	}else{
+		//不同情况
+		$(".i"+num1+" div").rotate3Di('unflip',250,{sideChange:mySideChange});
+		$(".i"+num2+" div").rotate3Di('unflip',250,{sideChange:mySideChange});
+		fs=0;
+		bindturning();
+	}
+}
+//时间计数器开始
+var timer;
+var timercont=60000;
+function timerstart(){
+	//强制重置
+	if(timercont==60000){
+		try{clearInterval(timer)}catch(e){}
+	}
+	//foot按钮生效
+	bindfootbut();
+	//创建计时器
+	timer=setInterval(function(){
+		if(timercont>=10){
+			timercont=timercont-10;
+			if(timercont%1000==0){
+				$("#timetip").html(timercont/1000+"'");
+			}
+		}else{
+			try{clearInterval(timer)}catch(e){}
+			//游戏失败
+			$("#fail").fadeIn(400,function(){
+				$("#fail_img").animate({"width":"36%"},300,"linear",function(){
+					$("#fail_img").animate({"width":"32%"},50,"linear",function(){
+						$("#fail_txt").animate({"opacity":"1"},400);
+						$("#fail_but").animate({"opacity":"1"},400);
+						$("#fail_but")[0].addEventListener('touchstart',function(){
+							window.location.reload();
+						},false);
+					});
+				});
+			});
+		}
+		$("#tlinenow").css({"width":timercont/60000*97+"%"});
+	},10);
+}
+//foot按钮生效
+function bindfootbut(){
+	$("#restart_show_but")[0].src="images/restart.png";
+	//$("#pause_show_but")[0].src="images/pause.png";
+	$("#restart_show_but")[0].addEventListener('touchstart',restartshow,false);
+	//$("#pause_show_but")[0].addEventListener('touchstart',pauseshow,false);
+}
+//foot按钮失效
+function unbindfootbut(){
+	$("#restart_show_but")[0].src="images/restart_un.png";
+	//$("#pause_show_but")[0].src="images/pause_un.png";
+	$("#restart_show_but")[0].removeEventListener('touchstart',restartshow,false);
+	//$("#pause_show_but")[0].removeEventListener('touchstart',pauseshow,false);
+}
+//显示重新开始画面
+function restartshow(){
+	//解绑翻牌事件
+	unbindturning();
+	clearInterval(timer);
+	$("#restart").fadeIn(500);
+}
+//显示暂停画面
+function pauseshow(){
+	//解绑翻牌事件
+	unbindturning();
+	clearInterval(timer);
+	$("#pause").fadeIn(500);
+}
+//重新开始画面按钮事件
+$(function(){
+	//取消继续
+	$("#restart_but_goon")[0].addEventListener('touchstart',function(){
+		$("#restart").fadeOut(500,function(){
+			timerstart();
+			bindturning();
+		});
+	},false);
+	//重新开始
+	$("#restart_but_restart")[0].addEventListener('touchstart',function(){
+		window.location.reload();
+	},false);
+});
+//暂停画面按钮事件
+$(function(){
+	//继续
+	$("#pause_but")[0].addEventListener('touchstart',function(){
+		$("#pause").fadeOut(500,function(){
+			timerstart();
+			bindturning();
+		});
+	},false);
+});
+</script>
+
+</head>
+<body>
+<!--页面背景-->
+<div id="game_bg" class="center_bg"></div>
+<!--页面头部-->
+<div id="game_head">
+	<!--倒计时牌-->
+    <div id="timer" class="bottom_bg"><span id="timer_txt"></span></div>
+    <div id="tline" class="full_bg"><div id="tlinenow"></div></div>
+    <div id="timetxt">快！记住图片的位置哦~</div>
+    <div id="timetip">60'</div>
+</div>
+<!--游戏主体-->
+<table id="game_tb" class="full_tb" cellspacing="0" cellpadding="0">
+<tr><td style="height:100%" align="center">
+<ul id="nav-list-example"></ul>
+</td></tr>
+</table>
+<!--页面底部-->
+<div id="game_foot">
+	<table class="full_tb" style="width:78%" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td align="center"><img id="restart_show_but" src="images/restart_un.png" style="width:36%"/></td>
+          <!--<td align="center"><img id="pause_show_but" src="images/pause_un.png"/></td>-->
+        </tr>
+    </table>
+</div>
+<!--游戏暂停-->
+<div id="pause" class="center_bg">
+	<table class="full_tb" cellspacing="0" cellpadding="0"><tr><td align="center">
+		<img src="images/cover_logo.png"/><br/>
+        <img id="pause_but" src="images/goon.png" class="but"/>
+	</td></tr></table>
+</div>
+<!--重新开始-->
+<div id="restart" class="center_bg">
+	<table class="full_tb" cellspacing="0" cellpadding="0"><tr><td align="center">
+		<img src="images/cover_logo.png"/><br/>
+        <img id="restart_but_restart" src="images/restart.png" class="but"/>
+        <img id="restart_but_goon" src="images/goon.png" class="but"/>
+	</td></tr></table>
+</div>
+<!--游戏失败-->
+<div id="fail" class="center_bg">
+	<table class="full_tb" cellspacing="0" cellpadding="0"><tr><td align="center">
+		<img id="fail_img" src="images/fail_img.png"/><br/>
+        <img id="fail_txt" src="images/fail_txt.png"/><br/>
+        <img id="fail_but" src="images/tryagain.png" class="but"/>
+	</td></tr></table>
+</div>
+<!--广告-->
+<div id="ad">
+	<div id="ad_bg"></div>
+    <table id="ad_f" class="full_tb" cellspacing="0" cellpadding="0"><tr><td align="center">
+    	<img id="stop_ico" src="images/stop_ico.png"/>
+        <div id="ad1" class="top_bg" style="background-size:100%"><div id="ad1_txt" class="ad_goon">返回继续>></div></div>
+        <div id="ad2" class="top_bg" style="background-size:100%"><div id="ad2_txt" class="ad_goon">返回继续>></div></div>
+        <div id="ad3" class="top_bg" style="background-size:100%">
+        	<div id="ad3_txt" class="ad_goon">返回继续>></div>
+            <div style="position:absolute;margin-top:17.2em;font-size:0.7em;width:70%;left:10%">建议wi-fi下观看 壕请略过视频需缓冲，请耐心等待</div>
+            <iframe id="advideo" src="http://player.youku.com/embed/XOTMwNjkyMjg0" frameborder=0 allowfullscreen></iframe>
+        </div>
+    </td></tr></table>
+</div>
+<!--loading-->
+<div id="hideimg"></div>
+<div id="loadingframe" style="position:absolute;background-image:url(images/game_bg.jpg);height:100%;z-index:999;display:block" class="center_bg">
+<div id="loadingbg" style="z-index:999;display:block">
+	<div id="loading"></div>
+</div>
+</div>
+<!--横屏提示-->
+<div id="attention">
+<table class="full_tb" cellspacing="0" cellpadding="0">
+<tr><td style="height:100%" align="center"><img src="images/exchange.png" style="width:30px;vertical-align:middle"/>　请保持竖屏以达到更好浏览体验</td></tr>
+</table>
+</div>
+</body>
+</html>
+</body>
+</html>
