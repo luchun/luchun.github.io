@@ -202,9 +202,9 @@ img{width:100%;border:none}
     background-size: 100% 100%;
     width: 1.4em;  height: 1.4em;  margin-top: .5em;  margin-right: .5em;
 }
-.list-nothing{text-align: center;    padding-top: 1em;  padding-bottom: 1em;}
+.list-nothing{text-align: center;    padding-top: 2em;  padding-bottom: 2em;}
 .list-nothing img{width: 65%}
-
+.list-nothing span{color: #999;}
 /*单独的列表页*/
 .cards-detail{
     min-height: 100%;
