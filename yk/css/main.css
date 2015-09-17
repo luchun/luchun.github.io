@@ -192,14 +192,15 @@ img{width:100%;border:none}
 .card-con-header .card-title-des{  font-size: .75em;}
 .card-con-body{  background: #ffffff;}
 .card-con-body .user-list{  height: 13.5em;}
-.card-con-footer{  background: #fef9f1;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;}
+.card-con-footer{  background: #fef9f1;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;
+    font-size: .75em;}
 .card-con-footer *{margin: 0}
-.card-con-footer .about-more{color: #777777;  font-size: .75em;}
+.card-con-footer .about-more{color: #777777; }
 .card-con-footer .icon-volume{display: block;  float: left;
     background: url("../images/icon-volume.png") no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    width: 1em;  height: 1em;  margin-top: .5em;  margin-right: .25em;
+    width: 1.4em;  height: 1.4em;  margin-top: .5em;  margin-right: .5em;
 }
 .list-nothing{text-align: center;    padding-top: 1em;  padding-bottom: 1em;}
 .list-nothing img{width: 65%}
