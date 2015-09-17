@@ -277,6 +277,7 @@ img{width:100%;border:none}
 .text-red{color: #f95086;}
 .text-black{color: #8c8c8c;}
 .wechat-attention .about-more{  font-size: .75em;  color: #999999;  }
+.wechat-attention .about-more .text-black{color: #333333;}
 /*我的邀约卡列表*/
 .my-card-list{
     background: #eeeeee;
