@@ -243,6 +243,9 @@ img{width:100%;border:none}
 .cards-detail .card-body .user-name{
     width: 7.2em;
 }
+.cards-detail .card-body  .user-list-sm .user-name{
+    width: 6em;
+}
 .cards-detail .card-con-footer{
     position: absolute;
     bottom: 0;
