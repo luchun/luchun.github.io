@@ -88,7 +88,7 @@
 .card-body .user-date{color: #999999;
     font-size: .85714em;}
 .card-footer{
-   padding:  .2em 1.625em .75em;
+   padding:  0 1.625em .75em;
 }
 .card-footer table{
     float: right;
