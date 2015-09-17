@@ -188,7 +188,7 @@ img{width:100%;border:none}
     background-size: 100% 100%;}
 .card-con-header{padding: 0.9375em;background: #f789ac;color: #fff;}
 .card-con-header .card-title-icon{  width: 2.25em;  height: 2.25em;  float: left;  margin-right: .75em;}
-.card-con-header .card-title{  font-size: 1em;  margin-bottom: .25em;}
+.card-con-header .card-title{  font-size: 1em;  margin-bottom: .35em;line-height: 1;}
 .card-con-header .card-title-des{  font-size: .75em;}
 .card-con-body{  background: #ffffff;}
 .card-con-body .user-list{  height: 13.5em;}
