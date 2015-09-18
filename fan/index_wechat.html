@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-<title>玫琳凯</title>
+<title>玫琳凯翻翻乐</title>
 <link rel="stylesheet" href="css/main.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" language="javascript" charset="utf-8">
@@ -28,23 +28,23 @@ function rs(){
 <div id="index_bg" class="center_bg"></div>
 <table class="full_tb" cellspacing="0" cellpadding="0" style="position:absolute">
   <tr>
-    <td><img src="images/cover_logo.png"/></td>
+    <td style="height:22%" valign="bottom"><img src="images/cover_logo.png"/></td>
   </tr>
   <tr>
-    <td align="center" valign="top" style="height:13em">
-        <div id="biaoqing" style="position:absolute;width:26%;left:37%;display:none"><img src="images/gift_but.png"/></div>
-    	<img src="images/index_titile.png" style="width:90%"/>
+    <td align="center" valign="top" style="height:50%">
+    	<img src="images/index_titile.png" style="margin-top:1em;width:90%"/>
+		<img src="images/index_main.png" style="margin-top:1em"/>
     </td>
   </tr>
   <tr>
-    <td align="center">
-		<div id="biaoqing" style="position:absolute;width:32%;left:34%" onClick="location.replace('game_wechat.html')"><img src="images/start_but.png"/></div>
+    <td align="center" style="height:28%"><img src="images/start_but.png" style="width:32%;" onClick="location.replace('game_wechat.html')"/>
     </td>
-  </tr>
-  <tr>
-    <td align="center"><img src="images/rule_but.png" style="width:46%"/></td>
   </tr>
 </table>
+<img src="images/rule_but.png" style="position:absolute;right:0;top:0;width:30%" onClick="$('#rule').fadeIn(400)"/>
+<div id="rule" style="height:100%;width:100%;background-image:url(images/rule.jpg);background-size:100%;background-repeat:no-repeat;display:none">
+<div id="rule_close" style="width:30%;left:0;bottom:0;font-size:0" onClick="$('#rule').fadeOut(400)"><img src="images/rule_return.png"/></div>
+</div>
 <!--横屏提示-->
 <div id="attention">
 <table class="full_tb" cellspacing="0" cellpadding="0">
