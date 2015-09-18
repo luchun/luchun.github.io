@@ -473,17 +473,18 @@
             // check to see if we need to fix or unfix the target element.
             $(window).bind('resize.ScrollToFixed', windowResize);
 
-            // When the window scrolls, check to see if we need to fix or unfix
-            // the target element.
-            $(window).bind('scroll.ScrollToFixed', windowScroll);
+
 
             // For touch devices, call checkScroll directlly rather than
             // rAF wrapped windowScroll to animate the element
             if ('ontouchmove' in window) {
-                console.log("scroll.touchmove")
+                console.log("scroll.touchmove");
               $(window).bind('touchmove.ScrollToFixed', checkScroll);
+            }else{
+                // When the window scrolls, check to see if we need to fix or unfix
+                // the target element.
+                $(window).bind('scroll.ScrollToFixed', windowScroll);
             }
-
             if (base.options.preFixed) {
                 target.bind('preFixed.ScrollToFixed', base.options.preFixed);
             }
