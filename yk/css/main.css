@@ -146,6 +146,9 @@ img{width:100%;border:none}
     font-size: 0.9375em;
     /*width: 11.33333em;*/
 }
+.card-footer .btn:active,.card-footer .btn:hover{
+    background-color: #44b45f;
+}
 .card-footer .btn.btn-done{    padding: 0.6667em 1.9em;
     background-color: #ffa200;
     border-color: #ffa200;
@@ -180,22 +183,22 @@ img{width:100%;border:none}
 .cards-con{  position: fixed;bottom: 0;left: 0;right: 0;}
 .cards-con *{margin: 0;}
 .card-con-switch{  font-size: .6875em;  width: 16em;margin: 0 auto;text-align: center;
-    background: #f8a4bf;border-radius:2em 2em 0 0;color: #fff;padding: .35em}
+    background: #ec6992;border-radius:2em 2em 0 0;color: #fff;padding: .35em}
 .cards-con .icon-switch-down{  background: url("../images/icon_arrow_down@2x.png") no-repeat;
-    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;    margin-bottom: .1em;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%; }
 .cards-con .icon-switch-up{ background: url("../images/icon_arrow_up@2x.png") no-repeat;
-    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;    margin-bottom: .1em;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;}
 .card-con-header{padding: 0.9375em;background: #f789ac;color: #fff;}
 .card-con-header .card-title-icon{  width: 2.25em;  height: 2.25em;  float: left;  margin-right: .75em;}
 .card-con-header .card-title{  font-size: 1em;  margin-bottom: .35em;line-height: 1;}
-.card-con-header .card-title-des{  font-size: .75em;}
+.card-con-header .card-title-des{  font-size: .75em;    margin-left: 9em;  text-indent: -5em;}
 .card-con-body{  background: #ffffff;}
 .card-con-body .user-list{  height: 13.5em;}
-.card-con-footer{  background: #fef9f1;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;
+.card-con-footer{  background: #fcf5e9;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;
     font-size: .75em;}
 .card-con-footer *{margin: 0}
 .card-con-footer .about-more{color: #777777; }
