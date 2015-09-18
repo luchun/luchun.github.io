@@ -165,12 +165,18 @@ img{width:100%;border:none}
     font-size: 0.9375em;
     /*width: 11.33333em;*/
 }
-.card-footer .btn:active,.card-footer .btn:hover{
+.card-footer .btn:hover,
+.card-footer .btn:active{
     background-color: #44b45f;
 }
 .card-footer .btn.btn-done{    padding: 0.6667em 1.9em;
     background-color: #ffa200;
     border-color: #ffa200;
+}
+.card-footer .btn.btn-done:hover,
+.card-footer .btn.btn-done:active{
+    background-color: #ef9903;
+    outline: none;
 }
 .card-footer .callout{
     background: url("../images/icon-callout.png");
