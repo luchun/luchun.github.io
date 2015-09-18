@@ -478,10 +478,14 @@ img{width:100%;border:none}
     /*position: relative;*/
     left: 0;
     top: 0;
+    width: 5em;
+    line-height: 2;
+    display: block;
+    text-align: center;
+    padding-right: .5em;
     font-size: .625em;
     color: #fff;
     font-weight: bold;
-    padding: .5em .83333em .5em .5em;
     z-index: 2;
     border-radius: 0 1.2em 1.2em 0;
     box-shadow: 0  1px 1px #ccc;
