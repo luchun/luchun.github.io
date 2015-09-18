@@ -479,7 +479,9 @@ img{width:100%;border:none}
     left: 0;
     top: 0;
     width: 5em;
-    line-height: 2;
+    line-height: 1;
+    padding-top: .5em;
+    padding-bottom: .5em;
     display: block;
     text-align: center;
     padding-right: .5em;
