@@ -7,113 +7,119 @@
     <title>玫琳凯</title>
     <link rel="stylesheet" href="css/main.css"/>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-scrolltofixed-min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body class="my-card-list">
-<div class="cards-header">
+<div class="card-header-fixed">
+    <div class="cards-header">
         <span class="right">
             你好！ <span class="user-name">Super蕾</span>
         </span>
-    <span class="header-logo"></span>
-</div>
-<div class="my-card-tabs">
-    <a href="#" class="active" data-tab="effective">未使用</a>
-    <a href="#" data-tab="used">已使用</a>
-    <a href="#" data-tab="expired">已过期</a>
+        <span class="header-logo"></span>
+    </div>
+    <div class="my-card-tabs">
+        <a href="#" class="active" data-tab="effective">未使用</a>
+        <a href="#" data-tab="used">已使用</a>
+        <a href="#" data-tab="expired">已过期</a>
+    </div>
 </div>
 <div class="detail-link">
     <a href="#">查看我最近邀约的顾客 ></a>
 </div>
 <div class="my-card-con">
     <div  class="cards-section active" data-tab="effective">
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
+        <div class="card-items">
             <div class="card-status card-status-new">
                 近期领取
             </div>
-        </div>
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
             </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
-            <div class="card-status card-status-new">
-                近期领取
-            </div>
-        </div>
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
-            <div class="card-status card-status-new">
-                近期领取
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
             </div>
         </div>
-        <div class="card-item ">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
-        </div>
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
+        <div  class="card-items card-items-old">
             <div class="card-status card-status-danger">
                 即将过期
             </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-img">
+                    <img src="./images/mklogo-pink.png" alt=""/>
+                </div>
+                <div class="card-info">
+                    <h4>“美美哒”美丽服务邀约卡</h4>
+                    <p>服务内容：事业机会介绍</p>
+                    <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
+                </div>
+            </div>
         </div>
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
-            <div class="card-status card-status-danger">
-                即将过期
-            </div>
-        </div>
-        <div class="card-item">
-            <div class="card-img">
-                <img src="./images/mklogo-pink.png" alt=""/>
-            </div>
-            <div class="card-info">
-                <h4>“美美哒”美丽服务邀约卡</h4>
-                <p>服务内容：事业机会介绍</p>
-                <p>美容顾问：<span class="text-red">张兰兰</span> <span class="text-red">13588669999</span></p>
-            </div>
-            <div class="card-status card-status-danger">
-                即将过期
-            </div>
-        </div>
+        <div class="scroll-to-bottom"></div>
     </div>
     <div  class="cards-section cards-section-used" data-tab="used">
         <div class="card-item">
@@ -160,11 +166,22 @@
             var firstName = element.find("a:first").attr("data-tab");  element.trigger("change.tabs", firstName);
             return this;
         };
-
-
         $(function(){
             $(".my-card-tabs").tabs(".my-card-con");
         })
+
+
+
+    $(".card-status-new").scrollToFixed({
+        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+        //limit:  $('.card-items-old').offset().top,
+        zIndex: 999
+    });
+    $(".card-status-danger").scrollToFixed({
+        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+        limit:  $('.scroll-to-bottom').offset().top,
+        zIndex: 1000
+    });
 </script>
 </body>
 </html>

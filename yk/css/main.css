@@ -283,24 +283,26 @@ img{width:100%;border:none}
 .card-generate-body{  background: #eeeeee;  }
 .card-generate{  background: white;margin: 0 0 .6em;padding:.5em 1em}
 .card-g-header{text-align: center;border-bottom: 1px solid #e1e1e1;}
-.card-g-header h5{    margin: .8em 0 1.5em;}
-.card-check{  width: 2em;  height: 2em;  display: block;  margin: 1em auto .8em;
+.card-g-header h5{    margin: .6em 0 1.2em;
+    font-size: 1em;}
+.card-check{  width: 2em;  height: 2em;  display: block;  margin: .5em auto .8em;
     background: url("../images/check.png") no-repeat;
     -webkit-background-size: 100% 100%;  background-size: 100% 100%;  }
 .contacts-info {color: #333;  font-size: .75em;  padding-top: 1em;}
-.contacts-info p{margin: 0;line-height: 2;}
+.contacts-info p{margin: 0;line-height: 2;vertical-align: bottom;}
 .period-of-use{color: #999999}
 .icon-callout-red{  background: url("../images/icon-callout-red.png") no-repeat;
-    margin-left: 1.5em; }
+    margin-left: 1em; }
 .icon-bubble-red{  background: url("../images/icon-bubble-red.png") no-repeat;
     margin-left: .75em; }
 .icon-callout-red,.icon-bubble-red{  width: 2em;  height: 2em;display: inline-block;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     vertical-align: middle;
+    margin-top: -3px;
 }
 .wechat-attention{  background: white;padding:.5em 1em}
-.wechat-des{color: #333333;  font-size: .8125em;text-align: center}
+.wechat-des{color: #333333;  font-size: .9em;text-align: center}
 .wechat-code{width: 75%;display: block;margin: 0 auto;}
 .text-red{color: #f95086;}
 .text-black{color: #8c8c8c;}
@@ -309,6 +311,16 @@ img{width:100%;border:none}
 /*我的邀约卡列表*/
 .my-card-list{
     background: #eeeeee;
+}
+.card-header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+}
+.card-header-fixed ~ .detail-link{
+    margin-top: 4.5em;
 }
 .my-card-list *{
     margin: 0;
@@ -458,8 +470,12 @@ img{width:100%;border:none}
     -webkit-background-size: 1px .4em ;
     background-size: 1px .4em;
 }
-.card-item .card-status{
+.card-items{
+    position: relative;
+}
+.card-items .card-status{
     position: absolute;
+    /*position: relative;*/
     left: -1.2em;
     top: 0;
     font-size: .625em;
