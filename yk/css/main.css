@@ -411,7 +411,7 @@ img{width:100%;border:none}
     background: #ffffff;
     border-radius: .25em;
     box-shadow: 0 .125em .125em #ccc;
-    margin:0 .75em 1em;
+    margin:0 .75em .5em;
     padding: 1.5em .75em 1.125em;
 }
 .card-item::after{
@@ -445,6 +445,7 @@ img{width:100%;border:none}
 .card-item .card-info p{
     font-size: .75em;
     line-height: 1.5;
+    vertical-align: bottom;
 }
 .card-item .card-img{
     width: 4.6875em;
@@ -539,6 +540,9 @@ img{width:100%;border:none}
 .card-detail-body *{
     margin: 0;
 }
+.card-detail-body .icon-callout-red,.card-detail-body  .icon-bubble-red{
+    margin-top: -3px;
+}
 .card-detail-body .card-detail{
     background: #FFFFFF;
     margin-bottom: .625em;
@@ -568,7 +572,7 @@ img{width:100%;border:none}
     margin: 0 1.5em;
     border-bottom: 1px solid #fab8cd;
     line-height: 1;
-    padding: 1.625em 0 1em;
+    padding: 1.25em 0 .75em;
 }
 .card-detail-body .card-d-header p{
     font-size: .75em;
@@ -607,7 +611,7 @@ img{width:100%;border:none}
 }
 .card-detail-body .qrcode-con{
     width: 31.25%;
-    margin: 1em auto;
+    margin: .75em auto;
 }
 .card-detail-body .use-des{
     color: #999999;
@@ -624,7 +628,8 @@ img{width:100%;border:none}
     text-decoration: none;
     color: #f95086;
     text-align: center;
-    margin: .5em 0;
+    margin: .4em 0;
+    font-size: .85em;
 }
 
 /*最近邀约  我的邀约卡列表*/
@@ -638,6 +643,9 @@ img{width:100%;border:none}
     color: #333333;
     font-size: .9375em;
     font-weight: normal;
+}
+.recent-list{
+    margin-top: 4.78em;
 }
 .recent-list .headpic{
     width: 2em;
