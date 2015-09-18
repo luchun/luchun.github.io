@@ -78,11 +78,29 @@ img{width:100%;border:none}
 .card-body .name,.card-body .phone-num{
     color: #f789ac;
 }
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
 .card-body .user-list{
     overflow-x: hidden;
     overflow-y: scroll;
     height: 10.5em;
     display: block;
+    -webkit-overflow-scrolling: touch
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(57,57,57, .6);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(156, 156, 156, .6);
 }
 .card-body .user-avatar{
     display: block;
