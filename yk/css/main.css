@@ -87,20 +87,21 @@ img{width:100%;border:none}
     overflow-y: scroll;
     height: 10.5em;
     display: block;
-    -webkit-overflow-scrolling: touch
+    /*-webkit-overflow-scrolling: touch;*/
 }
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 8px;
+    /*-webkit-appearance: none;*/
+    width: 4px;
 }
-
 ::-webkit-scrollbar-track {
-    background-color: rgba(57,57,57, .6);
-    border-radius: 8px;
+    /*background-color: rgba(57,57,57, .6);*/
+    /*border-radius: 8px;*/
 }
 ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: rgba(156, 156, 156, .6);
+    border: 3px solid transparent;
+    background-clip: content-box;
 }
 .card-body .user-avatar{
     display: block;
