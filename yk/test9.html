@@ -7,7 +7,7 @@
     <title>玫琳凯</title>
     <link rel="stylesheet" href="css/main.css"/>
     <script src="js/jquery.js"></script>
-    <script src="js/jquery-scrolltofixed-min.js"></script>
+    <script src="js/jquery-scrolltofixed.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body class="my-card-list">
@@ -173,12 +173,14 @@
 
 
     $(".card-status-new").scrollToFixed({
-        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+//        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+        marginTop:  $(".card-header-fixed").height(),
         //limit:  $('.card-items-old').offset().top,
         zIndex: 999
     });
     $(".card-status-danger").scrollToFixed({
-        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+//        marginTop: $('.card-header-fixed').outerHeight(true) + 10,
+        marginTop:  $(".card-header-fixed").height(),
         limit:  $('.scroll-to-bottom').offset().top,
         zIndex: 1000
     });
