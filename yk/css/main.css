@@ -45,13 +45,21 @@ img{width:100%;border:none}
     color: #666666;
 }
 .card-header{
-    background: #f789ac;
+    background:  #f789ac url("../images/card-head-bg.png") no-repeat top right;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
 }
 .card-header .card-title{
     padding: 0.625em 0.875em;
     color: white;
     font-size: 1em;
     white-space:nowrap;
+}
+.card-title-header{
+    font-size: 1.0625em;
+}
+.card-title-small{
+    font-size: 0.84375em;
 }
  .card-title-icon{
     width: 2em;
@@ -62,6 +70,7 @@ img{width:100%;border:none}
     vertical-align: middle;
     display: inline-block;
     margin-right: .25em;
+     float: left;
 }
 .card-header .card-header-body{
     font-size: .75em;
