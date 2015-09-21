@@ -1,13 +1,17 @@
 @charset "utf-8";
+.card-td{
+    height: 12.2rem;
+}
 .card{
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: relative;
+    /*left: 0;*/
+    /*right: 0;*/
     width: auto;
     /*overflow: hidden;*/
+    /*background: #FFFFFF;*/
     background: rgba(255,255,255,.5);
-    bottom: 0;
-    z-index: 2;
+    /*bottom: 0;*/
+    z-index: 102;
 }
 .card *{
     margin: 0;
@@ -22,10 +26,11 @@
     color: #666666;
 }
 .card-header{
+    /*background: #f789ac;*/
     background: rgba(247, 137, 172,.5);
 }
 .card-header .card-title{
-    padding: 0.625em 1.625em;
+    padding: 0.625em 1.2em;
     color: white;
     font-size: 1em;
     white-space:nowrap;
@@ -49,7 +54,7 @@
 }
 .card-body{
     font-size: 0.875em;
-    padding: 0.8571em 1.625em;
+    padding: 0.5em 1.2em;
     line-height: 1.85714;
     color: #333;
 }
@@ -87,7 +92,7 @@
 .card-body .user-date{color: #999999;
     font-size: .85714em;}
 .card-footer{
-   padding:  .2em 1.625em .75em;
+   padding:  .2em 1.2em .75em;
 }
 .card-footer table{
     float: right;
@@ -117,7 +122,7 @@
     border-radius: 4px;
     color: #fff;
     border: 1px solid #3ec576;
-    padding: 0.6667em 3.8em;
+    padding: 0.6667em 4.2em;
     font-size: 0.9375em;
     /*width: 11.33333em;*/
 }
