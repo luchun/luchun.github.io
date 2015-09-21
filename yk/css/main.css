@@ -414,6 +414,7 @@ img{width:100%;border:none}
     box-shadow: 0 .125em .125em #ccc;
     margin:0 .75em .5em;
     padding: 1.5em .75em 1.125em;
+    -webkit-user-select: none;
 }
 .card-item::after{
     content:'';
