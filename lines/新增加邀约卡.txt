@@ -1,4 +1,0 @@
-新增加邀约卡部分内容：
-	css中增加了一个card.css，是邀约卡内容的样式
-	result.html中新增加了一个div和后边一段js有注释
-	images文件夹中新增加三个图片 icon-bubble.png  icon-callout.png card-icon.png
