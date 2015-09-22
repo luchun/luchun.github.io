@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+<title>玫琳凯</title>
+<style>
+body{font-size:0;margin:0;position: relative}
+img{width:100%}
+</style>
+	<link rel="stylesheet" href="css/card.css"/>
+<script src="http://cdnjs.gtimg.com/cdnjs/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="js/frame.js"></script>
+<script>
+$(function(){
+	$(".button1").bind("touchend",function(){
+		//点击领取
+	});
+});
+</script>
+</head>
+
+<body>
+<img src="images/i1.gif"/>
+<img src="images/i2.gif"/>
+<img src="images/i3.gif"/>
+<img src="images/i4.gif"/>
+<img src="images/i5.gif"/>
+<img src="images/i6.jpg"/>
+<img src="images/i7.gif"/>
+<img src="images/i8.gif"/>
+<img src="images/i9.gif"/>
+<img src="images/i10.gif"/>
+<img src="images/i11.jpg"/>
+<img src="images/i12.gif"/>
+<!--<img src="images/i13.jpg"/>-->
+<!--<img class="button1" src="images/i14.gif"/>-->
+<!--<img src="images/i15.gif"/>-->
+
+<!--以下是新增加卡片部分-->
+<div class="card-section">
+	<div class="card">
+		<div class="card-header card-header-bg">
+			<div class="card-title">
+				<span class="card-title-icon"></span>
+				<h5 class="card-title-header">玫琳凯“美美哒”</h5>
+
+				<div class="card-title-small">美丽服务邀约卡</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<p>服务内容：<span>彩妆  护肤  形象设计</span></p>
+
+			<p>美容顾问：<span class="name">玫小琳</span></p>
+
+			<p>联系电话：<span class="phone-num">135-8866-9999</span></p>
+		</div>
+		<div class="card-footer">
+			<table>
+				<tr>
+					<td><a href="tel:15117146077"><span class="callout"></span>电话</a></td>
+					<td><span class="middle-line"></span></td>
+					<td><a href="sms:13588669999"><span class="icon-sms"></span>短信</a></td>
+				</tr>
+
+			</table>
+			<button class="btn">立即免费参与</button>
+		</div>
+	</div>
+	<div class="card-con-footer">
+		<span class="icon-volume"></span>
+		<p class="about-more">亲爱的,如果您也想订制专属邀约卡,请至玫琳凯之窗手机客户端>邀客专区 一键转发,轻松邀客!</p>
+	</div>
+</div>
+<script>
+	$(function(){rs();});
+	$(window).resize(function(){rs();});
+	var rs=function() {
+		var dw = document.documentElement.clientWidth;
+		var dh = document.documentElement.clientHeight;
+		$(".card-section").css({"font-size": 1 * dw / 360 + "rem"});
+	}
+</script>
+<!--以上是新增加卡片部分-->
+</body>
+</html>
