@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+<meta charset="UTF-8">
+<title>玫琳凯</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/card.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.rotate.min.js"></script>
+<script src="js/shake.js"></script>
+<script src="js/game.js"></script>
+</head>
+
+<body onLoad="loadimg(0)">
+<div id="hide"></div>
+<div id="loading" style="background-image:url(images/loading_bg.gif);z-index:999;display:none" class="center_bg">
+	<div id="index_timer_bg" class="full_bg" style="height:1.1em;width:40%;left:30%">
+    	<div id="index_timer_line" class="full_bg" style="margin-top:0.01em;height:1.1em;width:0;background-size:9em 1.1em"></div>
+    </div>
+	<div id="loading_logo"><img src="images/logo.png"/></div>
+	<div id="loading_sinker"><img src="images/loading_sinker.png"/></div>
+</div>
+<!--首页-->
+<div id="first_page" style="position:absolute;height:100%;z-index:99;display:none">
+<div id="index_board" class="center_bg"></div>
+<div id="index_bg" class="center_bg"></div>
+<div id="index_logo"><img src="images/logo.png"/></div>
+<div id="index_title"><img id="index_title_main" src="images/index_title_main.png"/></div>
+<div id="index_txt"><img src="images/index_txt.png"/></div>
+<div id="index_foot"><img src="images/index_foot.png"/></div>
+<div id="index_but"><img src="images/index_but.png"/></div>
+<div id="index_rule"><img src="images/index_rule_but.png"/></div>
+<!--活动规则-->
+<div id="rule" class="center_bg">
+	<div id="rule_close"><img src="images/rule_close.png"/></div>
+	<div id="rule_but"><img src="images/rule_but.png"/></div>
+</div>
+<!--产品介绍-->
+<div id="product">
+	<div id="product_close"><img src="images/product_but.png"/></div>
+</div>
+</div>
+<!--第一关-->
+<div id="stage1" class="stage">
+	<div id="stage1_bg" class="top_bg"></div>
+	<div id="s1_title" class="s_title"><img src="images/ready_1.png"/></div>
+	<div id="s1_bag">
+		<div class="s1_bag_img"><img src="images/s1_bag_bg.png"/></div>
+		<div class="s1_wrong s1_wrong1"><img src="images/s1_wrong1.png"/></div>
+		<div class="s1_wrong s1_wrong2"><img src="images/s1_wrong2.png"/></div>
+		<div class="s1_wrong s1_wrong3"><img src="images/s1_wrong3.png"/></div>
+		<div class="s1_wrong s1_wrong4"><img src="images/s1_wrong4.png"/></div>
+		<div class="s1_wrong s1_wrong5"><img src="images/s1_wrong5.png"/></div>
+		<div class="s1_wrong s1_wrong6"><img src="images/s1_wrong6.png"/></div>
+		<div class="s1_wrong s1_wrong7"><img src="images/s1_wrong7.png"/></div>
+		<div class="s1_wrong s1_wrong8"><img src="images/s1_wrong8.png"/></div>
+		<div class="s1_wrong s1_wrong9"><img src="images/s1_wrong9.png"/></div>
+		<div class="s1_wrong s1_wrong10"><img src="images/s1_wrong10.png"/></div>
+		<div class="s1_wrong s1_wrong11"><img src="images/s1_wrong11.png"/></div>
+		<div class="s1_wrong s1_wrong12"><img src="images/s1_wrong12.png"/></div>
+		<div class="s1_wrong s1_wrong13"><img src="images/s1_wrong13.png"/></div>
+		<div class="s1_wrong s1_wrong14"><img src="images/s1_wrong14.png"/></div>
+		<div class="s1_wrong s1_wrong15"><img src="images/s1_wrong15.png"/></div>
+		<div class="s1_wrong s1_wrong16"><img src="images/s1_wrong16.png"/></div>
+		<div class="s1_wrong s1_wrong17"><img src="images/s1_wrong17.png"/></div>
+		<div class="s1_wrong s1_wrong18"><img src="images/s1_wrong18.png"/></div>
+		<div class="s1_wrong s1_wrong19"><img src="images/s1_wrong19.png"/></div>
+		<div class="s1_wrong s1_wrong20"><img src="images/s1_wrong20.png"/></div>
+		<div class="s1_wrong s1_wrong21"><img src="images/s1_wrong21.png"/></div>
+		<div class="s1_wrong s1_wrong22"><img src="images/s1_wrong22.png"/></div>
+		<div class="s1_wrong s1_wrong23"><img src="images/s1_wrong23.png"/></div>
+		<div class="s1_wrong s1_wrong24"><img src="images/s1_wrong24.png"/></div>
+		<div class="s1_wrong s1_wrong25"><img src="images/s1_wrong25.png"/></div>
+		<div class="s1_wrong s1_wrong26"><img src="images/s1_wrong26.png"/></div>
+		<div class="s1_wrong s1_wrong27"><img src="images/s1_wrong27.png"/></div>
+		<div class="s1_wrong s1_wrong28"><img src="images/s1_wrong28.png"/></div>
+		<div class="s1_wrong s1_wrong29"><img src="images/s1_wrong29.png"/></div>
+		<div class="s1_wrong s1_wrong30"><img src="images/s1_wrong30.png"/></div>
+		<div class="s1_wrong s1_wrong31"><img src="images/s1_wrong31.png"/></div>
+		<div class="s1_wrong s1_wrong32"><img src="images/s1_wrong32.png"/></div>
+		<div class="s1_wrong s1_wrong33"><img src="images/s1_wrong33.png"/></div>
+		<div class="s1_wrong s1_wrong34"><img src="images/s1_wrong34.png"/></div>
+		<div class="s1_right s1_right1"><img src="images/s1_right1.png"/></div>
+		<div class="s1_right s1_right2"><img src="images/s1_right2.png"/></div>
+		<div class="s1_right s1_right3"><img src="images/s1_right3.png"/></div>
+		<div class="s1_right s1_right4"><img src="images/s1_right4.png"/></div>
+		<div class="s1_right1t s_rt"><img src="images/t5.png"/></div>
+		<div class="s1_right2t s_rt"><img src="images/t1.png"/></div>
+		<div class="s1_right3t s_rt"><img src="images/t6.png"/></div>
+		<div class="s1_right4t s_rt"><img src="images/t4.png"/></div>
+		<div class="s1_bag_img"><img src="images/s1_bag_main.png"/></div>
+	</div>
+	<div id="shake_txt"><img src="images/shake_txt.png"/></div>
+	<div id="shake_but"><img id="shake_but_img" src="images/shake_but.png"/><img src="images/shake_but_txt.png"/></div>
+	<div id="ready1_but" class="s_but"><img src="images/ready_but.png"/></div>
+</div>
+<!--第二关-->
+<div id="stage2" class="stage">
+	<div id="stage2_bg" class="center_bg"></div>
+    <div class="s2_wrong"></div>
+    <div class="s2_right s2_right1"><img src="images/s2_right1.png"/></div>
+	<div class="s2_right s2_right2"><img src="images/s2_right2.png"/></div>
+	<div class="s2_right s2_right3"><img src="images/s2_right3.png"/></div>
+	<div class="s2_right s2_right4"><img src="images/s2_right4.png"/></div>
+    <div class="s2_right s2_right5"><img src="images/s2_right5.png"/></div>
+	<div class="s2_right1t s_rt"><img src="images/t1.png"/></div>
+	<div class="s2_right2t s_rt"><img src="images/t4.png"/></div>
+	<div class="s2_right3t s_rt"><img src="images/t5.png"/></div>
+	<div class="s2_right4t s_rt"><img src="images/t3.png"/></div>
+	<div class="s2_right5t s_rt"><img src="images/t6.png"/></div>
+</div>
+<!--第三关-->
+<div id="stage3" class="stage">
+	<div id="stage3_bg" class="top_bg"></div>
+    <div class="s3_wrong"></div>
+    <div class="s3_right s3_right1"><img src="images/s3_right1.png"/></div>
+	<div class="s3_right s3_right2"><img src="images/s3_right2.png"/></div>
+	<div class="s3_right s3_right3"><img src="images/s3_right3.png"/></div>
+	<div class="s3_right s3_right4"><img src="images/s3_right4.png"/></div>
+    <div class="s3_right s3_right5"><img src="images/s3_right5.png"/></div>
+    <div class="s3_right s3_right6"><img src="images/s3_right6.png"/></div>
+	<div class="s3_right1t s_rt"><img src="images/t1.png"/></div>
+	<div class="s3_right2t s_rt"><img src="images/t3.png"/></div>
+	<div class="s3_right3t s_rt"><img src="images/t4.png"/></div>
+	<div class="s3_right4t s_rt"><img src="images/t2.png"/></div>
+	<div class="s3_right5t s_rt"><img src="images/t6.png"/></div>
+	<div class="s3_right6t s_rt"><img src="images/t5.png"/></div>
+</div>
+<!--计时器-->
+<div id="timer">
+	<div id="timer_bg" class="full_bg">
+    	<div id="timer_line" class="full_bg"></div>
+    </div>
+    <div id="timer_txt" class="full_bg"></div>
+</div>
+<!--金锤子-->
+<div id="sinker"><img src="images/sinker.png"/></div>
+<!--扣7秒-->
+<div id="seven"><img src="images/seven.png"/></div>
+<!--第一关开始浮层-->
+<div id="start1">
+	<div class="bcover"></div>
+    <table style="position:fixed;height:80%;top:10%;" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td><img src="images/ready_main1.png"/></td></tr>
+        <tr><td align="center"><img id="start1_go" class="start_go" src="images/go.png"/></td></tr>
+    </table>
+</div>
+<!--第二关开始浮层-->
+<div id="start2">
+	<div class="bcover"></div>
+    <table style="position:fixed;height:80%;top:10%;" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td><img src="images/ready_main2.png"/></td></tr>
+        <tr><td align="center"><img id="start2_go" class="start_go" src="images/go.png"/></td></tr>
+    </table>
+</div>
+<!--第三关开始浮层-->
+<div id="start3">
+	<div class="bcover"></div>
+    <table style="position:fixed;height:80%;top:10%;" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td><img src="images/ready_main3.png"/></td></tr>
+        <tr><td align="center"><img id="start3_go" class="start_go" src="images/go.png"/></td></tr>
+    </table>
+</div>
+<!--第二关准备浮层-->
+<div id="ready2">
+	<div id="s2_title" class="s_title"><img src="images/ready_2.png"/></div>
+	<div id="ready2_but" class="s_but"><img src="images/ready_but.png"/></div>
+</div>
+<!--第三关准备浮层-->
+<div id="ready3">
+		<div id="s3_title" class="s_title"><img src="images/ready_3.png"/></div>
+		<div id="ready3_but" class="s_but"><img src="images/ready_but.png"/></div>
+	</div>
+<!--通关浮层-->
+<div id="win">
+	<div class="bcover"></div>
+    <table style="position:fixed;height:80%;top:10%;" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td><img src="images/win.png"/></td></tr>
+    </table>
+</div>
+<!--通关浮层-->
+<div id="lose">
+	<div class="bcover"></div>
+    <table style="position:fixed;height:80%;top:10%;" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td>
+        	<img src="images/lose.png"/>
+        	<img id="lose_restart" src="images/lose_restart.png"/>
+            <img id="lose_tonext" src="images/lose_tonext.png"/>
+        </td></tr>
+    </table>
+</div>
+<!--结束浮层·胜利-->
+<div id="allwin">
+	<table id="win_frame" style="position:fixed" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td class="fin_top" valign="middle">
+			<img src="images/fin_win_main.gif"/>
+			<img class="fin_share" src="images/fin_share.gif"/>
+			<img id="fin_restart1" class="fin_restart" src="images/fin_again.gif"/>
+		</td></tr>
+        <tr>
+
+			<!--<td class="fin_bot" valign="bottom" style="font-size:0">-->
+			<!--<img src="images/fin_foot1.jpg"/>-->
+			<!--<img class="fin_but" src="images/fin_foot2.jpg"/>-->
+		<!--</td>-->
+			<!--以下是新增加卡片部分-->
+			<td>
+				<div class="card-section">
+					<div class="card">
+						<div class="card-header card-header-bg">
+							<div class="card-title">
+								<span class="card-title-icon"></span>
+								<h5 class="card-title-header">玫琳凯“美美哒”</h5>
+								<div class="card-title-small">美丽服务邀约卡</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<p>服务内容：<span>彩妆  护肤  形象设计</span></p>
+							<p>美容顾问：<span class="name">玫小琳</span></p>
+							<p>联系电话：<span class="phone-num">135-8866-9999</span></p>
+						</div>
+						<div class="card-footer">
+							<table class="table">
+								<tr>
+									<td><a href="tel:15117146077"><span class="callout"  ></span>电话</a></td>
+									<td><span class="middle-line"></span></td>
+									<td><a  href="sms:13588669999"><span class="icon-sms"></span>短信</a></td>
+
+								</tr>
+
+							</table>
+							<button class="btn">立即免费参与</button>
+						</div>
+					</div>
+					<div class="card-con-footer">
+						<span class="icon-volume"></span>
+						<p class="about-more">亲爱的,如果您也想订制专属邀约卡,请至玫琳凯之窗手机客户端>邀客专区 一键转发,轻松邀客！</p>
+					</div>
+				</div>
+
+				<script>
+					$(function(){resetFontSize();});
+					$(window).resize(function(){resetFontSize();});
+					var resetFontSize=function() {
+						var dw = document.documentElement.clientWidth;
+						var dh = document.documentElement.clientHeight;
+						$(".card-section").css({"font-size": 1 * dw / 360 + "rem"});
+					}
+				</script>
+			</td>
+
+			<!--以上是新增加卡片部分-->
+		</tr>
+    </table>
+	<div class="share top_bg"></div>
+</div>
+<!--结束浮层·失败-->
+<div id="alllose">
+	<table id="win_frame" style="position:fixed" class="full_tb" cellspacing="0" cellpadding="0">
+        <tr><td class="fin_top" valign="middle">
+			<img src="images/fin_lose_main.gif"/>
+			<img class="fin_share" src="images/fin_share.gif"/>
+			<img id="fin_restart2" class="fin_restart" src="images/fin_again.gif"/>
+		</td></tr>
+        <tr><td class="fin_bot" valign="bottom" style="font-size:0">
+			<img src="images/fin_foot1.jpg"/>
+			<img class="fin_but" src="images/fin_foot2.jpg"/>
+		</td></tr>
+    </table>
+	<div class="share top_bg"></div>
+</div>
+<!--横屏提示-->
+<div id="attention">
+<table class="full_tb" cellspacing="0" cellpadding="0">
+<tr><td style="height:100%" align="center"><img src="images/exchange.png" style="width:30px;vertical-align:middle"/>　请保持竖屏以达到更好浏览体验</td></tr>
+</table>
+</div>
+</body>
+</html>
