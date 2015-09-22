@@ -114,34 +114,27 @@ var percentresult;//最终的百分比
 
 <!--以下是新增加卡片部分-->
 <div class="card-section">
-	<div class="card">
-		<div class="card-header card-header-bg">
-			<div class="card-title">
-				<span class="card-title-icon"></span>
-				<h5 class="card-title-header">玫琳凯“美美哒”</h5>
-				<div class="card-title-small">美丽服务邀约卡</div>
+	<div class="cards-con">
+		<div class="card-con-switch">
+			<span class="icon-switch icon-switch-down"></span><span class="text">查看已领取邀约卡顾客</span>
+		</div>
+		<div class="card-con-header">
+			<span class="card-title-icon"></span>
+			<h5 class="card-title">玫琳凯“美美哒”美丽服务邀约卡</h5>
+			<p class="card-title-des">服务内容：彩妆  护肤  形象设计</p>
+		</div>
+		<div class="card-con-body card-body" style="display: none">
+			<div class="list-nothing">
+				<img src="images/list-nothing.png" alt=""/>
+				<br/>
+				<span>本张邀约卡暂时还没有顾客领取哦～</span>
 			</div>
 		</div>
-		<div class="card-body">
-			<p>服务内容：<span>彩妆  护肤  形象设计</span></p>
-			<p>美容顾问：<span class="name">玫小琳</span></p>
-			<p>联系电话：<span class="phone-num">135-8866-9999</span></p>
+		<div class="card-con-footer" style="display: none">
+			<span class="icon-volume"></span>
+			<p class="about-more">请至玫琳凯之窗手机客户端 > 邀客专区 > 我已邀约
+				查看更多已报名的顾客信息！</p>
 		</div>
-		<div class="card-footer">
-			<table>
-				<tr>
-					<td><a href="tel:15117146077"><span class="callout"  ></span>电话</a></td>
-					<td><span class="middle-line"></span></td>
-					<td><a  href="sms:13588669999"><span class="icon-sms"></span>短信</a></td>
-				</tr>
-
-			</table>
-			<button class="btn">立即免费参与</button>
-		</div>
-	</div>
-	<div class="card-con-footer">
-		<span class="icon-volume"></span>
-		<p class="about-more">亲爱的,如果您也想订制专属邀约卡,请至玫琳凯之窗手机客户端>邀客专区 一键转发,轻松邀客！</p>
 	</div>
 </div>
 <script>
@@ -152,6 +145,18 @@ var percentresult;//最终的百分比
 		var dh = document.documentElement.clientHeight;
 		$(".card-section").css({"font-size": 1 * dw / 360 + "rem"});
 	}
+	$(".card-con-switch,.card-con-header").bind("click",function(){
+		$(".icon-switch").toggleClass("icon-switch-down icon-switch-up");
+		var text =  $(".card-con-switch").find(".text");
+		if(text.text() == '查看已领取邀约卡顾客'){
+			text.text('收起顾客列表');
+		} else {
+			text.text('查看已领取邀约卡顾客');
+		};
+
+		$(".card-con-body").slideToggle();
+		$(".card-con-footer").slideToggle();
+	})
 </script>
 <!--以上是新增加卡片部分-->
 

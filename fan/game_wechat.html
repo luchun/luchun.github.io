@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-<title>玫琳凯</title>
+<title>玫琳凯翻翻乐</title>
 <link rel="stylesheet" href="css/main.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
@@ -19,6 +19,7 @@ function rs(){
 	var dh=document.documentElement.clientHeight;
 	if(0.75*dw>dh){$("#attention").show();}else{$("#attention").hide();}
 	$("body").css({"font-size":1*dw/360+"em"});
+	$("#loadingbg").css({"margin-top":(dh/2)-30*dw/640+"px"});
 	var nw=0.96;
 	if(dh*720/dw/1136<0.96){
 		nw=dh*720/dw/1136;
@@ -29,10 +30,88 @@ function rs(){
 	$("#game_foot").css({"height":(dh-dw*nw)/2+"px"});
 	$("#advideo").css({"height":(dw*0.8)/16*9+"px"});
 };
+var imgs=[
+	"images/cover_bg.jpg",
+	"images/cover_logo.png",
+	"images/fail_img.png",
+	"images/fail_txt.png",
+	"images/game_bg.jpg",
+	"images/gift_but.png",
+	"images/goon.png",
+	"images/i0.png",
+	"images/i1.png",
+	"images/i2.png",
+	"images/i3.png",
+	"images/i4.png",
+	"images/i5.png",
+	"images/i6.png",
+	"images/i7.png",
+	"images/i8.png",
+	"images/index_bg.jpg",
+	"images/index_titile.png",
+	"images/info_1.png",
+	"images/info_2.png",
+	"images/info_3.png",
+	"images/pause.png",
+	"images/pause_un.png",
+	"images/playagain.png",
+	"images/restart.png",
+	"images/restart_un.png",
+	"images/rule_but.png",
+	"images/s_down.png",
+	"images/s_title.png",
+	"images/sf_1.png",
+	"images/sf_2.png",
+	"images/sf_3.png",
+	"images/sf_t1.png",
+	"images/sf_t1s.png",
+	"images/sf_t2.png",
+	"images/sf_t2s.png",
+	"images/sf_t3.png",
+	"images/sf_t3s.png",
+	"images/share.png",
+	"images/start_but.png",
+	"images/stop_ico.png",
+	"images/success_bg.jpg",
+	"images/timeboard.png",
+	"images/timerbg.png",
+	"images/timernow.png",
+	"images/timetip.png",
+	"images/tryagain.png",
+	"images/wechat_sf1.png",
+	"images/wechat_sf1c.png",
+	"images/wechat_sf2.png",
+	"images/wechat_sf2c.png",
+	"images/wechat_sf3.png",
+	"images/wechat_sf3c.png",
+];
+$(function(){
+	var dw=document.documentElement.clientWidth;
+	var dh=document.documentElement.clientHeight;
+	$("#loadingbg").css({"margin-top":(dh/2)-30*dw/640+"px"});
+	var i=0;
+	var timer=setInterval(function(){
+		$("#hideimg").append("<img src='"+imgs[i]+"'/>");
+		try{
+			$("#loading").stop();
+		}catch(e){}
+		$("#loading").animate({"width":parseInt(i/(imgs.length-1)*100)+"%"},50);
+		if(i<imgs.length){
+			i++;
+		}
+		if(i==(imgs.length-1)){
+			clearInterval(timer);
+			$("#loadingframe").fadeOut(400);
+			$("#loadingbg").fadeOut(400,function(){
+				gameinit();
+			});
+		}
+	},50);
+});
 //加载时运行
 $(function(){
 	//游戏初始化
-	gameinit();
+
 });
 //游戏初始化
 var icocont=16;//图标总数
@@ -304,16 +383,16 @@ function timerstart(){
 //foot按钮生效
 function bindfootbut(){
 	$("#restart_show_but")[0].src="images/restart.png";
-	$("#pause_show_but")[0].src="images/pause.png";
+	//$("#pause_show_but")[0].src="images/pause.png";
 	$("#restart_show_but")[0].addEventListener('touchstart',restartshow,false);
-	$("#pause_show_but")[0].addEventListener('touchstart',pauseshow,false);
+	//$("#pause_show_but")[0].addEventListener('touchstart',pauseshow,false);
 }
 //foot按钮失效
 function unbindfootbut(){
 	$("#restart_show_but")[0].src="images/restart_un.png";
-	$("#pause_show_but")[0].src="images/pause_un.png";
+	//$("#pause_show_but")[0].src="images/pause_un.png";
 	$("#restart_show_but")[0].removeEventListener('touchstart',restartshow,false);
-	$("#pause_show_but")[0].removeEventListener('touchstart',pauseshow,false);
+	//$("#pause_show_but")[0].removeEventListener('touchstart',pauseshow,false);
 }
 //显示重新开始画面
 function restartshow(){
@@ -377,8 +456,8 @@ $(function(){
 <div id="game_foot">
 	<table class="full_tb" style="width:78%" cellspacing="0" cellpadding="0" align="center">
         <tr>
-          <td align="center"><img id="restart_show_but" src="images/restart_un.png"/></td>
-          <td align="center"><img id="pause_show_but" src="images/pause_un.png"/></td>
+          <td align="center"><img id="restart_show_but" src="images/restart_un.png" style="width:36%"/></td>
+          <!--<td align="center"><img id="pause_show_but" src="images/pause_un.png"/></td>-->
         </tr>
     </table>
 </div>
@@ -414,10 +493,17 @@ $(function(){
         <div id="ad2" class="top_bg" style="background-size:100%"><div id="ad2_txt" class="ad_goon">返回继续>></div></div>
         <div id="ad3" class="top_bg" style="background-size:100%">
         	<div id="ad3_txt" class="ad_goon">返回继续>></div>
-            <div style="position:absolute;margin-top:22.2em;font-size:0.7em;width:70%;left:-7%">建议wi-fi下观看 壕请略过<br/>视频需缓冲，请耐心等待</div>
-            <iframe id="advideo" src="http://player.youku.com/embed/XODkyNDMzOTE2" frameborder=0 allowfullscreen></iframe>
+            <div style="position:absolute;margin-top:17.2em;font-size:0.7em;width:70%;left:10%">建议wi-fi下观看 壕请略过视频需缓冲，请耐心等待</div>
+            <iframe id="advideo" src="http://player.youku.com/embed/XOTMwNjkyMjg0" frameborder=0 allowfullscreen></iframe>
         </div>
     </td></tr></table>
+</div>
+<!--loading-->
+<div id="hideimg"></div>
+<div id="loadingframe" style="position:absolute;background-image:url(images/game_bg.jpg);height:100%;z-index:999;display:block" class="center_bg">
+<div id="loadingbg" style="z-index:999;display:block">
+	<div id="loading"></div>
+</div>
 </div>
 <!--横屏提示-->
 <div id="attention">
