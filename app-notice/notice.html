@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="notice-modal">
+        <div class="notice-box">
+            <div class="close"><span class="close-icon"></span></div>
+            <p class="header-txt">初次打开APP会有以下提示，请根据下面的视频步骤进行操作</p>
+            <div class="notice-video">
+                <video width="100%" controls poster="video.jpg" preload="preload">
+                    <source src="http://video.marykay.com.cn/eshowcase/xx.mp4" type="video/mp4">
+                    您的浏览器不支持此种视频格式。
+                </video>
+            </div>
+            <div class="notice-link">
+                <a href="#">我已知道，立即下载</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var noticeModal = document.querySelector(".notice-box");
+
+        var windowHeight =window.outerHeight;
+        noticeModal.style.marginTop = (windowHeight-313)/2 + "px";
+    </script>
+</body>
+</html>

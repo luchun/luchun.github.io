@@ -1,0 +1,60 @@
+.notice-modal{
+    position: fixed;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    font-size: 1em;
+}
+.notice-modal *{
+    margin: 0;
+}
+.notice-box{
+    width: 18.125em;
+    background: #ffffff;
+    position: relative;
+    margin: 80px auto;
+    border-radius: 4px;
+}
+.close{
+    position: absolute;
+    right: -.5em;
+    top: -1em;
+}
+.close-icon{
+    width: 2em;
+    height: 2em;
+    background: url("./cancel-icon.png") no-repeat;
+    display: block;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.header-txt{
+    color: #333333;
+    font-size: 1em;
+    line-height: 1.25;
+    padding: 1.5em 1.25em .625em;
+}
+.notice-video{
+    padding: .625em 1em 1.6875em;
+}
+.notice-link{
+    border-top: 1px solid #adadad;
+}
+.notice-link a{
+    color: #007aff;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    line-height: 3.3125;
+    outline: none;
+    text-decoration: none;
+}
+.notice-link a:hover,
+.notice-link a:focus,
+.notice-link a:active,
+.notice-link a:visited{
+    outline: none;
+    text-decoration: none;
+}
