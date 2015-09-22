@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
 <meta charset="UTF-8">
-<title>玫琳凯翻翻乐</title>
+<title>WE杂志</title>
 <link rel="stylesheet" href="css/main.css">
 <style type="text/css">
 #hideimg{position:absolute;font-size:0;width:1px;height:1px;filter:alpha(opacity=0);-moz-opacity:0;opacity:0}
@@ -87,7 +87,10 @@ $(function(){
 	var i=0;
 	var timer=setInterval(function(){
 		$("#hideimg").append("<img src='"+imgs[i]+"'/>");
-		$("#loading").stop().animate({"width":parseInt(i/(imgs.length-1)*100)+"%"},50);
+		try{
+			$("#loading").stop();
+		}catch(e){}
+		$("#loading").animate({"width":parseInt(i/(imgs.length-1)*100)+"%"},50);
 		if(i<imgs.length){
 			i++;
 		}
