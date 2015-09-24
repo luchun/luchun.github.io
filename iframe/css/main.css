@@ -1,0 +1,771 @@
+@charset "utf-8";
+/* 全局 */
+body{margin:0;font-family:"Arial";color:#000}
+html,body{min-height: 100%;}
+img{width:100%;border:none}
+.top{width:100%;height:6em;background-image:url(../images/title_bg.gif);background-repeat:no-repeat;background-position:bottom;background-size:100%;
+    margin-bottom: 1em;}
+.foot{width:90%;text-align:right;margin-left:5%;color:#ff8686;font-size:0.9em;padding:1em 0;line-height:1.4em}
+.highl{color:#ff8686;}
+.top_txt{padding-top:4.5em;width:70%;text-align:right;font-size:0.7em;margin-left:2%;line-height:1.4em}
+.title{width:90%;margin-left:5%;color:#ff8686;font-size:1.1em;padding:0.8em 0 0.4em;line-height:1.4em}
+.txt_1{width:90%;margin-left:5%;font-size:0.8em;padding:0.4em 0;line-height:1.6em}
+.img_1{width:90%;margin-left:5%;font-size:0.8em;padding:0.4em 0}
+.img_2{width:48%;float:left;margin: 0 5% 0.2em 0}
+.tip_1{width:90%;margin-left:5%;color:#ff8686;font-size:0.9em;padding:0.5em 0 0;line-height:1.6em}
+.tip_2{width:90%;margin-left:5%;color:#1fbeb5;font-size:0.9em;padding:0.5em 0 0;line-height:1.6em}
+.label{width:100%;border:none;margin:1em 0}
+.lab_f{height:0.4em;background-image:url(../images/lab_bg1.gif);background-size:100%}
+.lab_m{background-image:url(../images/lab_bg2.gif);background-size:100% 100%;padding:0.2em 8% 0.4em;font-style:italic}
+.txt_r{text-align:right}
+.video1,.video2{width:90%;margin-left:5%;}
+
+/*add 2015/9/7*/
+.top_title{
+    padding-top: 2.75em;
+    width: 70%;
+    padding-left: 1em;
+    color: #333333;
+    font-size: 1.125em;
+    line-height: 1.4em;
+}
+
+.card{
+    margin: 1em  0.8333em;
+    border-radius: .5em;
+    overflow: hidden;
+    border: 2px solid #f789ac;
+}
+.card *{
+    margin: 0;
+}
+.card a,.card a:focus,.card a:active{
+    outline: none;
+    text-decoration: none;
+    color: #666666;
+}
+.card-header{
+    background:  #f789ac;
+}
+.card-header-bg,.card-title-bg{
+    background:  #f789ac url("../images/card-head-bg.png") no-repeat top right;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+}
+.card-header .card-title{
+    padding: 0.625em 0.875em;
+    color: white;
+    font-size: 1em;
+    white-space:nowrap;
+}
+.card-title-header{
+    font-size: 1.0625em;
+}
+.card-title-small{
+    font-size: 0.84375em;
+}
+ .card-title-icon{
+    width: 2em;
+    height: 2em;
+    background: url("../images/card-icon.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: .25em;
+
+}
+ .card-title-bg  .card-title-icon,
+.card-header-bg  .card-title-icon{
+    float: left;
+}
+.card-header .card-title .card-title-icon{
+    margin-top: 3px;
+}
+.card-header .card-header-body{
+    font-size: .75em;
+    line-height: 1.5;
+    color: white;
+    padding: .5em  1.166667em;
+    border-top: 1px solid #f47096;
+}
+.card-body{
+    font-size: 0.875em;
+    padding: 0.8571em;
+    line-height: 1.85714;
+}
+.card-body .name,.card-body .phone-num{
+    color: #f789ac;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
+.card-body .user-list{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 10.5em;
+    display: block;
+    /*-webkit-overflow-scrolling: touch;*/
+}
+::-webkit-scrollbar {
+    /*-webkit-appearance: none;*/
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    /*background-color: rgba(57,57,57, .6);*/
+    /*border-radius: 8px;*/
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(156, 156, 156, .6);
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+.card-body .user-avatar{
+    display: block;
+    border-radius: 1.8125em;
+    background: #c9c9c9;
+    width: 2em;
+    height:2em;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    margin-right: .1em;
+}
+.card-body .user-avatar img{max-width: 100%;}
+.card-body .user-name{color: #f95086;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 7.8em;
+    display: block;
+    font-size: .92857em;}
+.card-body .user-list-sm .user-name{
+    width: 6em;
+}
+.card-body .user-status{
+    font-size: .85714em;color: #333333;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+.card-body .user-date{color: #999999;
+    font-size: .85714em;}
+.card-footer{
+   padding:  .2em .75em .75em;
+}
+.card-footer table{
+    float: right;
+    color: #666;
+    font-size: 0.75em;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.card-footer .btn{
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #3ec576;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #3ec576;
+    padding: 0.6667em 3em;
+    font-size: 0.9375em;
+    /*width: 11.33333em;*/
+}
+.card-footer .btn:hover,
+.card-footer .btn:active{
+    background-color: #44b45f;
+}
+.card-footer .btn.btn-done{    padding: 0.6667em 1.9em;
+    background-color: #ffa200;
+    border-color: #ffa200;
+}
+.card-footer .btn.btn-done:hover,
+.card-footer .btn.btn-done:active{
+    background-color: #ef9903;
+    outline: none;
+}
+.card-footer .callout{
+    background: url("../images/icon-callout.png");
+    display: block;
+    width: 1.416667em;
+    height: 1.416667em;
+    -webkit-background-size:100% 100%;
+    background-size: 100% 100%;
+}
+.card-footer .icon-sms{
+    background: url("../images/icon-bubble.png");
+    width: 1.5em;
+    height: 1.416667em;
+    display: block;
+    -webkit-background-size: 100% 100%;
+    background-size:100% 100%;
+}
+.card-footer .middle-line{
+    height: 2em;
+    margin: auto 0.75em;
+    display: block;
+    width: 1px;
+    background: #e5e5e5;
+}
+.card-footer .callout,.card-footer .icon-sms{margin: 0 auto .5em}
+.card-footer .about-more{color: #999999;
+    font-size: .75em;}
+/*悬浮的列表*/
+.cards-con{  position: fixed;bottom: 0;left: 0;right: 0;}
+.cards-con *{margin: 0;}
+.card-con-switch{  font-size: .6875em;  width: 16em;margin: 0 auto;text-align: center;
+    background: #ec6992;border-radius:2em 2em 0 0;color: #fff;padding: .35em}
+.cards-con .icon-switch-down{  background: url("../images/icon_arrow_down@2x.png") no-repeat;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;    margin-bottom: .1em;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+.cards-con .icon-switch-up{ background: url("../images/icon_arrow_up@2x.png") no-repeat;
+    display: inline-block;width: 0.833333em;height: .5em; margin-right: .5em;    margin-bottom: .1em;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;}
+.card-con-header{padding: 0.9375em;
+    background:  #f789ac;
+    /*background:  #f789ac url("../images/card-head-bg.png") no-repeat top right;*/
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    color: #fff;
+}
+.card-con-header .card-title-icon{  width: 2.25em;  height: 2.25em;  float: left;  margin-right: .75em;}
+.card-con-header .card-title{  font-size: 1em;  margin-bottom: .35em;line-height: 1;}
+.card-con-header .card-title-des{  font-size: .75em;    margin-left: 9em;  text-indent: -5em;}
+.card-con-body{  background: #ffffff;}
+.card-con-body .user-list{  height: 13.5em;}
+.card-con-footer{  background: #fff5e6;  border-top: 1px solid #e5e5e5;padding: .5em 0.5em .5em 0.9375em;
+    font-size: .75em;}
+.card-con-footer *{margin: 0}
+.card-con-footer .about-more{color: #777777; }
+.card-con-footer .icon-volume{display: block;  float: left;
+    background: url("../images/icon-volume.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 1.4em;  height: 1.4em;  margin-top: .5em;  margin-right: .5em;
+}
+.list-nothing{text-align: center;    padding-top: 2em;  padding-bottom: 2em;}
+.list-nothing img{width: 65%}
+.list-nothing span{color: #999;
+    font-size: .75em;}
+/*单独的列表页*/
+.cards-detail{
+    min-height: 100%;
+    color: #333;
+}
+.cards-header{
+    border-bottom: 1px solid #bfbfbf;
+    overflow: hidden;
+    padding: .625em .8333em;
+}
+.cards-header:after{
+    display: block;
+    content: " ";
+    clear: both;
+
+}
+.right{
+    float: right;
+    color: #666666;
+    font-size: .75em;
+}
+.header-logo{
+    background: url("../images/mklogo.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 5.3125em;
+    height: .84275em;
+    display: block;
+}
+.cards-detail .card-body .user-list{
+    height: auto;
+}
+.cards-detail .card-body .user-name{
+    width: 7.2em;
+}
+.cards-detail .card-body  .user-list-sm .user-name{
+    width: 6em;
+}
+.cards-detail .card-con-footer{
+    position: absolute;
+    bottom: 0;
+}
+/*生成邀约卡*/
+.card-generate-body{  background: #eeeeee;  }
+.card-generate{  background: white;margin: 0 0 .6em;padding:.5em 1em}
+.card-g-header{text-align: center;border-bottom: 1px solid #e1e1e1;}
+.card-g-header h5{    margin: .6em 0 1.2em;
+    font-size: 1em;}
+.card-check{  width: 2em;  height: 2em;  display: block;  margin: .5em auto .8em;
+    background: url("../images/check.png") no-repeat;
+    -webkit-background-size: 100% 100%;  background-size: 100% 100%;  }
+.contacts-info {color: #333;  font-size: .75em;  padding-top: 1em;}
+.contacts-info p{margin: 0;line-height: 2;vertical-align: bottom;}
+.period-of-use{color: #999999}
+.icon-callout-red{  background: url("../images/icon-callout-red.png") no-repeat;
+    margin-left: 1em; }
+.icon-bubble-red{  background: url("../images/icon-bubble-red.png") no-repeat;
+    margin-left: .75em; }
+.icon-callout-red,.icon-bubble-red{  width: 2em;  height: 2em;display: inline-block;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.wechat-attention{  background: white;padding:.5em 1em}
+.wechat-des{color: #333333;  font-size: .9em;text-align: center}
+.wechat-code{width: 75%;display: block;margin: 0 auto;}
+.text-red{color: #f95086;}
+.text-black{color: #8c8c8c;}
+.wechat-attention .about-more{  font-size: .75em;  color: #999999;  }
+.wechat-attention .about-more .text-black{color: #333333;}
+/*我的邀约卡列表*/
+.my-card-list{
+    background: #eeeeee;
+}
+.card-header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+}
+.card-header-fixed ~ .detail-link{
+    margin-top: 4.5em;
+}
+.my-card-list *{
+    margin: 0;
+}
+.my-card-list .cards-header{
+    background: #ff729f;
+    border-bottom-color: #ff729f;
+}
+.my-card-list .cards-header .right{
+    color: #fff;
+    font-size: .6875em;
+    line-height: 1;
+}
+.my-card-list .header-logo{
+    background-image: url("../images/mklogo-white.png");
+}
+.my-card-tabs{
+    border-bottom: 1px solid #bfbfbf;
+    background: #FFFFFF;
+}
+.my-card-tabs:after{
+    clear: both;
+    display: block;
+    content: " ";
+}
+.my-card-tabs a,.my-card-tabs a:focus,.my-card-tabs a:active{
+    color: #666666;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    width: 33.3333%;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: .875em;
+    position: relative;
+    background: #ffffff;
+    line-height: 2.7;
+    height: 2.6em;
+}
+.my-card-tabs a.active,.my-card-tabs a.active:focus,.my-card-tabs a.active:active{
+    font-size: .9375em;
+    color: #333333;
+    border-bottom: .2em solid #222;
+    margin-bottom: -1px;
+    line-height: 2.5;
+}
+.my-card-tabs a:before{
+    position: absolute;
+    content: " ";
+    right: 0;
+    top: 1em;
+    height: 1.2em;
+    width: 1px;
+    background-color: #bfbfbf;
+    font-size: 0.875em;
+}
+.my-card-tabs a.active:before{
+    height: 1.1em;
+    top: 0.95em;
+}
+.my-card-tabs a:last-child:before{
+    background-color: #fff;
+}
+.my-card-tabs a.active:after{
+    /*position: absolute;*/
+    /*content: " ";*/
+    /*right: 0;*/
+    /*bottom: -1px;*/
+    /*height: .2em;*/
+    /*width:100% ;*/
+    /*background-color: #222;*/
+}
+.detail-link{
+    text-align: right;
+    padding: .5em .625em;
+}
+.detail-link a,
+.detail-link a:focus,
+.detail-link a:active{
+    color: #ff3676;
+    text-decoration: none;
+    outline: none;
+    font-size: .75em;
+}
+.card-item{
+    display: block;
+    position: relative;
+    background: #ffffff;
+    border-radius: .25em;
+    box-shadow: 0 .125em .125em #ccc;
+    margin:0 .75em .5em;
+    padding: 1.5em .75em 1.125em;
+    -webkit-user-select: none;
+}
+.card-item::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    display:block;
+    font-size:0.75em;
+    height:.5em;
+    background-color:#fff;
+    background-image: url("../images/after-bg.png");
+    -moz-background-size:1em .5em;
+    -o-background-size:1em .5em;
+    -webkit-background-size:1em .5em;
+    background-size:1em .5em;
+    background-position:left top;
+    width:100%;
+    top:0;
+    left: 0;
+    border-top-left-radius:.35em;
+    border-top-right-radius:.35em;
+}
+.card-item:hover,
+.card-item:active,
+.card-item:hover:after,
+.card-item:active:after
+{
+    background-color: rgba(0,0,0,.05);
+}
+.card-item .card-info{
+    color: #333333;
+}
+.card-item .card-info h4{
+    font-size: .875em;
+    padding-bottom: 0.75em;
+    line-height: 1;
+}
+.card-item .card-info p{
+    font-size: .75em;
+    line-height: 1.5;
+    vertical-align: bottom;
+}
+.card-item .card-img{
+    width: 4.6875em;
+    height: 3.6em;
+    float: left;
+    line-height: 3.6;
+    padding-right: .5em;
+    margin-right: .5em;
+    position: relative;
+}
+.card-item .card-img::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #FFF;
+    background-image:-webkit-linear-gradient(bottom, #dfdfdf 60%, transparent 0%);
+    background-image:-moz-linear-gradient(bottom, #dfdfdf 60%, transparent 0%);
+    background-image:linear-gradient(to bottom, #dfdfdf 60%,rgba(0,0,0,0) 0%);
+    -webkit-background-size: 1px .4em ;
+    background-size: 1px .4em;
+}
+.card-items{
+    position: relative;
+}
+.card-items .card-status{
+    position: absolute;
+    /*position: relative;*/
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 1;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    display: block;
+    text-align: center;
+    padding-right: .5em;
+    font-size: .625em;
+    color: #fff;
+    font-weight: bold;
+    z-index: 2;
+    border-radius: 0 1.2em 1.2em 0;
+    box-shadow: 0  1px 1px #ccc;
+}
+.card-status-danger{
+    background-color: #ff8828;
+}
+.card-status-new{
+    background-color: #22ac38;
+}
+.cards-section{
+    visibility: hidden;
+    display: none;
+}
+.cards-section.active{
+    visibility: visible;
+    display: block;
+}
+.cards-section-used .card-item,.cards-section-expired .card-item{
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: left bottom;
+    -webkit-background-size: 3.5em 3.5em;
+    background-size: 3.5em 3.5em;
+}
+.cards-section-used .card-item:hover,
+.cards-section-used .card-item:active,
+.cards-section-expired .card-item:hover,
+.cards-section-expired .card-item:active{
+    background-color: rgba(0,0,0,.05);
+}
+.cards-section-used .card-item:hover:after,
+.cards-section-used .card-item:active:after,
+.cards-section-expired .card-item:hover:after,
+.cards-section-expired .card-item:active:after{
+    background-color: rgba(0,0,0,.05);
+}
+.cards-section-expired .card-item .card-info p,
+.cards-section-used .card-item .card-info p{
+    color: #666;
+}
+.cards-section-used .card-item::after,
+.cards-section-expired .card-item::after{
+    background-image: url("../images/after-bg-dis.png");
+}
+.cards-section-used .card-item{
+    background-image: url("../images/used-bg.png");
+}
+.cards-section-expired .card-item{
+    background-image: url("../images/expired-bg.png");
+}
+.cards-section-used .text-red,
+.cards-section-expired .text-red{
+    color: #666666;
+}
+
+/*邀约卡详情页*/
+.card-detail-body{
+    background: #eeeeee;
+}
+.card-detail-body *{
+    margin: 0;
+}
+.card-detail-body .icon-callout-red,.card-detail-body  .icon-bubble-red{
+    margin-top: -3px;
+}
+.card-detail-body .card-detail{
+    background: #FFFFFF;
+    margin-bottom: .625em;
+}
+.card-detail-body .card-d-header{
+    background: #f789ac;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+.card-detail-body .card-d-header::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    display:block;
+    height:.1875em;
+    background-image: url("../images/after-bg-red.jpg");
+    -moz-background-size:.6875em .1875em;
+    -webkit-background-size:.6875em .1875em;
+    background-size:.6875em .1875em;
+    background-position:left bottom;
+    width:100%;
+    left: 0;
+}
+.card-detail-body .card-d-header h2{
+    font-size: 1.3125em;
+    margin: 0 1.5em;
+    border-bottom: 1px solid #fab8cd;
+    line-height: 1;
+    padding: 1.25em 0 .75em;
+}
+.card-detail-body .card-d-header p{
+    font-size: .75em;
+    padding:1.25em 0 1.8em;
+}
+.card-detail-body .contacts-info{
+    font-size: .875em;
+    margin-left: 1em;
+    padding-top: 0;
+    color: #666666;
+}
+.card-detail-body .contacts-info .info-title{
+    display: inline-block;
+    width: 8.2em;
+    color: #333;
+    padding-left: .2em;
+}
+.card-detail-body .contacts-info p{
+    line-height: 3.15;
+    border-bottom: 1px solid #e1e1e1;
+}
+.card-detail-body .period-of-use{
+    font-size: .858em;
+}
+.card-detail-body .contacts-info p.period-of-use{
+    border-bottom: none;
+}
+.card-detail-body .period-of-use .info-title{
+    color: #999999;
+    width: 9.75em;
+}
+.card-detail-body .icon-callout-red{
+    margin-left: 1em;}
+.card-detail-body .icon-bubble-red{
+    margin-left: .5em;
+}
+.card-detail-body .qrcode-con{
+    width: 31.25%;
+    margin: .75em auto;
+}
+.card-detail-body .use-des{
+    color: #999999;
+    font-size: .6875em;
+    line-height: 1.4;
+
+}
+.card-detail-body .more-link,
+.card-detail-body .more-link:hover,
+.card-detail-body .more-link:active,
+.card-detail-body .more-link:focus{
+    display: block;
+    outline: none;
+    text-decoration: none;
+    color: #f95086;
+    text-align: center;
+    margin: .4em 0;
+    font-size: .85em;
+}
+
+/*最近邀约  我的邀约卡列表*/
+.recent-header{
+    padding: .7em .8333em;
+    background: #FFFFFF;
+    border-bottom: 1px solid #bfbfbf;
+}
+.recent-header h4{
+    float: left;
+    color: #333333;
+    font-size: .9375em;
+    font-weight: normal;
+}
+.recent-list{
+    margin-top: 4.78em;
+}
+.recent-list .headpic{
+    width: 2em;
+    height: 2em;
+    display: block;
+    float: left;
+    margin-right: .625em;
+}
+.recent-list .recent-item{
+    background: #FFFFFF;
+    margin-bottom: .5em;
+    padding: 0 .8333em;
+}
+.recent-item-header::after{ clear: both;display: block;content: " ";}
+.recent-item-header{
+    padding: .226em 0;
+    position: relative;
+}
+.recent-item-header::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    background-image: -webkit-linear-gradient(right, #e5e5e5 70%, transparent 0%);
+    background-image: -moz-linear-gradient(right, #e5e5e5 70%, transparent 0%);
+    background-image: linear-gradient(to left, #e5e5e5 70%,rgba(0,0,0,0) 0%);
+    -webkit-background-size: .5em 1px;
+    background-size: .5em 1px;
+}
+.recent-item-header .name{
+    color: #333333;
+    font-size: .9375em;
+    line-height: 2;
+}
+.recent-item-body{
+    color: #999999;
+    font-size: .75em;
+    line-height: 1.5;
+    padding: .4em 0;
+}
+/*扫描提示*/
+.cards-notice-body{
+    height: 100%;
+    background: #f6f6f6;
+}
+.cards-notice{
+    background: #f6f6f6;
+}
+.cards-notice .cards-header{
+    background: #FFFFFF;
+}
+.cards-notice .notice-img{
+    width: 19em;
+    display: block;
+    margin:  3em auto;
+}
+.cards-notice-body{
+    font-size: .75em;
+}
+.cards-notice-body p{
+    width: 21em;
+    margin: 0 auto;
+    color: #666666;
+    line-height: 1.6667;
+}
+.cards-notice-body a,
+.cards-notice-body a:hover,
+.cards-notice-body a:active,
+.cards-notice-body a:focus,
+.cards-notice-body a:visited{
+    text-decoration: none;
+    outline: none;
+}
