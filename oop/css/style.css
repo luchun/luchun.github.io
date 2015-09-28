@@ -5,7 +5,7 @@
 .card-header{  padding-top: .25em;padding-right:.625em;border-bottom: 1px solid #f76690;}
 .card-header .card-title {  padding: .5em 0 .75em  0.75em;  color: white;   white-space: nowrap;background: url("../images/card-head-bg.png") no-repeat top right;  -webkit-background-size: auto 100%;  background-size: auto 100%;  }
 .card-title-icon {  width: 2.25em;  height: 2.25em;  background: url("../images/card-icon.png") no-repeat;  -webkit-background-size: 100% 100%;  background-size: 100% 100%;  vertical-align: middle;  display: inline-block;  margin-right: .5em;  }
-.card-header .card-title-icon {  float: left;    margin-top: .3em; }
+.card-header .card-title-icon {  float: left;    margin-top: 3px; }
 .card-title-header {  font-size: 1.0625em;     padding-bottom: .2em; }
 .card-title-small {  font-size: 0.84375em;  }
 .card-body {  font-size: 0.875em;      padding: .6876em .5em .7143em .8571em; line-height: 1.85714;  position: relative;  overflow: hidden;  }
