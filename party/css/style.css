@@ -1,4 +1,21 @@
 
+
+.card-icon-map{
+    background-image: url("../images/card-icon-map.png");
+    width: .76923em;
+    height: 1em;
+}
+.card-icon-clock{
+    background-image: url("../images/card-icon-clock.png");
+    width: 1em;
+    height: 1em;
+}
+.card-icon-user{
+    background-image: url("../images/card-icon-user.png");
+    width: 1em;
+    height: 1em;
+}
+
 .card{
     font-family: "微软雅黑",STHeiti,Helvetica,sans-serif;
 }
@@ -12,26 +29,19 @@
     color: white;
     font-size: .8175em;
 }
+.header-item{
+    padding-left: 1.8em;
+}
 .card-icon{
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    margin-left: -1.5em;
+    margin-right: .5em;
 }
-.card-icon-map{
-    background-image: url("../images/card-icon-map.png");
-    width: .76923em;
-    height: 1em;
+.header-item .card-icon-map{
+    margin-left: -1.3em;
+}
 
-}
-.card-icon-clock{
-    background-image: url("../images/card-icon-clock.png");
-    width: 1em;
-    height: 1em;
-}
-.card-icon-user{
-    background-image: url("../images/card-icon-user.png");
-    width: 1em;
-    height: 1em;
-}
