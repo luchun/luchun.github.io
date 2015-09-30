@@ -15,6 +15,12 @@
     width: 1em;
     height: 1em;
 }
+.pure-button-mk{
+    background: #ffac2f;
+    display: block;
+    width: 100%;
+    color: #fff;
+}
 
 .card{
     font-family: "微软雅黑",STHeiti,Helvetica,sans-serif;
@@ -34,7 +40,7 @@
 }
 .card-icon{
     display: inline-block;
-    vertical-align: top;
+    float: left;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -44,4 +50,31 @@
 .header-item .card-icon-map{
     margin-left: -1.3em;
 }
-
+.card-form{
+    background: #ffffff;
+}
+.card-form fieldset{
+    border: none;
+}
+.card-form .pure-u-3-4{
+    border: none;
+    float: right;
+    text-align: right;
+}
+.card-form .pure-u-3-4:focus{
+    border: none;
+    outline: 0;
+}
+.card-arc{
+    background: #f4f4f4;
+    padding: 1em;
+}
+.card-sec-header span{
+    font-size: 1em;
+    color: #fb5475;
+    display: inline-block;
+    background: url("../images/secbg.png") no-repeat bottom left;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding: .25em 0 .75em 1em;
+}
