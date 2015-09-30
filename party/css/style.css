@@ -20,6 +20,7 @@
     display: block;
     width: 100%;
     color: #fff;
+    font-size: 1.125em;
 }
 
 .card{
@@ -55,6 +56,8 @@
 }
 .card-form fieldset{
     border: none;
+    margin: 0;
+    padding: 0;
 }
 .card-form .pure-u-3-4{
     border: none;
@@ -65,9 +68,32 @@
     border: none;
     outline: 0;
 }
+.card-form .legend{
+    color: #666;
+    padding: 1.375em .875em;
+    border-bottom: 1px solid #e4e4e4;
+    margin: 0;
+
+}
+.card-form .pure-u-1{
+    padding: 1em .875em;
+    border-bottom: 1px solid #e4e4e4;
+    box-sizing: border-box;
+}
+.card-form label{
+    color: #333;
+}
+.card-form .pure-controls{
+    padding: 1.25em  .875em;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e4e4e4;
+}
 .card-arc{
     background: #f4f4f4;
-    padding: 1em;
+    padding: 1px 1em 2em;
+}
+.card-sec-header{
+    margin-bottom: .5em;
 }
 .card-sec-header span{
     font-size: 1em;
@@ -77,4 +103,12 @@
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     padding: .25em 0 .75em 1em;
+}
+.card-arc section p{
+    color: #333333;
+    font-size: .875em;
+}
+.card-arc section p.text-pink{
+    color: #fb5475;
+    font-weight: 600;
 }
