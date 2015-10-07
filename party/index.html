@@ -30,7 +30,7 @@
 
             <div class="pure-u-1">
                 <label for="tel">手机号码</label>
-                <input id="tel" class="pure-u-3-4" type="tel" placeholder="请填写" required>
+                <input id="tel" class="pure-u-3-4" type="tel" placeholder="请填写" required maxlength="11">
             </div>
             <div class="pure-controls">
                 <button type="submit" class="pure-button pure-button-mk">立即提交邀请卡</button>
@@ -61,7 +61,7 @@
             <p>
                 色彩随心更换； 潮流唇语教你百变造型！
             </p>
-            <video width="100%" controls poster="images/secimg1.jpg" preload="preload">
+            <video width="100%" controls poster="./images/secimg1.jpg" preload>
                 <source src="http://video.marykay.com.cn/eshowcase/zhenshi-tech.mp4" type="video/mp4">
                 您的浏览器不支持此种视频格式。
             </video>
@@ -110,7 +110,14 @@
 
 <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 <script>
-    $(function(){rs();});
+    $(function(){
+        rs();
+        $("#tel").on("blur",function(){
+            var dv = this.value;
+            if(dv.length !== 11){ console.log("手机号码应为11位"); return;}
+            this.value = dv.substr(0,3) + "-" + dv.substr(3,4) + "-" + dv.substr(7);
+        })
+    });
     $(window).resize(function(){rs();});
     var rs=function() {
         var dw = document.documentElement.clientWidth;

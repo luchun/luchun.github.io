@@ -12,7 +12,7 @@ require(['jquery','plugins','crousel'],function($,pl){
 
     //滑屏相册
     var owl = $("#carousel").owlCarousel();
-    $(".vd-intro-imgs").on("touchstart",function(e){
+    $(".vd-intro-imgs img").on("click",function(e){
         e.stopPropagation();
         e.preventDefault();
         //owl.jumpTo(2);
