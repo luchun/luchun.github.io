@@ -9,6 +9,7 @@
 }
 .notice-modal *{
     margin: 0;
+    -webkit-user-select: none;
 }
 .notice-box{
     width: 18.125em;

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=720,target-densitydpi=high-dpi">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body style="min-height: 2000px">
     <div class="notice-modal">
         <div class="notice-box">
             <div class="close"><span class="close-icon"></span></div>
@@ -24,10 +25,22 @@
         </div>
     </div>
     <script>
-        var noticeModal = document.querySelector(".notice-box");
-
-        var windowHeight =window.innerHeight;
-        noticeModal.style.marginTop = (windowHeight-313)/2 + "px";
+        $(function(){
+            rs();
+        });
+        $(window).resize(function(){rs();});
+        var rs=function() {
+            var noticeModal =  $(".notice-box");
+            var dw = document.documentElement.clientWidth;
+            var dh = document.documentElement.clientHeight;
+           if(dw<dh){
+               noticeModal.css({"font-size": dw / 320 + "em"});
+           }else{
+               noticeModal.css({"font-size": dh / 480 + "em"});
+           }
+            var bh = noticeModal.innerHeight();
+            noticeModal.css("margin-top" , (dh-bh)/2 + "px");
+        }
     </script>
 </body>
 </html>
