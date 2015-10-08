@@ -134,7 +134,7 @@
     width: 10em;
     height: 10em;
     display: block;
-    margin: 1em auto;
+    margin: .5em auto;
 }
 .card-qrcode p{
     color: #a7a7a7;
@@ -144,16 +144,16 @@
 }
 .card-notice-footer{
     color: #f39800;
-    font-size: 1em;
+    font-size: .75em;
     text-align: center;
     background: #fffae0;
-    line-height: 2.8125;
+    line-height: 2;
     border-top: 1px solid #f8e3c0;
-    margin-top: .75em;
+    margin-top: 0em;
 }
 .card-success1{
     width: 10em;
-    margin: 1em auto .75em;
+    margin: .75em auto .5em;
 }
 .card-success1 .card-check{
     width: 1.625em;
@@ -179,6 +179,6 @@
 .card-success2{
     color: #333333;
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: .75em;
+    margin-top: 1em;
+    margin-bottom: .5em;
 }
