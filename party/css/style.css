@@ -149,11 +149,11 @@
     background: #fffae0;
     line-height: 2;
     border-top: 1px solid #f8e3c0;
-    margin-top: 0em;
+    margin-top: -.1em;
 }
 .card-success1{
     width: 10em;
-    margin: .75em auto .5em;
+    margin: .5em auto .5em;
 }
 .card-success1 .card-check{
     width: 1.625em;
