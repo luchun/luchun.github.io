@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="构建快速，现代，移动Web应用的前端模板">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design Lite</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Material Design Lite">
+    <link rel="icon" sizes="192x192" href="../assets/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon" href="../assets/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <meta name="theme-color" content="#263238">
+
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <!-- Page styles -->
+    <link rel="stylesheet" href="../assets/prism-default.css">
+    <link rel="stylesheet" href="../assets/material.min.css">
+    <link rel="stylesheet" href="../assets/main.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.useso.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body class="styles">
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    // if (document.location.hostname !== 'localhost' &&
+    //     document.location.hostname !== '127.0.0.1' &&
+    //     document.location.hostname.search('.corp.') === -1) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-25993200-9', 'auto');
+    // If a specific component page is loaded directly we'll attribute the
+    // page view to the specific component's page
+    if (window.location.pathname.indexOf('/components/') !== -1 &&
+      window.location.hash.indexOf('-section') !== -1) {
+      ga('send', 'pageview', '/components/' +
+        window.location.hash.split('#')[1].split('/')[0]);
+    } else {
+      ga('send', 'pageview');
+    }
+    // }
+
+    // Setup error tracking before anything else runs.
+    window.onerror = function(message, file, lineNumber, columnNumber, error) {
+      try {
+        if (error !== undefined) {
+          message = error.stack;
+        }
+        ga('send', 'event', 'error', file + ':' + lineNumber, String(message));
+      } catch (e) {
+        // no-op
+      }
+    };
+  </script>
+  <div class="image-preloader"></div>
+  <div class="docs-layout mdl-layout mdl-js-layout">
+    <header class="docs-layout-header mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="docs-layout-title mdl-layout-title"><a href="../">Material<br>Design<br>Lite</a></span>
+      </div>
+      <div class="docs-navigation__container">
+        <nav class="docs-navigation mdl-navigation">
+          <a href="../index.html" class="mdl-navigation__link about">关于</a>
+          <a href="../started/index.html" class="mdl-navigation__link started">起步</a>
+          <a href="../templates/index.html" class="mdl-navigation__link templates">模板</a>
+          <a href="../components/index.html" class="mdl-navigation__link components">组件</a>
+          <a href="../styles/index.html" class="mdl-navigation__link styles">风格</a>
+          <a href="../customize/index.html" class="mdl-navigation__link customize">定制</a>
+          <a href="../faq/index.html" class="mdl-navigation__link faq">FAQ</a>
+          <div class="spacer"></div>
+          <a href="https://github.com/google/material-design-lite" class="mdl-navigation__link mdl-navigation__link--icon github"><i class="material-icons">link</i><span>GitHub</span></a>
+          <a href="../started/index.html#download" class="mdl-navigation__link mdl-navigation__link--icon download">
+            <i class="material-icons">&#xE2C4;</i><span>Download</span>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab mdl-color--lime-A200">
+              <i class="material-icons">&#xE2C4;</i>
+            </button>
+          </a>
+        </nav>
+      </div>
+      <i class="material-icons scrollindicator scrollindicator--right">&#xE315;</i>
+      <i class="material-icons scrollindicator scrollindicator--left">&#xE314;</i>
+    </header>
+    <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
+      <div class="content mdl-grid mdl-grid--no-spacing" id="content">
+        <div class="subpageheader mdl-cell--12-col">风格</div>
+
+
+        <div class="docs-text-styling">
+          <section id="include">
+            <div class="styles__content">
+              <p>
+                Material Design Lite 是Material Design的一个轻量级实现，专为Web制作。
+                关于更详细的规范和其他平台的实现请参考
+                <a href="https://www.google.com/design/spec/material-design">
+                  Material Design site
+                </a>
+              </p>
+
+              <h2 class="mdl-typography--subhead">排版</h2>
+              <dl class="typo-styles">
+                <dt>h1</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--display-4">Light 112sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">display-4</span>
+                    <span class="typo-styles__weight">font weight 300</span>
+                  </div>
+                </dd>
+                <dt>h2</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--display-3">Regular 56sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">display-3</span>
+                    <span class="typo-styles__weight">font weight 400</span>
+                  </div>
+                </dd>
+                <dt>h3</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--display-2">Regular 45sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">display-2</span>
+                    <span class="typo-styles__weight">font weight 400</span>
+                  </div>
+                </dd>
+                <dt>h4</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--display-1">Regular 34sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">display-1</span>
+                    <span class="typo-styles__weight">font weight 400</span>
+                  </div>
+                </dd>
+                <dt>h5</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--headline">Regular 24sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">headline</span>
+                    <span class="typo-styles__weight">font weight 400</span>
+                  </div>
+                </dd>
+                <dt>h6</dt>
+                <dd>
+                  <div class="typo-styles__demo mdl-typography--title">Regular 20sp</div>
+                  <div class="typo-styles__desc">
+                    <span class="typo-styles__name">title</span>
+                    <span class="typo-styles__weight">font weight 500</span>
+                  </div>
+                </dd>
+              </dl>
+              <div class="code-with-text">
+                <strong>Note</strong>:这部分只是展示了标题和显示出来的的css的样式。 更多的排版指南，请参考<a href="https://www.google.com/design/spec/material-design">Material Design spec</a>。
+              </div>
+              <div class="styles__download">
+                <a class="download-btn download-btn--font" href="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0B0J8hsRkk91LRjU4U1NSeXdjd1U/RobotoTTF.zip">
+                  <i class="material-icons">file_download</i>
+                  下载 Roboto 字体
+                </a>
+                <span class="download__size">1.21 MB (.zip)</span>
+              </div>
+              <div class="code-with-text">
+                要嵌入Roboto字体到你的网页，复制以下代码到HTML文档中做为 <code>&lt;head&gt;</code> 标签中的第一个元素。
+                <pre class="language-markup"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;<a href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">http://fonts.googleapis.com/css?family=Roboto:300,400,500,700</a>&quot; type=&quot;text/css&quot;&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="styles__ribbon styles__ribbon--icons">
+              <a href="http://google.github.io/material-design-icons/" class="ribbon__imagecontainer">
+                <img src="../assets/icons.svg" class="ribbon__image">
+                <div class="ribbon__caption ribbon__caption--split">
+                  预览 图标 <i class="material-icons">arrow_forward</i>
+                </div>
+              </a>
+            </div>
+
+            <div class="styles__content mdl-grid mdl-grid--no-spacing">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h3>图标</h3>
+                <p>图标是精选的 Google Material Design 规范中的正式开源的图标。包括：</p>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <ul>
+                  <li>SVG版所有的图标都有24px和48px两种格式</li>
+                  <li>所有图标的 SVG 和 css 雪碧图版</li>
+                  <li>1x.2x用于web (PNG)</li>
+                  <li>1x,2x,3x用于iOS (PNG)</li>
+                  <li>所有图标都具备高画质版 (hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi) (PNG)</li>
+                </ul>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h3>起步</h3>
+                <p>你有多种方式可以获取图标。</p>
+                <h3>下载 Zip</h3>
+                <p>从站点获取最新版本的所有最新稳定图标zip压缩包（〜57MB）。</p>
+                <div class="styles__download">
+                  <a class="download-btn download-btn--icons" href="https://github.com/google/material-design-icons/releases/download/2.0.0/material-design-icons-2.0.0.zip">
+                    <i class="material-icons">file_download</i>
+                    下载
+                  </a>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <h3>Bower</h3>
+                <div class="code-with-text">
+                  通过 <strong>Bower</strong> 包管理工具安装图标
+                  <pre class="language-markup"><code>$ bower install material-design-icons --save</code></pre>
+                </div>
+                <h3>npm</h3>
+                <div class="code-with-text">
+                  你也可以在 <strong>npm</strong> 上找到所有图标
+                  <pre class="language-markup"><code>$ npm install material-design-icons --save</code></pre>
+                </div>
+                <h3>用法</h3>
+                <p>通过查看包含的index.html预览所有图标。您可以自由使用的图标，以最有意义的方式到项目中。</p>
+                <h3>结构</h3>
+                <p>在一般情况下，一个图标类别（如动作）将包括以下目录，包含了图标的多种分辨率。</p>
+                <ul>
+                  <li>1x, 2x Web</li>
+                  <li>1x, 2x, 3x iOS</li>
+                  <li>drawable hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi</li>
+                  <li>svg</li>
+                </ul>
+                <p>依据项目要求的图标分辨率来复制，然后引用您要使用的图标。</p>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h3>雪碧图</h3>
+                <p> Material Design 图标有SVG和CSS两种雪碧图，都包含了所有的图标集合。这些都可以在sprites目录中找到，svg-sprite和css-sprite。</p>
+                <h3>使用css雪碧</h3>
+                <p>要使用css雪碧图，引用希望使用的图标类别的样式表，然后在的标记上定义。如，使用css-sprite-av中的一个播放图标。</p>
+                <p>就是这样，不要忘了在部署项目时发布相应的 CSS 和 SVG/PNG 文件。</p>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <div class="code-with-text">
+                  引入样式文件
+                  <pre class="language-markup"><code>&lt;link href=&quot;css-sprite/sprite-av-black.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+                </div>
+                <div class="code-with-text">
+                  创建一个将要使用该图标作为背景的元素：
+                  <pre class="language-markup"><code>&lt;div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-with-text">
+                  添加一个 <code>icon</code> 雪碧图中相关的css，这里是 <code>icon icon-ic_play-circle_outline_black_24dp</code> 。你可以从前边的样式表中找到它。
+                  <pre class="language-markup"><code>&lt;div class=&quot;icon icon-ic_play-circle_outline_black_24dp&quot;&gt;&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h3>使用SVG 雪碧图</h3>
+                <p>类似的，要使用SVG雪碧表，引入相关图标集合的样式表，然后在你的标签上加入相关的图标定义。</p>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <div class="code-with-text">
+                  例如：要使用 <code>svg-sprite-av</code> 中的一个播放按钮，引入样式表：
+                  <pre class="language-markup"><code>&lt;link href=&quot;svg-sprite/svg-sprite-av.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+                </div>
+                <div class="code-with-text">
+                  创建一个将要使用该图标作为背景的元素：
+                  <pre class="language-markup"><code>&lt;div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-with-text">
+                  下一步，确定好图标的尺寸，这可以通过行内样式或者class来修改，这里我们使用一个class。
+        <pre class="language-markup"><code>&lt;style&gt;
+.svg-ic_play_circle_outline_24px-dims { width: 24px; height: 24px; }
+&lt;/style&gt;</code></pre>
+                </div>
+                <div class="code-with-text">
+                  最后，设置尺寸并指定图标class  <code>svg-ic_play_circle_outline_24px</code> ，你可以从前边的样式表中找到它。
+                  <pre class="language-markup"><code>&lt;div class=&quot;svg-ic_play_circle_outline_24px svg-ic_play_circle_outline_24px-dims&quot;&gt; &lt;/div&gt;</code></pre>
+                </div>
+                <h3>Polymer Icons</h3>
+                <p>如果你想要在Ploymer中使用图标，我们建议通过 <strong>&lt;iron-icons&gt;-element</strong> 元素来实现它。
+                <h3>许可证</h3>
+                <p>所有的图标基于 <strong>Attribution 4.0 International license</strong> 发布。</p>
+              </div>
+            </div>
+            <div class="styles__ribbon styles__ribbon--colors">
+              <a class="ribbon__imagecontainer">
+                <img src="../assets/colors.svg" class="ribbon__image">
+                <div class="ribbon__caption">
+                  调色板
+                </div>
+              </a>
+            </div>
+            <div class="styles__content mdl-grid mdl-grid--no-spacing">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h3>调色板</h3>
+                <p>如果你使用扩展的调色板，在应用程序使用第一个颜色作为主色，其他颜色作为点缀。</p>
+                <p><strong>查看所有的颜色和它们的可访问性比率</strong>.此资源包括在彩色背景上使用白色或黑色文本时的适当对比度和 alpha 值信息。</p>
+                <div class="styles__download">
+                  <a class="download-btn download-btn--swatches" href="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0B0J8hsRkk91LSGx6b0w3WWpMQ1k/color_swatches.zip">
+                    <i class="material-icons">file_download</i>
+                    下载颜色色板
+                  </a>
+                  <span class="download__size">0.02 MB (.zip)</span>
+                </div>
+                <div class="styles__download">
+                  <a class="download-btn download-btn--customizer" href="../customize/index.html">
+                    <i class="material-icons">arrow_forward</i>
+                    尝试定制 CSS 主题工具
+                  </a>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <a href="../customize/index.html"><img class="customizer" src="../assets/customizer.png"></a>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+
+      </div>
+      <section class="docs-text-styling download mdl-color--grey-800">
+        <a href="../started/index.html#download" class="mdl-color-text--grey-50">Download Kit</a>
+      </section>
+      <footer class="docs-text-styling docs-footer mdl-mini-footer mdl-color--grey-900">
+        <ul>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://twitter.com/googledesign" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://github.com/google/material-design-lite" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://plus.google.com/+googledesign" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
+          </li>
+        </ul>
+        <ul class="docs-link-list">
+          <li><a class="mdl-color-text--grey-600" href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+          <li><a class="mdl-color-text--grey-600" href="https://github.com/google/material-design-lite/issues">Help</a></li>
+        </ul>
+      </footer>
+    </main>
+  </div>
+
+    <!-- IE Compatibility shims -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js""></script>
+    <![endif]-->
+
+    <!--[if IE]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js"></script>
+    <link href="../assets/ie.css" rel="stylesheet">
+    <![endif]-->
+    <!-- end shims -->
+
+
+    <!-- Material Design Lite -->
+    <script src="../scripts/material.min.js"></script>
+    <!-- Add Copy-to-CodePen buttons to code blocks -->
+    <script src="../assets/codepen.js"></script>
+    <!-- Enable Prism syntax highlighting -->
+    <script src="../assets/prism.js"></script>
+    <script src="../assets/prism-markup.min.js"></script>
+    <script src="../assets/prism-javascript.min.js"></script>
+    <script src="../assets/prism-css.min.js"></script>
+    <script src="../assets/prism-bash.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <!-- Built with love using Material Design Lite -->
+  </body>
+</html>
