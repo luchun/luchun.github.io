@@ -31,7 +31,13 @@ var TodoList = Backbone.Collection.extend({
     },
     analysis: function () {
         var jsonthis = this.toJSON();
-        var ratelist = _.uniq(this.pluck("rate").reverse());
+        var ratelist = _.uniq(this.pluck("rate").map(function (d) {
+            return parseFloat(d);
+        }));
+        ratelist = _.sortBy(ratelist, function (d) {
+            return +d;
+        }).reverse();
+        console.log(ratelist);
         var groupBy = _.groupBy( jsonthis, function(d){ return d.rate; });
         var ranking = ['第一名','第二名','第三名','第四名','第五名','第六名','第七名','第八名','第九名','第十名','第十一名','第十二名','第十三名'];
         var result = '';
