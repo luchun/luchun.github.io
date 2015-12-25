@@ -12,6 +12,7 @@ permalink: /about/
 
 ### 近期项目
 
+
 #### 百变美人决赛首页
 
 [预览地址](http://getmdl.tech/beauty2016/)    [线上地址](https://beauty.marykay.com.cn/BeautyContest/)  2016-01
@@ -19,6 +20,7 @@ permalink: /about/
 玫琳凯百变美人是一场大型选秀活动，持续一整年，终于到了决赛赛季。 
 
 特点 响应式 PC端 兼容性 公司项目
+
 
 #### 邀约卡卡片
 
@@ -38,6 +40,14 @@ permalink: /about/
 特点  MVC Backbone 个人项目
 
 
+#### 粉巴活动报名页
+
+[预览地址](http://getmdl.tech/PinkBusMobile/app/) [上线地址](#)(不清楚) 2015-12
+记录这个项目原因是 我在项目开始阶段 使用了 [Web Starter Kit ](https://developers.google.com/web/tools/starter-kit/?hl=en)；这是谷歌发布的一套前端自动化工具，可以自动检查语法错误，压缩，预编译，auto-reload等，大大的提高了开发效率。
+
+特点 自动化 移动端 公司项目
+
+
 #### 粉巴活动名单管理后台
 
 [预览地址](http://getmdl.tech/PinkBusHTML/) 2015-11
@@ -45,7 +55,6 @@ permalink: /about/
 内部后台项目，管理玫琳凯粉巴中国行项目的名单，只上传了一个有代表性的页面。主要特点是我在这里使用了观察者模式，设计了一个对象管理数据，感觉有点理解了MVC的意思，在这个项目后决定多使用MVC类框架。
 
 特点 观察者模式 公司项目 
-
 
 
 #### MDL 中文
