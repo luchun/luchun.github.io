@@ -1,0 +1,1171 @@
+<!doctype html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>2015百变美人季</title>
+  <script type="text/javascript">
+    var EXAPIUrl = 'https://api.marykay.com.cn/campaignSiteExternalService/V1/';
+    var DomainPreUrl = './BeautyContest/';
+    var EXHost = 'https://api.marykay.com.cn/campaignSiteExternalService/easyxdm/cors/';
+    var loginUrl = 'http://www.marykayintouch.com.cn/Login/Login.aspx';
+    var OAuthKey = '7db1be69-8c92-4f28-a032-77afb930e6ca';
+    var EnableApply = '2015-10-31 18:00:00';
+    var CHECKLOGIN_CONST = 'TRUE';
+    var shareActivityMsg = '#玫琳凯百变美人季# 想得到美容顾问的专业打造？想零距离接触明星达人？想踏上欧洲造星之旅？亮采梦想季，量身打造专属你的独特魅力！只要你敢来，下一个广告代言人就是你！分享活动还可赢取更多惊喜，详情请登陆官方网站 https://beauty.marykay.com.cn';
+    var sharePieceeMsg = '#玫琳凯百变美人季# 想知道她闪耀如钻的蜕变背后，有多少精心的打造吗？快点击链接围观吧！为她投上你支持的一票，成就她的亮采梦想，还可赢取更多精彩大礼！';
+    var siteRuntime = 'prod';
+    var WXActivityMsg = '#玫琳凯百变美人季# 成就精彩蜕变，实现美丽梦想，下一位广告代言人可能就是你！';
+    var WXPieceMsg = '#玫琳凯百变美人季# 想看看她打造前后的惊艳蜕变吗？快来围观吧！';
+    var sCodeAccount = 'marykaychinabeautycontestweb';
+    var userRole='';var UserKey='';
+    function QueryString() {
+      var name, value, i;
+      var str = location.href;
+      var num = str.indexOf("?")
+      str = str.substr(num + 1);
+      var arrtmp = str.split("&");
+      for (i = 0; i < arrtmp.length; i++) {
+        num = arrtmp[i].indexOf("=");
+        if (num > 0) {
+          name = arrtmp[i].substring(0, num);
+          value = arrtmp[i].substr(num + 1);
+          this[name] = value;
+        }
+      }
+    }
+
+    function trackLink() {
+      s.linkTrackVars = 'prop1,prop2,events';
+      s.linkTrackEvents = 'event1';
+      s.prop1 = 'Custom Property of Link';
+      s.events = 'event1';
+
+      s.t();
+
+    }
+    function s_code_exec(pageName) {
+
+      s.pageName = pageName;
+      s.channel = "btc";
+      var request = new QueryString();
+      if (request != null) {
+        source = request["source"];
+        s.prop1 = userRole;
+        s.prop2 = source;
+      }
+      //console.log(s);
+      s.t();
+    };
+
+    function s_code_sendevent(eventName, isSendUserRole, videoName) {
+      s.events = eventName;
+      if (isSendUserRole == true) {
+        s.prop1 = userRole;
+      }
+      if (eventName == "event3" && videoName != undefined)
+      {
+        s.eVar1 = videoName;
+      }
+      s.t();
+    };
+
+  </script>
+  <noscript>
+    &amp;lt;img src="http://marykay.122.2o7.net/b/ss/marykaychinabeautycontestweb/1/H.25.4--NS/0"
+    height="1" width="1" border="0" alt="" /&amp;gt;
+  </noscript>
+
+  <link rel="SHORTCUT ICON" href="./BeautyContest/Content/image/favicon.ico">
+  <link rel="stylesheet" href="./BeautyContest/Content/assets/bootstrap.min.css">
+  <link rel="stylesheet" href="./BeautyContest/Content/assets/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./BeautyContest/Content/assets/pushy.css">
+  <link href="./BeautyContest/Content/assets/elastislide.css" rel="stylesheet">
+  <!--bootstrap css-->
+  <link rel="stylesheet" href="./BeautyContest/Content/css/components.css">
+  <link rel="stylesheet" href="./BeautyContest/Content/css/style.css">
+  <link href="./BeautyContest/Content/assets/skins/square/red.css" rel="stylesheet">
+  <link rel="stylesheet" href="./BeautyContest/Content/css/cityselect.css">
+  <link href="./BeautyContest/Content/assets/skins/square/cpink.css" rel="stylesheet">
+  <link href="./BeautyContest/Content/css/share_style0_32.css" rel="stylesheet">
+  <link href="./BeautyContest/Content/css/jquery.loadmask.css" rel="stylesheet">
+  <script src="./BeautyContest/Content/assets/jquery-1.11.0.js"></script>
+  <script src="./BeautyContest/Content/assets/bootstrap.min.js"></script>
+  <script src="./BeautyContest/Content/assets/head.core.min.js"></script>
+  <script src="./BeautyContest/Content/assets/headroom.min.js"></script>
+  <script src="./BeautyContest/Content/assets/icheck.min.js"></script>
+  <script src="./BeautyContest/Content/assets/pushy.min.js"></script>
+  <script src="./BeautyContest/Content/assets/jquerypp.custom.js"></script>
+  <script src="./BeautyContest/Content/assets/head.core.min.js"></script>
+  <script src="./BeautyContest/Content/assets/modernizr.custom.17475.js"></script>
+  <script src="./BeautyContest/Content/assets/jquery.elastislide.js"></script>
+  <script src="./BeautyContest/Content/assets/qrcode.min.js"></script>
+  <script src="./BeautyContest/Content/assets/s_code.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/select.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/json2.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/easyXDM.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/jquery.loadmask.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/jquery.cookie.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/common/common.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/common/shareModel.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/lib/knockout-2.3.0.js"></script>
+  <script src="./BeautyContest/Scripts/Scp-1112/rel/model/WXShare.js"></script>
+
+  <!--有更新-->
+  <script type="text/javascript">
+
+    //if it not ie8 load a script ;
+    // 这个是给照片墙添加手机端滑动功能的方法，有更新 2015/12/24
+
+    $(function(){
+      if ($("html").hasClass("no-rgba") && $("html").hasClass("no-backgroundsize") && $("html").hasClass("no-borderradius") && $("html").hasClass("no-boxshadow") && $("html").hasClass("no-opacity")) {
+        //it is ie8 ,do nothing
+      } else {
+        $.getScript(DomainPreUrl + "Content/assets/touch-0.2.14.min.js")
+                .done(function (script, textStatus) {
+                  console.log( textStatus );
+                  var targets = $('.carousel.slide');
+                  console.log(targets)
+                  if (!targets.length ) return;
+                  $.each(targets, function (i,target) {
+
+                    target.style.webkitTransition = 'all ease 0.2s';
+                    touch.on(target, 'swiperight', function (ev) {
+                      $(target).carousel('prev');
+                    });
+                    touch.on(target, 'swipeleft', function (ev) {
+                      $(target).carousel('next');
+                    });
+                  })
+
+                })
+      }
+    });
+
+
+    var setWXConfig = function (appid, timestamp, nonceStr, signature) {
+      wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: appid, // 必填，公众号的唯一标识
+        timestamp: timestamp, // 必填，生成签名的时间戳
+        nonceStr: nonceStr, // 必填，生成签名的随机串
+        signature: signature,// 必填，签名，见附录1
+        jsApiList: [
+          'checkJsApi',
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage'
+        ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+      });
+      //alert('进行注册config');
+    }
+
+
+    //Modernizr.load({
+    //    test: Modernizr.input.placeholder,
+    //    nope: 'Content/assets/placeholders.min.js',
+    //    complete: function () {
+    //        if (typeof Placeholders !== "undefined" && Placeholders !== null) {
+    //            return Placeholders.enable();
+    //        }
+    //    }
+    //});
+
+
+
+
+
+  </script>
+  <!--[if IE ]>
+  <link rel="stylesheet" href="./BeautyContest/Content/css/ie.css">
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="./BeautyContest/Content/assets/css3-mediaqueries.js"></script>
+  <link rel="stylesheet" href="./BeautyContest/Content/css/ie8.css">
+  <![endif]-->
+
+
+
+
+  <script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+  <script>
+    function isMobleLogin()
+    {
+      var result=false;
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.indexOf("iphone") != -1 || ua.indexOf("ipod") != -1 || ua.indexOf("android") != -1)
+        result = true;
+      return result;
+    }
+
+    //
+    //微信浏览器必须登录
+    (function WeiXinBroswerAuthrize() {
+      var isCompleted = 'False';
+      var username = '';
+      if (username == '') {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+          // alert("确认前往微信进行用户验证?");
+          $.post("./BeautyContest/Wechat/GetRedirectUrl", { currentUrl: window.location.href }, function (data) {
+
+            //alert(data.url);
+            window.location.href = data.url;
+          }, "JSON");
+
+        }
+      }
+    }());
+
+
+    function CheckWechatLoginShare() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if ('' != ''&&ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+      }
+      return false;
+    }
+
+    //登陆验证
+    function checkWeiXinLogin()
+    {
+      //测试模式时为NO
+
+
+      var result = true;
+      var isCompleted = 'False';
+      if ('' == '') {
+        if (isMobleLogin()) {
+          window.location.href = './BeautyContest/Wechat/MobileLogin' + '?returnURL=' + window.location.href;
+        }
+        else {
+          window.location.href = './BeautyContest/Wechat/Login' + '?returnURL=' + window.location.href;
+        }
+        result = false;
+      } else {
+        if (isCompleted == 'False') {
+          if (isMobleLogin()) {
+
+            window.location.href = './BeautyContest/Wechat/MobileUserBind' + '?returnURL=' + window.location.href;
+          } else {
+            window.location.href = './BeautyContest/Wechat/UserBind' + '?returnURL=' + window.location.href;
+          }
+          result = false;
+        }
+      }
+      return result;
+    }
+
+  </script>
+
+  <!--新加-->
+  <script src="./BeautyContest/Content/assets/jquery.nicescroll.min.js"></script>
+</head>
+<body class="home homepage">
+<nav class="pushy pushy-right visible-xs-block visible-sm-block">
+
+  <!--未登录不显示投票信息-->
+  <div class="uploadarea"><a id="read-pe" class="p1" href="/BeautyContest/Piece">查看赛季优胜作品</a> </div>
+  <div class="apply"><a id="menu-apply" href="javascript:void(0);"  class="menu-enrollbtn">我要报名</a></div>
+
+  <div class="about">
+    <span class="abouttitle">关于活动 </span>
+    <ul>
+      <li><span class="ol">活动介绍 <i class="dropicon icon"></i></span>
+        <ol>
+          <li><a href="/BeautyContest/About">大赛章程</a> </li>
+
+        </ol>
+      </li>
+      <li><a href="/BeautyContest/About/Videos">精彩视频</a></li>
+      <li><a href="/BeautyContest/About/Titbits">赛季花絮</a></li>
+      <li><a href="/BeautyContest/About/JudgeGroups">达人评审团</a></li>
+      <li><a href="/BeautyContest/About/MediaReports">媒体报道</a></li>
+    </ul>
+  </div>
+
+  <div class="btns">
+    <a href="javascript:void(0)" class="bds_weixin btn btn-green"  onclick="HeaderPartialModel.createActivityShare('Wechat')" title="分享到微信"><i class="wx"></i>分享活动</a>
+
+
+  </div>
+
+</nav>
+<script>
+  $(function () {
+    $("#menu-apply").click(function () {
+      s_code_sendevent("event14", false);
+    });
+    $("#read-pe").click(function () {
+      s_code_sendevent("event15", false);
+    });
+    $("#imm-draw").click(function () {
+      s_code_sendevent("event16", false);
+    });
+    $("#bind-number").click(function () {
+      s_code_sendevent("event17", false);
+    });
+  })
+
+</script>
+
+
+<div class="site-overlay"></div>
+<div id="container">
+
+  <div class="header-top header header--fixed">
+    <div class="container">
+      <div class="row  top-inner">
+        <div class="col-sm-3 col-xs-6 logo"> <a href="/BeautyContest/"><img src="./BeautyContest/Content/image/logo.png" width="232"></a> </div>
+        <div class="menu-btn visible-xs-inline-block visible-sm-inline-block"><img src="./BeautyContest/Content/image/icon-menu-btn.png"></div>
+        <nav id="navApply" class="main-menu col-sm-9  col-xs-12  visible-lg-inline-block visible-md-inline-block">
+          <ul class="nav" id="nav">
+            <li class="about"><a class="o1 dropdown-toggle" href="/BeautyContest/About" data-toggle="dropdown">关于活动 <i class="dropicon icon"></i></a>
+              <ul class="dropdown-menu drop_head" role="menu">
+                <li><a href="/BeautyContest/About">活动介绍</a> </li>
+                <li><a href="/BeautyContest/About/Videos">精彩视频</a> </li>
+                <li><a href="/BeautyContest/About/Titbits">赛季花絮</a></li>
+                <li><a href="/BeautyContest/About/JudgeGroups">达人评审团</a></li>
+                <li><a href="/BeautyContest/About/MediaReports">媒体报道</a></li>
+                <li><a href="/BeautyContest/LuckyDraw">抽奖专区</a></li>
+              </ul>
+            </li>
+            <li class="wxshare">
+              <a href="javascript:void(0);" class="bds_weixin" title="分享到微信" onclick="HeaderPartialModel.createActivityShare('Wechat')"> <i class="wx"></i>分享活动</a>
+            </li>
+          </ul>
+        </nav>
+        <!--main-menu-->
+      </div>
+    </div>
+    <!--header-top-->
+  </div>
+
+  <!--首页 banner图片 start-->
+  <div class="home-banner">
+    <div class="container">
+      <img src="./BeautyContest/Content/image/banner-logo.png" class="banner-logo">
+      <div class="hidden-xs">
+        <img src="./BeautyContest/Content/image/home-banner-title.png" class="banner-title" alt="">
+        <p class="banner-words">
+          百变美人总决赛，12位评委，150位大众评审，3轮形象、智力、才艺的比拼。<br>
+          在万人的见证下共同High翻比赛现场。 <br>
+          MK美人榜，百变选手，感恩之星，究竟谁能问鼎三甲，摘得广告合约？ <br>
+          今夜在这里，等你来见证
+        </p>
+      </div>
+      <div class="hidden-md hidden-lg hidden-sm banner-mb-bg">
+        <img src="./BeautyContest/Content/image/home-banner-title-mb.png" class="banner-title" alt="">
+        <p class="banner-words">
+          百变美人总决赛，12位评委，150位大众评审，<br>
+          3轮形象、智力、才艺的比拼。<br>
+          在万人的见证下共同High翻比赛现场。MK美人榜，<br>
+          百变选手，感恩之星，究竟谁能问鼎三甲，摘得广告合约？ <br>
+          今夜在这里，等你来见证
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--首页 banner图片 end-->
+
+  <!--首页 导航 start-->
+  <div class="homepage-nav">
+    <div class="container">
+      <ul class="nav" id="homepageSectionNav">
+        <li><a href="#homepageSection1"><span class="hidden-xs">总决赛视频</span><span class="hidden-lg hidden-md hidden-sm">决赛</span></a><span class="nav-line"></span></li>
+        <li><a href="#homepageSection2"><span class="hidden-xs">36强选手风采</span><span class="hidden-lg hidden-md hidden-sm">选手</span></a><span class="nav-line"></span></li>
+        <li><a href="#homepageSection3"><span class="hidden-xs">明星嘉宾</span><span class="hidden-lg hidden-md hidden-sm">明星</span></a><span class="nav-line"></span></li>
+        <li><a href="#homepageSection4"><span class="hidden-xs">评委阵容</span><span class="hidden-lg hidden-md hidden-sm">评委</span></a><span class="nav-line"></span></li>
+        <li><a href="#homepageSection5"><span class="hidden-xs">万人公益</span><span class="hidden-lg hidden-md hidden-sm">公益</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    $(function(){
+        void function(){
+
+          var    sectionNav = $('#homepageSectionNav'),
+                  section1 = $('#homepageSection1'),
+                  section2 = $('#homepageSection2'),
+                  section3 = $('#homepageSection3'),
+                  section4 = $('#homepageSection4'),
+                  section5 = $('#homepageSection5'),
+                  section1Top = section1.position().top,
+                  section2Top = section2.position().top,
+                  section3Top = section3.position().top;
+                  section4Top = section4.position().top,
+                  section5Top = section5.position().top,
+                  sc=null, index=null;
+
+          sectionNav.on('click','li', function (e) {
+            e.preventDefault();
+            index =  sectionNav.find("li").index(this);
+            switch (index){
+              case 0:
+                    sc = section1Top;
+                    break;
+              case 1:
+                    sc = section2Top;
+                    break;
+              case 2:
+                    sc = section3Top;
+                    break;
+              case 3:
+                    sc = section4Top;
+                    break;
+              case 4:
+                    sc = section5Top;
+                    break;
+            }
+            console.log(sc);
+            $('html,body').animate({
+              scrollTop:sc
+            },300);
+          })
+
+        }()
+    });
+  </script>
+  <!--首页 导航 end-->
+
+  <!--首页 视频section start-->
+  <div class="videozone" id="homepageSection1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 videozone-header">
+          <a href="#" class="pull-right hidden-sm hidden-xs">全部视频 ></a>
+          <h3>总决赛视频</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9 col-xs-12 main-video">
+          <div class="item">
+            <img src="./BeautyContest/Content/image/home-mainvideo-bg.jpg" alt="">
+            <i class="icon-play"></i>
+          </div>
+        </div>
+        <div class="col-sm-3  video-list hidden-sm hidden-xs">
+          <div class="video-list-box" id="videoScrollList">
+            <a href="" class="video-list-item">
+              <img src="./BeautyContest/Content/image/video/1.jpg" alt="">
+              <span class="title">时尚美人蜕变之旅</span>
+              <i class="icon-play"></i>
+            </a>
+            <a href="" class="video-list-item">
+              <img src="./BeautyContest/Content/image/video/1.jpg" alt="">
+              <span class="title">时尚美人蜕变之旅</span>
+              <i class="icon-play"></i>
+            </a>
+            <a href="" class="video-list-item">
+              <img src="./BeautyContest/Content/image/video/1.jpg" alt="">
+              <span class="title">时尚美人蜕变之旅</span>
+              <i class="icon-play"></i>
+            </a>
+            <a href="" class="video-list-item">
+              <img src="./BeautyContest/Content/image/video/1.jpg" alt="">
+              <span class="title">时尚美人蜕变之旅</span>
+              <i class="icon-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row  hidden-md hidden-lg see-all-video">
+        <div class="col-xs-12">
+          <a class="btn btn-pink" id="seeAllVideo" href="/BeautyContest/About/Videos">查看全部视频</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $("#videoScrollList").niceScroll({
+        cursorcolor:"#fb7a93",
+        cursorwidth: "10px", // cursor width in pixel (you can also write "5px")
+        cursorborder: "none", // css definition for cursor border
+        autohidemode: false,
+        background: "#ecd0cd" // change css for rail background
+      });
+    })
+
+  </script>
+  <!--首页 视频section end-->
+
+  <!--首页 选手照片墙 start-->
+  <div class="contestants-photos" id="homepageSection2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-tabs-title hidden-lg hidden-md">
+              <span><span class="big-font">万人</span>参与， 见证广告明星诞生</span>
+            </li>
+            <li role="presentation" class="fr "><a href="#contestants-photos4" role="tab" data-toggle="tab">香港/台湾</a></li>
+            <li role="presentation" class="fr"><a href="#contestants-photos3" role="tab" data-toggle="tab">华丽绽放季</a></li>
+            <li role="presentation" class="fr"><a href="#contestants-photos2" role="tab" data-toggle="tab">动感蜕变季</a></li>
+            <li role="presentation" class="fr no-line active"><a href="#contestants-photos1" role="tab" data-toggle="tab">亮采梦想季</a></li>
+            <li class="nav-tabs-title hidden-xs hidden-sm">
+              <span><span class="big-font">万人</span>参与， 见证广告明星诞生</span>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="contestants-photos1">
+              <!-- 大屏幕下的照片墙 start -->
+              <div class="hidden-xs hidden-sm">
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+              </div>
+              <!-- 大屏幕下的照片墙 end -->
+
+              <!--ipad 屏幕下的照片墙 start-->
+              <div class="hidden-xs  hidden-md hidden-lg">
+                <div class=" slide-for-ipad">
+                  <div id="carousel-ipad-generic-1" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-ipad-generic-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-ipad-generic-1" data-slide-to="1" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo4.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+                </div>
+              </div>
+              <!--ipad 屏幕下的照片墙 end-->
+
+
+              <!--手机上的照片墙 start-->
+              <div class="hidden-sm hidden-md hidden-lg">
+                <div class="slide-for-phone">
+                  <div id="carousel-phone-generic-1" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-phone-generic-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-phone-generic-1" data-slide-to="1" class=""></li>
+                      <li data-target="#carousel-phone-generic-1" data-slide-to="2" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+                </div>
+              </div>
+              <!--手机上的照片墙 end-->
+            </div>
+            <div role="tabpanel" class="tab-pane" id="contestants-photos2">
+              <!-- 大屏幕下的照片墙 start -->
+              <div class="hidden-xs hidden-sm">
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+              </div>
+              <!-- 大屏幕下的照片墙 end -->
+
+              <!--ipad 屏幕下的照片墙 start-->
+              <div class="hidden-xs  hidden-md hidden-lg">
+                <div class="slide-for-ipad">
+                  <div id="carousel-ipad-generic-2" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-ipad-generic-2" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-ipad-generic-2" data-slide-to="1" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+
+                </div>
+              </div>
+              <!--ipad 屏幕下的照片墙 end-->
+              <!--手机上的照片墙 start-->
+              <div class="hidden-sm hidden-md hidden-lg">
+                <div class="slide-for-phone">
+                  <div id="carousel-phone-generic-2" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-phone-generic-2" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-phone-generic-2" data-slide-to="1" class=""></li>
+                      <li data-target="#carousel-phone-generic-2" data-slide-to="2" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+                </div>
+              </div>
+              <!--手机上的照片墙 end-->
+            </div>
+            <div role="tabpanel" class="tab-pane" id="contestants-photos3">
+              <!-- 大屏幕下的照片墙 start -->
+              <div class="hidden-xs hidden-sm">
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+              </div>
+              <!-- 大屏幕下的照片墙 end -->
+
+              <!--ipad 屏幕下的照片墙 start-->
+              <div class="hidden-xs  hidden-md hidden-lg">
+                <div class="slide-for-ipad">
+                  <div id="carousel-ipad-generic-3" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-ipad-generic-3" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-ipad-generic-3" data-slide-to="1" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+
+                </div>
+              </div>
+              <!--ipad 屏幕下的照片墙 end-->
+              <!--手机上的照片墙 start-->
+              <div class="hidden-sm hidden-md hidden-lg">
+                <div class="slide-for-phone">
+                  <div id="carousel-phone-generic-3" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-phone-generic-3" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-phone-generic-3" data-slide-to="1" class=""></li>
+                      <li data-target="#carousel-phone-generic-3" data-slide-to="2" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+                </div>
+              </div>
+              <!--手机上的照片墙 end-->
+            </div>
+            <div role="tabpanel" class="tab-pane" id="contestants-photos4">
+              <!-- 大屏幕下的照片墙 start -->
+              <div class="hidden-xs hidden-sm">
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+                <div class="contestants-photos-row">
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""></a>
+                  <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                </div>
+              </div>
+              <!-- 大屏幕下的照片墙 end -->
+
+              <!--ipad 屏幕下的照片墙 start-->
+              <div class="hidden-xs  hidden-md hidden-lg">
+                <div class="slide-for-ipad">
+                  <div id="carousel-ipad-generic-4" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-ipad-generic-4" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-ipad-generic-4" data-slide-to="1" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo4.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo4.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+
+                </div>
+              </div>
+              <!--ipad 屏幕下的照片墙 end-->
+              <!--手机上的照片墙 start-->
+              <div class="hidden-sm hidden-md hidden-lg">
+                <div class="slide-for-phone">
+                  <div id="carousel-phone-generic-4" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-phone-generic-4" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-phone-generic-4" data-slide-to="1" class=""></li>
+                      <li data-target="#carousel-phone-generic-4" data-slide-to="2" class=""></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo4.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                        <a href="#" class="contestants-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                      </div>
+
+                    </div>
+                    <!-- Controls -->
+                  </div>
+                </div>
+              </div>
+              <!--手机上的照片墙 end-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--首页 选手照片墙 end-->
+
+  <!--首页 嘉宾歌手 start-->
+  <div class="homepage-singer" id="homepageSection3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-xs-5 homepage-singer-img">
+          <img src="./BeautyContest/Content/image/hp-singlerimg.png" alt="杨培安">
+          <p class="singer-info">明星表演嘉宾：杨培安</p>
+        </div>
+        <div class="col-md-7 col-xs-7 homepage-singer-text">
+          <p class="homepage-singer-p1 hidden-xs hidden-sm"><span class="big-font">万人</span>同唱，那些年我们狂欢一起唱过的歌</p>
+          <p class="homepage-singer-p1 hidden-lg hidden-md"><span class="big-font">万人</span>同唱，<br>那些年我们狂欢一起唱过的歌</p>
+          <h3>我相信</h3>
+          <p><span class="line"></span></p>
+          <p class="longtext hidden-xs hidden-sm">今夜在这里，让我们与台湾歌手杨培安一起，共同现场万人合唱他的成名曲《我相信》，并与那些年在研讨会、领袖会上听到过的那些歌曲的幕后“玫琳凯御用歌手”见面，一起现场互动劲歌热舞！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--首页 嘉宾歌手 end-->
+
+  <!--首页 评委照片墙 Judges start-->
+  <div class="homepage-judges" id="homepageSection4">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 homepage-judges-header">
+          <span class="big-font">9</span> 位评委，<span class="big-font">150</span> 位大众评审
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- 大屏幕下的照片墙 start -->
+          <div class="hidden-xs hidden-sm">
+            <div class="judges-photos-row">
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/homepage-judges-card.jpg" alt=""></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""><span class="name">王美丽</span></a>
+            </div>
+            <div class="judges-photos-row">
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1-1.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2-1.jpg" alt=""><span class="name">王美丽</span></a>
+              <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""><span class="name">王美丽</span></a>
+            </div>
+          </div>
+          <!-- 大屏幕下的照片墙 end -->
+
+          <!--ipad 屏幕下的照片墙 start-->
+          <div class="hidden-xs  hidden-md hidden-lg">
+            <div class="slide-for-ipad">
+              <div id="carousel-ipad-judges" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-ipad-judges" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-ipad-judges" data-slide-to="1" class=""></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo4.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""><span class="name">王美丽</span></a>
+                  </div>
+
+
+                </div>
+                <!-- Controls -->
+              </div>
+            </div>
+          </div>
+          <!--ipad 屏幕下的照片墙 end-->
+
+          <!--手机上的照片墙 start-->
+          <div class="hidden-sm hidden-md hidden-lg">
+            <div class="slide-for-phone">
+              <div id="carousel-phone-judges" class="carousel slide" data-ride="" style="transition: all 0.2s ease;"><!--carousel-->
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-phone-judges" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-phone-judges" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel-phone-judges" data-slide-to="2" class=""></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+
+                  </div>
+                  <div class="item">
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo2.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  </div>
+                  <div class="item">
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo3.jpg" alt=""></a>
+                    <a href="#" class="judges-photos-item"><img src="./BeautyContest/Content/image/temp/photo1.jpg" alt=""></a>
+                  </div>
+
+                </div>
+                <!-- Controls -->
+              </div>
+            </div>
+          </div>
+          <!--手机上的照片墙 end-->
+        </div>
+    </div>
+  </div>
+    </div>
+  <!--首页 评委照片墙 Judges end-->
+
+  <!--首页 公益活动 Charitable start-->
+  <div class="homepage-charitable" id="homepageSection5">
+    <div class="container">
+      <div class="row ">
+        <div class="col-sm-12 homepage-charitable-col">
+          <h4 class="homepage-charitable-title"><span class="big-font">万人</span>公益，展现MK人的感恩精神</h4>
+          <img src="./BeautyContest/Content/image/homepage-charitable.png" class="hidden-sm hidden-xs" alt="公益照片-PC">
+          <img src="./BeautyContest/Content/image/homepage-charitable-mb.png" class="hidden-lg hidden-md" alt="公益照片-移动">
+          <p class="hidden-md hidden-lg homepage-charitable-text">2016领袖用爱启程！一份爱的付出，一枚爱的别针，一张爱的证书。此次活动报名费的净收入将捐赠给“上海宋庆龄基金会——玫琳凯感恩公益基金”。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--首页 公益活动 Charitable end-->
+
+  <!--<返回顶部>-->
+  <script>
+    (function($){
+      var h = $(document).height();
+      var wh = $(window).height();
+
+      var ww = $(window).width();
+      //如果是小于ipad横屏 就不显示返回顶部
+      if(ww<1024) return;
+
+      if (h > wh) {
+        var b = $("<span id='gotop'></span>");
+        b.css('right',(ww-970)/2 -80 + 'px')
+        $('#container').append(b);
+        b.click(function () {
+          $('html,body').animate({scrollTop: 0}, 100);
+        });
+        $(window).scroll(function () {
+          var sh =  (document.documentElement && document.documentElement.scrollTop) ||
+                  document.body.scrollTop;
+          if (sh > 0) {
+            b.show();
+          } else {
+            b.hide();
+          }
+        })
+      }
+    })(jQuery)
+  </script>
+  <!--返回顶部-->
+  <!--底部没有变化-->
+  <div class="bottomzone hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <span class="title">媒体报道</span> <span class="more"><a href="./BeautyContest/About/MediaReports">查看更多 &gt;</a></span>
+          <div class="mediabox row">
+            <div class="col-md-4 col-sm-6 col-xs-6"><a class="jiaren"></a></div>
+            <div class="col-md-4 col-sm-6  col-xs-6"><a class="ruili"></a></div>
+            <div class="col-md-4 col-sm-6  col-xs-6"><a class="ssjk"></a></div>
+            <div class="col-md-4 col-sm-6  col-xs-6"><a class="yizhou"></a></div>
+            <div class="col-md-4 col-sm-6  col-xs-6"><a class="yueji"></a></div>
+            <div class="col-md-4 col-sm-6  col-xs-6"><a class="yzwb"></a></div>
+          </div>
+        </div>
+        <div class="col-sm-3  col-xs-12  attentionus">
+          <span class="title">关注我们</span>
+          <div class="row">
+            <div class="col-sm-12 col-xs-4  col-md-5 wxbox">
+              <a href="javascript:void(0);" id="wxpopup" class="wx"></a>
+              <div class="hoverercode hidden-sm hidden-xs">
+                <div class="h-e-l">
+                  <img src="./BeautyContest/content/image/servicecode.png" alt=""><br>
+                  <span>玫琳凯美丽到家服务</span></div>
+                <div class="h-e-r">
+                  <img src="./BeautyContest/content/image/officecode.png" alt=""><br>
+                  <span>玫琳凯中国</span></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-xs-6  col-md-5"><a href="http://weibo.com/marykaychina" class="wb"></a></div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-6 othersites hidden-xs">
+          <span class="title">手机版活动网站</span>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 ft-code">
+              <a href="javascript:void(0)">  <img src="./BeautyContest/Content/image/QR_CampaignSite.jpg" width="116" height="116"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="copyright">©2007-2013 Mary Kay Inc. 沪ICP备10024290号</div>
+
+</div>
+</body>
+<!--右下角小框  未登录-->
+<div class="message-box homebox hidden-sm hidden-xs"  style="display: none">
+  <div class="panel-group" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-body p-login">
+        <a href="">登 录</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/右下角小框  未登录-->
+<!--右下角小框  已登录-->
+<div class="message-box homebox hidden-sm hidden-xs">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading mb-top" role="tab" id="headingOne"> <i class="user-icon"></i> <a href="">
+        <!--顾客-->
+        <span style="display: none">顾客，Lover Julie</span>
+        <!--/顾客-->
+        <!--顾问-->
+        <span>亲爱的，Lover Julie</span>
+        <!--/顾问-->
+        <a class="closeitme" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <i class="arrow-icon"></i> </a> </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body mb-bottom">
+          <!--顾客的底部-->
+          <div class="p-operate" ><a href="">退出当前账号</a>　|　<a href="">绑定顾问账号</a></div>
+          <!--/顾客的底部-->
+          <!--顾问的底部-->
+          <div class="p-operate" style="display: none"><a href="">退出当前账号</a></div>
+          <!--/顾问的底部-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/右下角小框  已登录-->
+
+<div class="modal blk-modal mediamodal" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="true" aria-hidden="true">
+  <div class="modal-dialog modal-video">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true" class="icon icon-close"></span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="media-box">
+          <video controls="controls" src="" width="98%" preload="preload" poster="./BeautyContest/Content/image/video/campaignvideo01_3.png">
+          </video>
+        </div>
+        <div style="min-height: 45px;">
+          <div class="col-sm-6" style="float: left;">
+            <h5 id="myModal2Name"></h5>
+          </div>
+          <div class="col-sm-6 text-right">
+            <input type="hidden" id="ShareVideoId" value="">
+            <input type="hidden" id="ShareVideoTab" value="home">
+            <a href="javascript:void(0);" class="btn btn-green video-share" data-cmd="weixin" title="分享到微信" onclick="shareModel.VideoShare($('#ShareVideoId').val(), 'Wechat', $('#ShareVideoTab').val());"><i class="wx"></i>分享活动</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
