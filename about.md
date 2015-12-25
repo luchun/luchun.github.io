@@ -21,6 +21,8 @@ permalink: /about/
 
 特点 响应式 PC端 兼容性 公司项目
 
+---
+
 
 #### 邀约卡卡片
 
@@ -30,6 +32,7 @@ permalink: /about/
 
 特点 CSS3 移动端 公司项目
 
+---
 
 #### 连带率分析
 
@@ -39,6 +42,7 @@ permalink: /about/
 
 特点  MVC Backbone 个人项目
 
+---
 
 #### 粉巴活动报名页
 
@@ -48,6 +52,7 @@ permalink: /about/
 
 特点 自动化 移动端 公司项目
 
+---
 
 #### 粉巴活动名单管理后台
 
@@ -57,6 +62,7 @@ permalink: /about/
 
 特点 观察者模式 公司项目 
 
+---
 
 #### MDL 中文
 
@@ -66,6 +72,7 @@ permalink: /about/
 
 特点  翻译 站点 框架 个人项目
 
+---
 
 ### Contact me
 
