@@ -1,0 +1,43 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html,body{  height: 100%;  }
+
+body {  font-family: "微软雅黑","Helvetica Neue", Helvetica, STHeiTi, sans-serif;  }
+::selection          { background:none;  }
+::-moz-selection    { background:none;  }
+::-webkit-selection { background:none; }
+*{  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  }
+.page-wrapper{  min-height: 28.5em;  margin-bottom: -.3125em; background: #fceff6;}
+.page-wrapper:after {  content: "";  display: block;  }
+.site-footer, .page-wrapper:after {  height: .3125em;  }
+.site-footer {
+    background: rgb(237,116,144);
+    background: -moz-linear-gradient(left,  rgba(237,116,144,1) 0%, rgba(237,116,144,1) 31%, rgba(126,206,243,1) 31%, rgba(126,206,243,1) 78%, rgba(250,206,136,1) 78%, rgba(250,206,136,1) 100%);
+    background: -webkit-linear-gradient(left,  rgba(237,116,144,1) 0%,rgba(237,116,144,1) 31%,rgba(126,206,243,1) 31%,rgba(126,206,243,1) 78%,rgba(250,206,136,1) 78%,rgba(250,206,136,1) 100%);
+    background: linear-gradient(to right,  rgba(237,116,144,1) 0%,rgba(237,116,144,1) 31%,rgba(126,206,243,1) 31%,rgba(126,206,243,1) 78%,rgba(250,206,136,1) 78%,rgba(250,206,136,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed7490', endColorstr='#face88',GradientType=1 );
+}
+.img-block img{  display: block;max-width: 100%;width: 100%;  }
+.card{position: relative;padding: .8em .9375em .5em 1.25em;}
+.card:before{
+    content: " ";
+    display:block;
+    position: absolute;
+    width: 100%;
+    top:-20px;
+    left:0;
+    height:30px;
+    background: linear-gradient(135deg, transparent 75%, #fceff6 75%) 0 50%,
+    linear-gradient(-45deg, transparent 75%, #fceff6 75%) 0 50%;
+    background: -moz-linear-gradient(-135deg, transparent 75%, #fceff6 75%) 0 50%,
+    -moz-linear-gradient( -45deg, transparent 75%, #fceff6 75%) 0 50%;
+    background: -webkit-linear-gradient(-135deg, transparent 75%, #fceff6 75%) 0 50%,
+    -webkit-linear-gradient( -45deg, transparent 75%, #fceff6 75%) 0 50%;
+    background-repeat: repeat-x;
+    background-size:10px 10px, 10px 10px;
+}
+.abs-img{position: absolute;top: .625em;  right:.9375em;width: 4.1875em;}
+.card-name{  color: #666666; /* font-size: 1.375em;*/ font-size: 1.5em; margin: 0;font-weight: normal;}
+.card-info{/*font-size: .8125em;*/font-size: .9em;color: #4c4c4c;  margin-top: .7em;  padding-bottom: .7em;  border-bottom: 1px solid #fde7ee;  margin-left: -.5em;  text-indent: .5em;  width: 88%;  margin-bottom: .5em;  }
+.tel-call{color: #e57c9c;text-decoration: none;outline: none;font-size: 1.1875em}
+.tel-icon{width: .85em;height: .85em; margin-top: -2px; background: url("../images/tel-icon.svg") no-repeat;  -webkit-background-size:100%;  background-size:100%;display: inline-block;vertical-align: middle;}
