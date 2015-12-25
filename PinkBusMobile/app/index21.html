@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>贵宾邀请券</title>
+
+    <link rel="stylesheet" href="styles/pure-min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+  <body class="">
+  <main>
+    <header class="header-card">
+      <div class="header-title">
+        <h1>贵宾邀请劵</h1>
+        <p class="title-des">
+          <img src="images/line-bg.png" alt="" class="fl">
+          粉巴巡游 — 长春终极会
+          <img src="images/line-bg.png" alt="" class="fr">
+        </p>
+        <div class="header-item"><span class="card-icon card-icon-map"></span><p class="header-item-location">长春市南关区明珠广场A</p></div>
+        <div class="header-item"><span class="card-icon card-icon-clock"></span><p class="header-item-date">2015.10.1 9:00 - 14:30</p></div>
+
+      </div>
+      <div class="header-sec">
+        <table class="table">
+          <tbody>
+          <tr>
+            <td><a href="tel:15117146077"><span class="callout"></span>电话</a></td>
+            <td><span class="middle-line"></span></td>
+            <td><a href="sms:13588669999"><span class="icon-sms"></span>短信</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <div>
+          <div class="header-item"><span class="card-icon card-icon-user"></span><p class="header-item-name">邀请人 张兰兰</p> </div>
+          <div class="header-item"><span class="card-icon card-icon-tel"></span><p class="header-item-name">138-9087-6995</p> </div>
+        </div>
+      </div>
+    </header>
+    <section class="info-form">
+      <form class="pure-form info-form-aligned">
+        <fieldset>
+          <legend>填写信息</legend>
+
+          <div class="pure-control-group">
+            <label for="name">姓名 <span>(必填)</span></label>
+            <div class="input-con">
+              <input id="name" name="name" class="required" type="text" placeholder="请填写">
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="tel">手机号码 <span>(必填)</span></label>
+            <div class="input-con">
+              <input id="tel" name="tel" type="tel" class="required" placeholder="请填写">
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="identity">来宾身份 <span>(必填)</span></label>
+            <div class="input-con">
+              <input  name="identity" type="hidden" class="required" placeholder="请选择 >">
+              <div id="identity" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="age">年龄 <span>(必填)</span></label>
+            <div class="input-con">
+              <input id="age" name="age" type="number" class="required" placeholder="请填写" pattern="\d*" step="1"  min="0">
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="profession">职业</label>
+            <div class="input-con">
+              <input  name="profession" type="hidden" placeholder="请选择 >">
+              <div id="profession" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="topic">感兴趣的话题</label>
+            <div class="input-con">
+              <input  name="topic" type="hidden" placeholder="请选择 >">
+              <div id="topic" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="course">是否上过美容课</label>
+            <div class="input-con">
+              <input  name="course" type="hidden" placeholder="请选择 >">
+              <div id="course" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="product">是否使用过产品</label>
+            <div class="input-con">
+              <input  name="product" type="hidden" placeholder="请选择 >">
+              <div id="product" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="content">感兴趣的内容</label>
+            <div class="input-con">
+              <input  name="content" type="hidden" placeholder="请选择 >">
+              <div id="content" class="info-select info-select-placeholer">请选择 ></div>
+            </div>
+          </div>
+
+          <div class="pure-control info-form-submit">
+            <button type="submit" class="pure-button disable">领取邀请券</button>
+          </div>
+
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <!--预留-->
+  </footer>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
