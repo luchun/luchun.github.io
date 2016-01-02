@@ -96,9 +96,9 @@ app.AppView = Backbone.View.extend({
 
         return {
             title : title[0],
-            times :matchs[2] ,   //笔数
-            count :matchs[1] ,   //总商品数
-            rate  :matchs[3],      //连带率
+            times :matchs[2].trim() ,   //笔数
+            count :matchs[1].trim() ,   //总商品数
+            rate  :  parseFloat( matchs[3].trim()).toFixed(2),      //连带率
             source :txt
         };
     },

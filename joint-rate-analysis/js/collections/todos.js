@@ -32,17 +32,20 @@ var TodoList = Backbone.Collection.extend({
     analysis: function () {
         var jsonthis = this.toJSON();
         var ratelist = _.uniq(this.pluck("rate").map(function (d) {
-            return parseFloat(d);
+            return parseFloat(d).toFixed(2);
         }));
         ratelist = _.sortBy(ratelist, function (d) {
+            console.log(d)
             return +d;
         }).reverse();
         console.log(ratelist);
         var groupBy = _.groupBy( jsonthis, function(d){ return d.rate; });
+        console.log(groupBy);
         var ranking = ['第一名','第二名','第三名','第四名','第五名','第六名','第七名','第八名','第九名','第十名','第十一名','第十二名','第十三名'];
         var result = '';
         var part = '并列店铺:\n';
         _.each(ratelist, function (d,i) {
+            console.log(d);
             if( groupBy[d].length === 1){
                 result = result + ranking[i] + ':'+ groupBy[d][0].source +'\n';
             }else{
