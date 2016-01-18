@@ -6,6 +6,10 @@
   //-webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+html,body{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%!important;
+}
 .hundred-lessons {
   background: #ffd1d0;
   min-height: 100%;
