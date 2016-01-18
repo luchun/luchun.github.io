@@ -14,7 +14,7 @@ var rs=function(){
 
         var that =this;
         //将按钮修改为不可点击的状态
-        $(this).addClass("done");
+        //$(this).addClass("done");
 
         $.get("./mockdata/addback.json",{data:"lesson"})
             .done(function (data) {
@@ -27,7 +27,7 @@ var rs=function(){
             }).always(function(){
 
                 //无论是否成功，都将按钮更改为可点击状态
-                $(that).removeClass("done")
+               // $(that).removeClass("done")
             });
 
     });
