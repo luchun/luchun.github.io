@@ -10,7 +10,7 @@
   background: #ffd1d0;
   min-height: 100%;
   font-family: "Microsoft YaHei", "STHeiti", "SimHei", "Helvetica", sans-serif;
-  transition: font .25s;
+  //transition: font .25s;
   a {
     text-decoration: none;
     outline: none;
@@ -51,10 +51,10 @@
     background-color: #ff8a00;
     box-shadow: (2em/18) (4em/18) 0 #e15900;
     font: {
-      size: (18em/16);
+      size: (19em/16);
       weight: 800;
     }
-    padding: 0.78em 2.95em;
+    padding: 0.5em 1.5em;
     margin: {
       top: .75em;
       bottom: .75em
@@ -66,7 +66,7 @@
       width: (1em/18);
       color:  #ffd5af;
     }
-    transition: all .25s;
+    transition: background .25s;
     &.done {
       pointer-events: none;
       background-color: rgb(170, 170, 170);
@@ -322,7 +322,8 @@
         background:url("../images/icon-more.png") no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
-        vertical-align: bottom;
+        vertical-align: middle;
+        margin-top:-.1em;
       }
     }
 
@@ -812,13 +813,14 @@
     box-shadow: (2em/18) (4em/18) 0 #e15900;
     font-size: 1.125em;
     font-weight: 800;
-    padding: 0.78em 2.95em;
+    padding-top: 0.78em;
+    padding-bottom: 0.78em ;
     margin: .75em .75em 1.2em;
     border-style: solid;
     border-radius: 1.5em;
     border-width: (1em/18);
     border-color: #ffd5af;
-    transition: all .25s;
+    //transition: all .25s;
   }
 }
 //媒体查询

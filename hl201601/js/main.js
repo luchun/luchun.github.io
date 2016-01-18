@@ -6,12 +6,9 @@
 $(function(){rs();});
 $(window).resize(function(){rs();});
 var rs=function(){
-    console.log('1')
     var dw=document.documentElement.clientWidth;
-    var dh=document.documentElement.clientHeight;
-    $("body").css({"font-size":dw/320+"em"});
+    document.querySelector('body').style.fontSize = dw/320+"em";
 };
-
     //记录一堂美容课相关事件
     $(".hl-button").on("touchstart",function(){
 
