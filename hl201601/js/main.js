@@ -22,7 +22,7 @@ var rs=function(){
             }).fail(function() {
             plusOne.apply(that);
             new hlWindow().alert({
-                content:"每周最多记录40堂美容课哦！"
+                content:"每月最多记录40堂美容课哦！"
             });
             }).always(function(){
 
