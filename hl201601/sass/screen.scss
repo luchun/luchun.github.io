@@ -227,17 +227,17 @@ html,body{
         background: #fff6f6;
         padding: 1em 0;
         table{
-          width: 85%;
+          width: 100%;
           margin: 0 auto;
         }
       }
+
       .qrcode-con{
         position: relative;
         float:right;
-        width: (85em/13);
-        height: (85em/13);
+        width: (100em/13);
+        height: (100em/13);
         img{
-          //max-width: 100%;
           width: 100%;
         }
         .qrcode-logo{
@@ -252,7 +252,7 @@ html,body{
         }
       }
       .qrcode-des{
-        padding-left: 1em;
+        padding-left: .75em;
         h5,p{
           margin: 0;
         }
@@ -370,6 +370,7 @@ html,body{
       position: relative;
       @include box-shadow( (2em/13) (2em/13) 0 rgb(255, 181, 180));
       padding: 1em 1.2em 1em 1.5em;
+      //padding: 1em .25em 1em .75em;
       font-weight: bold;
       color: #333;
       &::before {
