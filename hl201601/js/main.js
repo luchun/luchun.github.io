@@ -14,20 +14,20 @@ var rs=function(){
 
         var that =this;
         //将按钮修改为不可点击的状态
-        //$(this).addClass("done");
+        $(this).addClass("done");
 
         $.get("./mockdata/addback.json",{data:"lesson"})
             .done(function (data) {
 
             }).fail(function() {
-            plusOne.apply(that);
+                plusOne.apply(that);
             new hlWindow().alert({
                 content:"每月最多记录40堂美容课哦！"
             });
             }).always(function(){
 
                 //无论是否成功，都将按钮更改为可点击状态
-               // $(that).removeClass("done")
+                $(that).removeClass("done")
             });
 
     });
@@ -36,7 +36,8 @@ var rs=function(){
     function plusOne(){
         var plus = $("<span class='hl_plus_one'>+1</span>");
         $(this).before(plus);
-        setTimeout($.proxy(plus.remove,plus),800)
+        setTimeout($.proxy(plus.remove,plus),800);
+
     }
 
 
