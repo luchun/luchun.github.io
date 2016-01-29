@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>玫琳凯</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body class="card-generate-body">
+    <div class="card-generate">
+        <div class="card-g-header">
+            <table class="card-header-table">
+                <tr>
+                    <td><span class="card-check"></span></td>
+                    <td>
+                        <div class="card-g-header-right">
+                            <h5>邀约卡已放入您的玫琳凯卡包</h5>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="card-magic-bg card-magic-bg-2">
+            <div class="contacts-info">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="card-img">
+                            <img src="./images/mklogo-pink.png" alt="">
+                            <span style="float: right;height: 100%;display: block;width: 1px;border-right: 1px dashed #000">
+
+                            </span>
+                        </td>
+                        <td>
+                            <div class="line-left">
+                                <h5>玫琳凯“美美哒”美丽服务邀约卡</h5>
+                                <p>服务：护肤 彩妆 彩妆 形象设计</p>
+                                <p><span class="contacts-ellipsis-name">美容顾问：张兰兰ABCDEFGHIJKLMN</span>  <a href="tel:13588669999"><span class="icon-callout-red"></span></a> </p>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div style="background: #fff5e6;" class="btn-line">
+                    <span>您尚未留手机号，顾问可能找不到您哦</span> <button class="pure-button button-warning" id="add-tel">立即填写</button>
+                </div>
+            </div>
+            <img src="./images/wechat-code.png" alt="二维码" class="wechat-code"/>
+
+        </div>
+    </div>
+    <script src="js/addTelConform.js"></script>
+    <script>
+        $(function () {
+            'use strict';
+
+            var alertWindow = Object.create(AlertWindow,{
+                telNum:{value:'13512341234'},
+                consultantName:{value:'王美丽ABCDEFGHIJKLMN'},
+                consultantHead:{value:'./images/consultanttmp.png'}
+            });
+            $('#add-tel').on('click', alertWindow.show.bind(alertWindow));
+            alertWindow.on('addTel', function (telnum) {
+                console.log('addtel')
+                if(telnum.length<11){
+                    alertWindow.error('手机号长度不够');
+                }else {
+                    alertWindow.hide();
+                }
+            });
+
+
+        })
+    </script>
+</body>
+</html>
