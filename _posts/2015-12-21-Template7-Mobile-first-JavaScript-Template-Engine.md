@@ -1,6 +1,6 @@
 ---
 layout: post
-title: {{Template7}} Mobile-first JavaScript Template Engine
+title: Template7 Mobile-first JavaScript Template Engine
 ---
 ## Template7 移动优先的额模板引擎
 
