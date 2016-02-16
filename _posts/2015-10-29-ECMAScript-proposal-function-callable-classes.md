@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ECMAScript proposal function-callable classes
+title: ECMAScript proposal function callable classes
 ---
 ## ECMAScript 建议：函数可调用的类
 
