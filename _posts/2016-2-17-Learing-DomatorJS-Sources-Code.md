@@ -194,7 +194,136 @@ es6新增了一个结构赋值 `...`代表余下的，比如 `let [head, ...tail
 
 `setAttributes(node,attrs)` 这个函数就是循环调用dom的setAttribute()方法，对于没有属性值的属性，也设置为同名属性值，像 autofocus,disabled这种适用。
 
-在设置钱先合并class属性和className属性，并删除className属性，如果不存在class属性也进行删除。
+在设置前先合并class属性和className属性，并删除className属性，如果不存在class属性也进行删除。
 
 最后返回接收到的node节点
 
+    function render (item) {
+        if (isArray(item)) {
+            if (item.length === 1) return render(item[0])
+
+            let wrapper = doc.createDocumentFragment()
+
+            forEach(item, function (item) {
+                let el = render(item)
+                wrapper.appendChild(el)
+            })
+
+            return wrapper
+        }
+
+        if (item.tag) {
+            item.el = domator.create(item.tag, item.attrs)
+        } else {
+            setAttributes(item.el, item.attrs)
+        }
+
+        if (item.children) {
+            forEach(item.children, function (child) {
+               item.el.appendChild(render(child))
+            })
+        }
+
+        return item.el
+    }
+
+render 方法就是将数组创建为节点的，可以当作递归使用。
+
+    function parseName (name) {
+        const attrs = {}
+        let pending = name
+
+        let m
+        do {
+            m = null
+
+            if ((m = pending.match(regexes.tag))) {
+                attrs.tag = m[1]
+            } else if ((m = pending.match(regexes.id))) {
+                attrs.id = m[1]
+            } else if ((m = pending.match(regexes.className))) {
+                if (!attrs.className) attrs.className = []
+                attrs.className.push(m[1])
+            } else if ((m = pending.match(regexes.attr))) {
+                attrs[m[1]] = m[2]
+            }
+
+            if (m) pending = pending.slice(m[0].length)
+     } while (m)
+
+        if (pending && (m = pending.match(regexes.text))) {
+            attrs.text = m[1]
+         pending = pending.slice(m[0].length)
+        }
+
+        if (pending) {
+            throw new Error(`There was an error when parsing element name: "${name}"`)
+        }
+    
+      return attrs
+    }
+parseName用来解析，主要是依赖前边的正则，循环过滤，并保存到对象中
+
+    function parse (args) {
+        const items = []
+        let item
+        while ((item = parseNext(args))) items.push(item)
+        return items
+    }
+    
+parse函数在一开始就用来解析参数，循环调用parseNext
+
+
+    function parseNext (args) {
+        if (!args.length) return null
+        var item = {children: []}
+
+        while (true) {
+            var val = args.shift()
+
+            if (val instanceof doc.defaultView.Node) {
+                item.el = val
+            } else if (typeof val === 'string') {
+                item.tag = val
+            } else if (isArray(val)) {
+                let child
+                while ((child = parseNext(val))) item.children.push(child)
+            } else if (typeof val === 'object') {
+                item.attrs = val
+            } else {
+                throw new Error('Incorrect value.')
+            }
+
+            if (!args[0]) break
+            if (args[0] instanceof doc.defaultView.Node) break
+            if (typeof args[0] === 'string') break
+        }
+
+        return item
+    }
+    
+ document.defaultView.Node 的用法我没有理解，我尝试了下 document.createElement('span') instanceof window.Node 返回的也是true
+ 
+    if (typeof window !== 'undefined' && window.document) {
+        domator.setDocument(window.document)
+        }
+        
+设定doc
+
+    if (typeof module === 'undefined') {
+        if (typeof define === 'function' && define.amd) {
+            define([], function () {
+                return domator
+            })
+        } else if (typeof window !== 'undefined') {
+            window.domator = domator
+        }
+    }
+    
+一点AMD设置
+
+### 总结
+    
+整体上 就最后doc.defaultView.Node没有理解上来。
+
+ 
