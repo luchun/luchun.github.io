@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript中的>>>操作符
+title: Javascript中的右移位操作符
 ---
 
 在MDN上看到很多地方用到>>>操作符，很是不理解，通过[stackoverflow](http://stackoverflow.com/questions/1822350/what-is-the-javascript-operator-and-how-do-you-use-it)获得了以下解释
