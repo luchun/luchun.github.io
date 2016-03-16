@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>玫琳凯</title>
+    <link rel="stylesheet" href="./css/pure-min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body class="card">
+<header class="header">
+    <div class="header-sec">
+        <div class="header-item"><span class="card-icon card-icon-map"></span><p class="header-item-location"></p></div>
+        <div class="header-item"><span class="card-icon card-icon-clock"></span><p class="header-item-date"></p></div>
+        <div class="header-item"><span class="card-icon card-icon-user"></span><p class="header-item-name"></p> </div>
+    </div>
+
+</header>
+<section>
+    <div class="card-success2">
+        <span class="card-success-name"></span> <br/>
+        请在入口处出示此券
+    </div>
+    <div class="card-qrcode">
+        <!--<img src="images/tmp2.png" alt="二维码"/>-->
+        <p>
+            此二维码为入场唯一凭证 <br/>
+            切勿任意转发或复制给其他顾客
+        </p>
+    </div>
+</section>
+<script>
+    var data = {
+        location: "魅力女人工作室上海市静安区南京西路1366号恒隆广场2期19楼培训教室B",     //地址 String
+        date: "2015年5月30日 11:45－15:00",                                                  //日期 String
+        name: "邀请人 张兰兰",                                                                  //姓名 String
+        successname:"王美丽",                                                                  //下边那个姓名 String
+        qrcode:"images/tmp2.png"                                                              //二维码图片路径  String
+    };
+
+    /**
+     * Reset font size
+     * @function
+     *
+     */
+    function rs() {
+        var dw = document.documentElement.clientWidth;
+        var dh = document.documentElement.clientHeight;
+        document.body.style.fontSize = dw / 320 + "em";
+    }
+
+    /**
+     * Replace dom text with data object
+     * @function
+     * @param {string} dom - The id or class of the dom.
+     * @param {string}  text - The text want to replace.
+     */
+    function replaceText(dom, text) {
+
+        var node = document.querySelectorAll(dom)[0];
+        node.innerHTML = text;
+    }
+
+    /**
+     *  load Image
+     *  @function
+     * @param {string} src - The src of the image
+     * @param {function}  cb - The callback function after load image object,the only param is the image object.
+     */
+    function loadImage(src, cb){
+
+        var newImage =  document.createElement("img");
+        newImage.src = src;
+        cb(newImage);
+    }
+
+    //document ready event
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+        //重新设置字体大小
+        rs();
+
+        //替换信息
+        replaceText(".header-item-location", data.location);
+        replaceText(".header-item-date", data.date);
+        replaceText(".header-item-name", data.name);
+        replaceText(".card-success-name", data.successname);
+
+        //替换二维码图片
+        loadImage(data.qrcode, function(img){
+            var Imgbox = document.querySelectorAll(".card-qrcode")[0],
+                    ImgboxP = Imgbox.querySelectorAll("p")[0];
+            Imgbox.insertBefore(img,ImgboxP);
+        })
+
+
+    });
+
+    //监听resize事件
+    window.addEventListener('resize', function() {
+        console.log("resize");
+        rs();
+    }, true);
+
+</script>
+</body>
+</html>

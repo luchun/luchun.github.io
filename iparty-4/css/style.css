@@ -123,7 +123,26 @@ html,body{
     font-size: 1em;
 }
 .card-arc h5{
-    color: #fb5475;
+    color: #8ba6c1;
+    font-weight: normal;
+    font-size: .875em;
+    margin-bottom: .75em;
+}
+.card-arc .intro-box{
+    background: url("../images/intro-bg.png") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    padding-top: .75em;
+    padding-bottom: 1em;
+}
+.icon-diamond{
+    width: 1em;
+    height: 0.7857142857em;
+    display: inline-block;
+    background: url("../images/diamond.png") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    vertical-align: middle;
 }
 .card-sec-header span{
     font-size: 1em;
