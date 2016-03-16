@@ -143,9 +143,8 @@ html,body{
     -webkit-background-size:100% 100%;
     background-size:100% 100%;
     vertical-align: middle;
-    float: left;
-    margin-top: 0.35em;
-    margin-right: .25em;
+    line-height: inherit;
+    margin-top: -.2em;
 }
 .card-sec-header span{
     font-size: 1em;
