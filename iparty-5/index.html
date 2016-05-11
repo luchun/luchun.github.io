@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>玫琳凯</title>
+    <link rel="stylesheet" href="./css/pure-min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body class="card">
+<header class="header">
+
+    <div class="header-sec">
+        <h3 class="header-sec-title">亮采产品推荐礼遇日活动</h3>
+        <div class="header-item"><span class="card-icon card-icon-map"></span><p class="header-item-location"></p></div>
+        <!--<div class="header-item"><span class="card-icon card-icon-clock"></span><p class="header-item-date"></p></div>-->
+        <div class="header-item"><span class="card-icon card-icon-user"></span><p class="header-item-name"></p> </div>
+    </div>
+
+</header>
+<section class="card-form">
+    <form class="">
+        <fieldset>
+            <p class="legend">请填写您的个人信息来生成邀请卡</p>
+            <div  class="pure-u-1" >
+                <label for="name" >姓名</label>
+                <input id="name" class="pure-u-3-4" type="text" placeholder="请填写" required>
+            </div>
+
+            <div class="pure-u-1">
+                <label for="tel">手机号码</label>
+                <input id="tel" class="pure-u-3-4" type="tel" placeholder="请填写" required maxlength="11">
+            </div>
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-button-mk">生成邀约卡</button>
+            </div>
+            <!--<div class="errorAlert">-->
+                <!--请准确填写手机号码-->
+            <!--</div>-->
+        </fieldset>
+    </form>
+</section>
+<article  class="card-imgs">
+    <section>
+        <img src="./images/secimg1.jpg" alt=""><img src="./images/secimg3.jpg" alt=""><img src="./images/secimg4.jpg" alt=""><img
+            src="./images/secimg5.jpg" alt=""><img
+            src="./images/secimg6.jpg" alt="">
+    </section>
+</article>
+<section class="footer">
+    <a type="submit" class="pure-button pure-button-mk" href="#">我要参加</a>
+</section>
+<script>
+    var data = {
+        location: "魅力女人工作室上海市静安区南京西路1366号恒隆广场2期19楼培训教室B",     //地址 String
+        date: "2015年5月30日 11:45－15:00",                                                  //日期 String
+        name: "邀请人 张兰兰",                                                                  //姓名 String
+        successname:"王美丽",                                                                  //下边那个姓名 String
+        qrcode:"images/tmp2.png"                                                              //二维码图片路径  String
+    };
+
+    /**
+     * Reset font size
+     * @function
+     *
+     */
+    function rs() {
+        var dw = document.documentElement.clientWidth;
+        var dh = document.documentElement.clientHeight;
+        document.body.style.fontSize = dw / 320 + "em";
+    }
+
+    /**
+     * Replace dom text with data object
+     * @function
+     * @param {string} dom - The id or class of the dom.
+     * @param {string}  text - The text want to replace.
+     */
+    function replaceText(dom, text) {
+
+        var node = document.querySelectorAll(dom)[0];
+        node.innerHTML = text;
+    }
+
+    //document ready event
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+        //重新设置字体大小
+        rs();
+
+        //替换信息
+        replaceText(".header-item-location", data.location);
+//        replaceText(".header-item-date", data.date);
+        replaceText(".header-item-name", data.name);
+
+
+        //手机号码3-4-4
+        document.getElementById("tel").addEventListener("blur", function( event ) {
+            var dv = this.value;
+            if(dv.length !== 11){ console.log("手机号码应为11位"); return;}
+            this.value = dv.substr(0,3) + "-" + dv.substr(3,4) + "-" + dv.substr(7);
+        }, true);
+
+
+    });
+
+    //监听resize事件
+    window.addEventListener('resize', function() {
+        rs();
+    }, true);
+
+    function Alert(dom, text, timeout){
+        var node = document.querySelectorAll(dom)[0];
+        var textnode = document.createElement("div");
+        textnode.className = "errorAlert";
+        textnode.innerText = text;
+        node.appendChild(textnode);
+        timeout && setTimeout(function(){
+            node.removeChild(textnode);
+        },timeout)
+    }
+    // Alert('.card-form',"请准确填写手机号码",1000);
+
+</script>
+</body>
+</html>
