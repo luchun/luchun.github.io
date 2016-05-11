@@ -232,6 +232,7 @@ html,body{
 /*20151009*/
 .card-form{
     position: relative;
+    padding-bottom: 1.5em;
 }
 .card-form .errorAlert{
     color: #fff;
