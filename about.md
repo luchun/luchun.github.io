@@ -10,6 +10,7 @@ permalink: /about/
 
 我目前是博彦科技员工，外派在玫琳凯中国工作，主要负责 “玫琳凯百变美人” 项目的持续更新维护，“玫琳凯美丽服务邀约卡” 项目的更新维护，以及一些内部项目。我在这些项目中主要职责为前端CSS+JS。
 
+
 ### 近期项目
 
 
@@ -72,6 +73,19 @@ permalink: /about/
 
 特点  翻译 站点 框架 个人项目
 
+--- 
+
+### 关于项目托管
+
+* 个人博客 使用的是 [Github Page](https://pages.github.com/) 服务
+* 公司项目的静态内容 一般开发流程是我先做出 html，再进入VS中，一起合作进行开发。
+这个早期过程，我会将代码托管在 [Bitbucket](https://bitbucket.org/)，因为它的私人仓库是免费的，可以保护代码。
+然后一般使用 [netlify](https://www.netlify.com/) 来预览。
+* 个人学习型的项目 实践书中的项目，或者是慕课网上的教程，代码会托管在 github ,使用 [netlify](https://www.netlify.com/) 来预览或者只在本地运行，不放在静态站点。
+* 个人创作型的项目 静态站点型一般使用 github 托管代码，使用 [netlify](https://www.netlify.com/) 来发布站点
+* 个人创作型的项目 动态站点型一般使用 github 托管代码，使用 [Bluemix](http://www.ibm.com/cloud-computing/bluemix/cn-zh/) 来作为站点容器，
+不过Bluemix 免费资源有限，一般会放在一个站点的二级目录下。
+* 个人创作型的项目 插件型一般使用 github 托管代码，会搭配一个静态站点放在 [netlify](https://www.netlify.com/)
 ---
 
 ### Contact me
