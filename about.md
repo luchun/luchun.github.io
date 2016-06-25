@@ -4,74 +4,52 @@ title: About
 permalink: /about/
 ---
 
-个人信息
+# 个人信息
 
-### 工作 
+## 介绍 
 
-我目前是博彦科技员工，外派在玫琳凯中国工作，主要负责 “玫琳凯百变美人” 项目的持续更新维护，“玫琳凯美丽服务邀约卡” 项目的更新维护，以及一些内部项目。我在这些项目中主要职责为前端CSS+JS。
+我目前是博彦科技员工，外派在玫琳凯中国工作，主要负责 “百变美人” 项目的持续更新维护，“邀客” 项目的更新维护，以及一些内部项目。我在这些项目中主要职责为前端 CSS+JS。
 
+## 工作经历
 
-### 近期项目
+### 博彦科技股份有限公司（2015.5 - 今）
 
+为了方便到甲方工作，我在2015年5月份从青岛转到上海博彦公司
 
-#### 百变美人决赛首页
+#### 玫琳凯邀客
+  这是玫琳凯的内容分享项目，主要为移动端工作。在此项目中我掌握了动画的兼容性知识，使用了ES6，Gulp打包工具，实现前端自动化。
+  
 
-[预览地址](http://getmdl.tech/beauty2016/) &nbsp;    [线上地址](https://beauty.marykay.com.cn/BeautyContest/)    &nbsp; 日期  : 2016-01
+### 北京圣安德科技有限公司青岛分公司 (2014.9 - 2015.5)
 
-玫琳凯百变美人是一场大型选秀活动，持续一整年，终于到了决赛赛季。 
+#### 玫琳凯百变美人
+  
+  这是玫琳凯的[选秀网站](https://beauty.marykay.com.cn/beautycontest/)，目前仍在每季度更新。我负责项目前端工作，在此期间，我掌握了很多兼容性知识，以及响应式知识。
 
-特点 响应式 PC端 兼容性 公司项目
+#### 其他
+  
+  在此期间我还参与了 [青岛机场](http://www.qdairport.com/control/main) 巴克莱银行 某海淘网站 的外包项目 。学习了图表如 [D3.js](https://d3js.org/) [Echart](http://echarts.baidu.com/)
+  
 
----
+### 华唐国际投资控股集团(2013.7 - 2014.9)
 
+  在此公司工作期间，我主要负责公司商城前端工作，掌握了CSS3语法，JavaScript语法等知识
 
-#### 邀约卡卡片
+## 个人项目
 
-[预览地址](http://getmdl.tech/cardImg2016/)   &nbsp;  日期  : 2015-12
-
-这是一个小项目 ，记录下来是因为 其中有两处CSS不错
-
-特点 CSS3 移动端 公司项目
-
----
-
-#### 连带率分析
+### 连带率分析
 
  [地址](http://getmdl.tech/joint-rate-analysis/) &nbsp; 日期 : 2015-12
 
-女朋友在一家连锁母婴用品店工作，每天需要从微信中收集各家店铺的销售信息，然后给各家的连带率做出排名。我写了这个WEB APP 来帮助她，从微信中复制信息出来粘贴到这里的输入框后，可以分析，当粘贴满13家（因为一共13家店铺）时进行排名分析。这是我首次尝试使用Backbonejs对app进行MVC分层。
-
-特点  MVC Backbone 个人项目
+帮助老婆解决重复工作，使用Backbone.js + jQuery.js
 
 ---
 
-#### 粉巴活动报名页
-
-[预览地址](http://getmdl.tech/PinkBusMobile/app/) [上线地址](#)(不清楚)   日期 2015-12
-
-记录这个项目原因是 我在项目开始阶段 使用了 [Web Starter Kit ](https://developers.google.com/web/tools/starter-kit/?hl=en)；这是谷歌发布的一套前端自动化工具，可以自动检查语法错误，压缩，预编译，auto-reload等，大大的提高了开发效率。
-
-特点 自动化 移动端 公司项目
-
----
-
-#### 粉巴活动名单管理后台
-
-[预览地址](http://getmdl.tech/PinkBusHTML/)   &nbsp;  日期 2015-11
-
-内部后台项目，管理玫琳凯粉巴中国行项目的名单，只上传了一个有代表性的页面。主要特点是我在这里使用了观察者模式，设计了一个对象管理数据，感觉有点理解了MVC的意思，在这个项目后决定多使用MVC类框架。
-
-特点 观察者模式 公司项目 
-
----
-
-#### MDL 中文
+### MDL 中文
 
  [地址](http://getmdl.tech/getmdl)   &nbsp;   日期 2015-11
 
 [Material Design Lite](http://www.getmdl.io/) 是一套优秀的前端框架，可谓是最符合Google Material Design 的框架。可惜的是目前还没有中文介绍，网站由于引用的被墙的资源而打开缓慢，所以我做了一个中文站点，并将资源改成360的前端公共库。
-
-特点  翻译 站点 框架 个人项目
 
 --- 
 
@@ -83,8 +61,7 @@ permalink: /about/
 然后一般使用 [netlify](https://www.netlify.com/) 来预览。
 * 个人学习型的项目 实践书中的项目，或者是慕课网上的教程，代码会托管在 github ,使用 [netlify](https://www.netlify.com/) 来预览或者只在本地运行，不放在静态站点。
 * 个人创作型的项目 静态站点型一般使用 github 托管代码，使用 [netlify](https://www.netlify.com/) 来发布站点
-* 个人创作型的项目 动态站点型一般使用 github 托管代码，使用 [Bluemix](http://www.ibm.com/cloud-computing/bluemix/cn-zh/) 来作为站点容器，
-不过Bluemix 免费资源有限，一般会放在一个站点的二级目录下。
+* 个人创作型的项目 动态站点型一般使用 github 托管代码，使用 [Bluemix](http://www.ibm.com/cloud-computing/bluemix/cn-zh/) 来作为站点容器，不过Bluemix 免费资源有限，一般会放在一个站点的二级目录下。
 * 个人创作型的项目 插件型一般使用 github 托管代码，会搭配一个静态站点放在 [netlify](https://www.netlify.com/)
 ---
 
