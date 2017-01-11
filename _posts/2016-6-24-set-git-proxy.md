@@ -10,6 +10,14 @@ title: 在git中设置代理
 
     git config --global --unset http.proxy
     
+#### 2017-1-17 更新
+最近换用mac系统，发现这样设置代理还是没有用，换了一个方法:
+
+    git config --global http.proxy 'socks5://127.0.0.1:1086'
+    git config --global https.proxy 'socks5://127.0.0.1:1086'
+    
+使用 1086 是因为 在 mac上 sock5是1086端口，windows上是 1080端口
+    
 npm 设置代理
 
     npm config set proxy http://proxy.company.com:8080
