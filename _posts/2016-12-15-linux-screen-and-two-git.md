@@ -20,7 +20,6 @@ title: Linux screen & two remote git
  这样我给bitbucket起了一个aws的名字就好了。
  使用sourcetree提交的时候，可以选择提交到哪一个远端仓库.
     
-    
  
 
 	
