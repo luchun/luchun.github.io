@@ -1,6 +1,6 @@
 ---
 layout: post
-title: point-events
+title: 向一个只读文件写入内容
 ---
 
 今天在 AWS 上安装 MongoDB, 按照官网的[指南](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
