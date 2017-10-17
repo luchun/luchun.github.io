@@ -215,7 +215,5 @@ export default {
 当然还有 Vue-Router 和 Vuex
 
 
-
-
 ### 原文地址
 [https://medium.com/@denny.headrick/mixins-and-plugins-in-vuejs-ecee9b37d1bd](https://medium.com/@denny.headrick/mixins-and-plugins-in-vuejs-ecee9b37d1bd)        
