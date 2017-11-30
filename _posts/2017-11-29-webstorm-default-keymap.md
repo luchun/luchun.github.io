@@ -163,10 +163,8 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 
 ![Move line up](http://ofn6njofy.bkt.clouddn.com/move-line-selection-up-down.gif)
 
-
 ## `⌥ ⇧ ︎↓`  对选中的代码 或 光标所在行 进行 向下移动 
 
-(不会截取gif,从网上找了一个移动内容的gif)
 ![Move line down](http://ofn6njofy.bkt.clouddn.com/FlawlessWhichAlbacoretuna-size_restricted.gif)
 
 
@@ -181,37 +179,41 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 ## `⇧  ↩︎`  Start new line
 
 
-// TODO 
-## `⌘ ⇧ U`  Toggle case for word at caret or selected block
+## `⌘ ⇧ U`  切换选中的代码块 / 光标所在单词 的大小写
         
-// TODO 
-## `⌥ ⌘ ⇧ ]`  Select till code block end
- 
+![Toggle Upcase](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-095838.gif)
         
-// TODO 
-## `⌥ ⌘ ⇧ [`  Select till code block start
-
-
-<video src="http://ofn6njofy.bkt.clouddn.com/Jietu20171130-095111.mp4" type="video/mp4"></video>   
-
+## `⌥ ⌘ ⇧ ]`  从当前位置选择到代码块结束位置 
  
-// TODO 
-## `⌥ ⌦`  Delete to word end
+## `⌥ ⌘ ⇧ [`  从当前位置选择到代码块开始位置
+
+![Select from current to end](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-095111.gif)
   
-// TODO 
+## `⌥ ⌦`  Delete to word end
+
 ## `⌥ ⌫`  Delete to word start
 
-// TODO 
-## `⌘ +` / `⌘ -`  Expand/collapse code block
-  
-// TODO 
-## ` ⌘ ⇧ +`  Expand all 
-     
-// TODO 
-## ` ⌘ ⇧ -`  Collapse all
+![Delete to word start / Delete to word end](http://ofn6njofy.bkt.clouddn.com/delete_word.gif)
 
-// TODO 
-## ` ⌘ W`  Close active editor tab 关闭当前激活的编辑tab
+## `⌘ +` / `⌘ -` 展开折叠当前的代码块
+
+![Expand/collapse code block](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-115931.gif)
+  
+ 
+## ` ⌘ ⇧ +` 全部展开
+
+     
+## ` ⌘ ⇧ -` 全部折叠
+
+![Collapse all](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-120125.gif)
+
+
+## ` ⌘ W` 关闭当前激活的编辑器标签tab
+
+![Close active editor tab](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-120017.gif)
+  
+
+
 
 # Multiple carets and selections 
 
