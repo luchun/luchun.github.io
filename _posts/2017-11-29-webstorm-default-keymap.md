@@ -63,9 +63,7 @@ WebStorm有很多意图来帮助您快速应用修复，生成代码或更改一
 ![Show descriptions of error or warning at caret](http://ofn6njofy.bkt.clouddn.com/blogWX20171129-141715.png)
 
 
-## `⌃ ↩︎` / `⌘  N` （control + enter / command + N）  Generate code... 
-
-生成代码 ? 好像不常用 ? 
+## `⌃ ↩︎` / `⌘  N` （control + enter / command + N）  生成代码
 
 ![Generate code](http://ofn6njofy.bkt.clouddn.com/WX20171129-143717@2x.png)
   
@@ -112,7 +110,7 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 
 ## `⌥ ↑` （`Alt +  方向上︎`）  选择连续增加的代码块
 
-动态图不好截取，所以没截图。在html中非常好用，会逐级向上选中代码块。
+在html中非常好用，会逐级向上选中代码块。
 
 如 有 `body>main>section>div>p>span>''hello world'` 这样的html结构，光标在`hello world`。连续点击 （`Alt +  方向上︎`） ，选中的代码块也会从 text 到 span 到 p 最终到 body。
 
@@ -124,34 +122,32 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 基本可以看做是前一个快捷键的反操作，前一个操作如果选多了，可以使用这个操作缩小选择。
 
 
- 
-## `⌃ ⇧ Q︎`  Context info 
-
-查看上下文信息 ？ 好像不常用 ?
+## `⌃ ⇧ Q︎`  查看上下文信息
 
 
 ## `⌥ ⌘ L︎`  Reformat code 重新格式化代码
 
 如果在选中的代码块上执行， 则会重新格式化选中；如果没有选中的代码块
 
+![Reformat code](http://ofn6njofy.bkt.clouddn.com/Reformat_code.gif)
 
-// TODO 
-## `⌥ ⌘ I`  Auto-indent line(s)
+
+## `⌥ ⌘ I`  对行(多行) 自动缩进
 
 
 ## `⇥`  缩进选定的行 
 
-
 ## `⇧ ⇥`  取消对选定行的缩进 是上一个操作的逆操作
 
+![Indent selected lines](http://ofn6njofy.bkt.clouddn.com/Indent_selected_lines.gif)
 
 ## `⌘ ⇧ V︎`  从近期缓存区复制
+![Paste_from_recent_buffers](http://ofn6njofy.bkt.clouddn.com/Paste_from_recent_buffers.gif)
 
-![Paste from recent buffers](http://ofn6njofy.bkt.clouddn.com/WX20171130-070448@2x.png)
 
+## `⌘ D`  Duplicate current line or selected block
 
-// TODO 
-## `⌘ D`  Comment/uncomment with line comment
+![Duplicate current line or selected block](http://ofn6njofy.bkt.clouddn.com/Duplicate_current_line_or_selected_block.gif)
 
 
 ## `⌘ ⌫`  删除光标所在的行 
@@ -168,15 +164,22 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 ![Move line down](http://ofn6njofy.bkt.clouddn.com/FlawlessWhichAlbacoretuna-size_restricted.gif)
 
 
+## `⌃ ⇧ ︎J`   向下合并行 
 
-// TODO 
-## `⌃ ⇧ ︎J`  Join lines
+![Join lines](http://ofn6njofy.bkt.clouddn.com/join_line.gif)
 
-// TODO 
-## `⌘ ↩︎`  Split line
 
-// TODO 
-## `⇧  ↩︎`  Start new line
+## `⌘ ↩︎`   拆分一个新行
+
+和直接使用回车不一样 光标的位置不会改变
+
+![Split line](http://ofn6njofy.bkt.clouddn.com/split_line.gif)
+
+## `⇧  ↩︎`   开始新的一行
+
+在当前光标行直接开始一个新行，不会从光标处折断行
+
+![Start new line](http://ofn6njofy.bkt.clouddn.com/start_new_line.gif)
 
 
 ## `⌘ ⇧ U`  切换选中的代码块 / 光标所在单词 的大小写
@@ -202,7 +205,6 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
  
 ## ` ⌘ ⇧ +` 全部展开
 
-     
 ## ` ⌘ ⇧ -` 全部折叠
 
 ![Collapse all](http://ofn6njofy.bkt.clouddn.com/Jietu20171130-120125.gif)
