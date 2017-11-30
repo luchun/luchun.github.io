@@ -219,20 +219,34 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 
 # Multiple carets and selections 
 
-// TODO 
+
+> * 📖 [Multicursor](https://www.jetbrains.com/help/webstorm/multicursor.html) 
+
+
 ## ` ⌥  Click`  Add or remove caret
 
-// TODO 
+![Add or remove caret](http://ofn6njofy.bkt.clouddn.com/Add_or_remove_caret.gif)
+  
+
 ## ` ⌃ ⌘ G`  Select all occurrences
 
-// TODO 
+![Select all occurrences](http://ofn6njofy.bkt.clouddn.com/Select_all_occurrences.gif)
+  
+
 ## ` ⌃ G`  Select next occurrence
 
-// TODO 
+![Select next occurrence](http://ofn6njofy.bkt.clouddn.com/Select_next_occurrence.gif)
+  
+
 ## ` ⌃ ⇧ G`  Unselect occurrence
 
-// TODO 
+![Unselect occurrence](http://ofn6njofy.bkt.clouddn.com/Unselect_occurrence.gif)
+    
+
 ## `⎋`  Unselect all occurrences or carets 
+
+![Unselect all occurrences or carets](http://ofn6njofy.bkt.clouddn.com/Unselect_all_occurrences_or_carets.gif)
+ 
 
 # Running
 
