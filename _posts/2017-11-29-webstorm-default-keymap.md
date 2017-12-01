@@ -17,7 +17,7 @@ Webstorm用的久了 ，记住一些快捷键会方便很多
 9. **[Debugging](#debugging)**
 10. **[General](#general)**
 
-##Editing 
+## Editing 
 
 ### `⌃ Space` (`Control + Space`) 基本代码完成。 完成名称和关键字
 
