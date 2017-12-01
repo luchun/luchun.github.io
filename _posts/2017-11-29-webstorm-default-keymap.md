@@ -276,7 +276,6 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
  **[⬆ back to top](#table-of-contents)**
 
  
- 
 ## VCS/Local History 
 
 > * 📖  [Version control with WebStorm](https://www.jetbrains.com/help/webstorm/version-control-with-webstorm.html)
@@ -302,7 +301,6 @@ Webstorm 内置了大量的代码模板，可以节省很多工作量。
 
 
 **[⬆ back to top](#table-of-contents)**
-
 
 
 ## Search/Replace 
@@ -530,10 +528,10 @@ Webstorm 会查找使用情况并在提示下进行删除
 
 > * 📖  [Extract Parameter](https://www.jetbrains.com/help/webstorm/refactoring-javascript.html#javascript_extract_parameter)
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Running
 
-**[⬆ back to top](#table-of-contents)**
 
 ### `⌃ ⌥ R`  (`Control Alt R`) 选择配置并运行 Select configuration and run
 
@@ -552,10 +550,11 @@ Webstorm 会查找使用情况并在提示下进行删除
 
 ### ` ⌥  F11` (`Alt F11`) 执行 Gulp/Grunt/npm 任务 Run Gulp/Grunt/npm tasks
 
+**[⬆ back to top](#table-of-contents)**
+
 
 ## Debugging
 
-**[⬆ back to top](#table-of-contents)**
 
 ### `F8` / `F7`  步入/步入 Step over / step into
 
@@ -580,11 +579,10 @@ Webstorm 会查找使用情况并在提示下进行删除
 
 ### `⇧ ⌘ F8 ` (`Command Shift F8`) 查看断点 View breakpoints
 
+**[⬆ back to top](#table-of-contents)**
 
 
 ## General
-
-**[⬆ back to top](#table-of-contents)**
 
 
 ### ![High][high_img]` Double ⇧ ` (`Shift Shift`) 到处搜索 Search everywhere
@@ -647,9 +645,12 @@ Webstorm 会查找使用情况并在提示下进行删除
 **[⬆ back to top](#table-of-contents)**
 
 ## 后记 
-* ![high_img][high_img] 意味着项目是 **推荐记住的**。
+* ![high_img][high_img]  意味着项目是 **推荐记住的**。
+
 * 想要输入 代表mac键盘的特殊字符 或者是 emoji ，需要同时按住 `control command space` 
+
 * 还有一个挺有用的快捷输入方式 那就是生成 JSdoc。 在 function 上边 先 输入 /** 接着按下回车
+
 ---
 
 **[⬆ back to top](#table-of-contents)**
