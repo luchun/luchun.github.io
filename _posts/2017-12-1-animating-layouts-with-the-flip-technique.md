@@ -118,3 +118,50 @@ const last = lastElm.getBoundingClientRect();
 
 <p data-height="370" data-theme-id="13607" data-slug-hash="305a618d4dd75cbe8423183c70d6a43e" data-default-tab="result" data-user="davidkpiano" data-embed-version="2" data-pen-title="FLIP example with WAAPI" class="codepen">See the Pen <a href="https://codepen.io/davidkpiano/pen/305a618d4dd75cbe8423183c70d6a43e/">FLIP example with WAAPI</a> by David Khourshid (<a href="https://codepen.io/davidkpiano">@davidkpiano</a>) on <a href="https://codepen.io">CodePen</a>.<br />
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+
+## Parent-Child Transitions 
+
+在之前的实现中，元素边界是基于`window`的。对于大多数用例来说，这很好，但请考虑这种情况：
+
+* 一个元素改变位置并需要 transition。
+
+* 该元素包含一个子元素，该元素本身需要转换到父级中的不同位置。
+
+由于之前计算的界限是相对于`window`的，因此我们对子元素的计算将会失效。
+为了解决这个问题，我们需要确保边界是相对于父元素计算的：
+
+```javascript
+const parentElm = document.querySelector('.parent');
+const childElm = document.querySelector('.parent > .child');
+
+// First: parent and child
+const parentFirst = parentElm.getBoundingClientRect();
+const childFirst = childElm.getBoundingClientRect();
+
+doSomething();
+
+// Last: parent and child
+const parentLast = parentElm.getBoundingClientRect();
+const childLast = childElm.getBoundingClientRect();
+
+// Invert: parent
+const parentDeltaX = parentFirst.left - parentLast.left;
+const parentDeltaY = parentFirst.top - parentLast.top;
+
+// Invert: child relative to parent
+const childDeltaX = (childFirst.left - parentFirst.left)
+  - (childLast.left - parentLast.left);
+const childDeltaY = (childFirst.top - parentFirst.top)
+  - (childLast.top - parentLast.top);
+  
+// Play: using the WAAPI
+parentElm.animate([
+  { transform: `translate(${parentDeltaX}px, ${parentDeltaY}px)` },
+  { transform: 'none' }
+], { duration: 300, easing: 'ease-in-out' });
+
+childElm.animate([
+  { transform: `translate(${childDeltaX}px, ${childDeltaY}px)` },
+  { transform: 'none' }
+], { duration: 300, easing: 'ease-in-out' });
+```
