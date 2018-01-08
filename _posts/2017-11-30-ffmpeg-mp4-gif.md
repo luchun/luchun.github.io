@@ -39,6 +39,26 @@ ffmpeg 下载 [https://evermeet.cx/ffmpeg/](https://evermeet.cx/ffmpeg/)
 
 `for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.gif"; done`
 
+ 如果想指定编码格式实现压缩
+ 
+ `$ ffmpeg -i input.mp4 -vcodec h264 -acodec aac  output.mp4`
+ 
+ 想对视频进行缩放
+ 
+ 指定一边 另一边按比例缩放
+
+ `$ ffmpeg -i input.mp4 -vcodec h264 -acodec aac -vf scale=320:-1 output.mp4`
+ 
+ 指定两边
+ 
+  `$ ffmpeg -i input.mp4 -vcodec h264 -acodec aac -vf scale=320:240 output.mp4`
+ 
+  
+ ### updates
+   
+  **2018-1-8** : 在将gif转为mp4时遇到了问题 chrome兼容性强可以播放 firefox和Edge/IE 不行 后来找到了正确的姿势
+  
+  `ffmpeg -f gif -i FOO.gif -pix_fmt yuv420p -c:v libx264 -movflags +faststart -vf scale=320:-1 BAR.mp4`
  
  
  ## 参考
@@ -48,3 +68,5 @@ ffmpeg 下载 [https://evermeet.cx/ffmpeg/](https://evermeet.cx/ffmpeg/)
 * [How do you convert an entire directory with ffmpeg?](https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg)
 
 * [如何将小视频转换成GIF动图或将GIF动图转换成视频](http://www.webhek.com/post/convert-video-gif.html)
+
+* [ffmpeg convert gif to mp4, for best cross browser compatibility](https://gist.github.com/ingramchen/e2af352bf8b40bb88890fba4f47eccd0)
