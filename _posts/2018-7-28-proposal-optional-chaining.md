@@ -19,6 +19,8 @@ const obj = {
 ```
 
 现在TC39提出了一个新的想法 `optional chaining` 安全的链式调用
+
+### 
 上边的代码可以写成下边这种形式:
 ```javascript
     const baz = obj?.foo?.bar?.baz
