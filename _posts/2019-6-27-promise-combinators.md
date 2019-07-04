@@ -21,7 +21,7 @@ ES2015引入了`promises`，并且支持两种组合器，静态方法`Promise.a
 此实例在 `iterable` 参数内所有的 `promise` 都“完成（`resolved`）”或参数中不包含 `promise` 时回调完成（`resolve`）；
 如果参数中  `promise` 有一个失败（`rejected`），此实例回调失败（`reject`），失败原因的是第一个失败 `promise` 的结果。
 
-``` ecmascript 6
+``` 
 const promises = [
   fetch('/component-a.css'),
   fetch('/component-b.css'),
@@ -41,7 +41,7 @@ try {
 `Promise.race(iterable)` 方法返回一个 `promise`，一旦迭代器中的某个`promise`解决或拒绝，返回的 `promise`就会解决或拒绝。
 在你需要有一个解决时就做些事情或者是有一个拒绝时做些事情时，它会很有用。
 
-``` ecmascript 6
+``` 
 try {
   const result = await Promise.race([
     performHeavyComputation(),
@@ -57,7 +57,7 @@ try {
 [mdn文档地址](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 `Promise.allSettled(iterable)`方法返回一个`promise`，一旦迭代器中的所有`promise`都完成了解决或拒绝，返回的 `promise`就会解决。
 
-``` ecmascript 6
+``` 
 const promises = [
   fetch('/api-call-1'),
   fetch('/api-call-2'),
@@ -74,7 +74,7 @@ removeLoadingIndicator();
 `Promise.any(iterable)`方法返回一个`promise`，一旦迭代器中的某个`promise`解决，返回的 `promise`就会解决。当迭代器中的所有`promise`拒绝，返回的 `promise`就会拒绝。
 与`Promise.race`相比，返回的`promise`解决的逻辑相同。但`Promise.race`相返回的`promise`会在迭代器中的某个`promise`拒绝时就拒绝。
 
-``` ecmascript 6
+``` 
 const promises = [
   fetch('/endpoint-a').then(() => 'a'),
   fetch('/endpoint-b').then(() => 'b'),
