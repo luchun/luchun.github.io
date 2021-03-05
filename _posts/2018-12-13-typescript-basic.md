@@ -6,8 +6,9 @@ title: TypeScript Basic
 最近的一个公司项目中，我给项目加上了TypeScript。
 目前项目有三名前端，2019年将会增加更多的前端，更多的项目。
 一方面我们使用ESLint控制代码风格，但是我觉得ESLint越来越不够了。所以明年所有前端项目，我都将要求使用TypeScript。
+<!-- more -->
 
-Use types in TypeScript
+## Use types in TypeScript
 
 ````ecmascript 6
 const myVar: string = 'hello';

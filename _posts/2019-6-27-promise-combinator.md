@@ -5,6 +5,7 @@ title: Promise组合器
 
 ES2015引入了`promises`，并且支持两种组合器，静态方法`Promise.all` 和 `Promise.race`。
 目前草案中还有另外两个组合器`Promise.allSettled`和`Promise.any`。
+<!-- more -->
 
 | 名称 | 描述 | 状态 | 
 | ----- | --------- | ----------- | 

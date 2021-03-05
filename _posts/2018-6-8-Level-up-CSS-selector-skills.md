@@ -2,6 +2,8 @@
 layout: post
 title: 提升 CSS 选择器技能
 ---
+不常用的CSS选择器
+<!-- more -->
 
 ### 组合选择器 Combinator selectors
 * [后代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_selectors) `div span`

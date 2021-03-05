@@ -2,6 +2,8 @@
 layout: post
 title: Web Animation API - 在 JavaScript 中释放 CSS keyframes 的力量
 ---
+Animation API
+<!-- more -->
 
 如果你曾经使用过CSS3关键帧动画，那么你可能会感受到这个功能受到的严重阻碍。
 一方面，CSS关键帧可以让你使用纯CSS创建复杂的动画，也存在一个问题 - 所有的事情都必须在 CSS 内部预先声明。

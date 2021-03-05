@@ -4,6 +4,7 @@ title: JS工具 Platform.js 和 URI.js
 ---
 
 一些常用的 判断浏览器功能支持/浏览器版本信息工具
+<!-- more -->
 
 ## [Platform.js](https://github.com/bestiejs/platform.js#readme)
 对UserAgent判断浏览器信息的集成。 可以判断浏览器渲染引擎/生产厂家/浏览器名称/操作系统/版本。

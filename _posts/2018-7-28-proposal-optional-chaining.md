@@ -2,6 +2,9 @@
 layout: post
 title: optional chaining
 ---
+介绍一下可选链
+<!-- more -->
+
 在开发中经常遇到一个问题，安全引用对象的属性。例如:
 
 ```javascript

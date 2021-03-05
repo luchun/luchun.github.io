@@ -3,6 +3,7 @@ layout: post
 title: Promise.prototype.finally()
 ---
 ES2018 新增额一个方法 `Promise.prototype.finally()`
+<!-- more -->
 
 ##
 ```ecmascript 6

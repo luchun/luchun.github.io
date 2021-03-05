@@ -2,6 +2,8 @@
 layout: post
 title: 前端面试问题 - CSS
 ---
+收集一些前端面试题
+<!-- more -->
 
 ## "resetting" 和 "normalizing" CSS 的区别？ 你会选择哪一个？
 * *Resetting* 重置是为了去除元素上的所有默认浏览器样式。例如对于所有元素的`margin`，`padding`，`font-size`重置为相同。

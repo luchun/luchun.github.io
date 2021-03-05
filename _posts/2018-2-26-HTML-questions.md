@@ -2,6 +2,9 @@
 layout: post
 title: 前端面试问题 - HTML
 ---
+收集一些前端面试题
+<!-- more -->
+
 <!--html问题-->
 ## `DOCTYPE` 有什么作用?
 
