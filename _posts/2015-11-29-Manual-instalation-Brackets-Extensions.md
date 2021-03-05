@@ -2,10 +2,11 @@
 layout: post
 title: Manual instalation Brackets Extensions 
 ---
-## 手动安装Brackets扩展插件
-
 Brackets这款编辑器小巧好用，扩展多，最重要的是它免费开源，对于替代sublime Text ,notepad++ 等工具来说，是个不错的选择。
 但是由于国内的网络环境，我在家尝试了很多次，都无法打开他的扩展管理器，没办法只能手动添加扩展了。
+<!-- more -->
+## 手动安装Brackets扩展插件
+
 
 第一步 打开扩展文件夹 ，由于编辑器经常更新，文件夹名称和位置也经常不一样，不过可以从编辑器菜单栏找到入口
 **顶部菜单栏-帮助-显示扩展目录**

@@ -2,6 +2,9 @@
 layout: post
 title: Install-SDK-for-Node-Gyp
 ---
+windows下安装node-gyp
+<!-- more -->
+
 ## 为安装node-gyp而安装windos SDK
 
 [node-gyp](https://github.com/nodejs/node-gyp) 是一个nodejs原声插件构建工具，具体我也不是很理解，大概是将c++编译成node的一个工具。很多别的插件都需要用它来rebuild，比如我最近常用的[browser-sync](https://github.com/browsersync/browser-sync),安装时就需要`node-gyp`。

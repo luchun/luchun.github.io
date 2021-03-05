@@ -2,11 +2,13 @@
 layout: post
 title: Javascript：Pascal's Triangle
 ---
+最近在codewars上升级为了4段，难度增加了不少，出现了更多的算法题，我没有做出来，看了答案，感觉很是精妙。
+<!-- more -->
+
 ##javascript解决杨辉三角问题
 
 原题地址在 [codewars](http://www.codewars.com/kata/5226eb40316b56c8d500030f/train/javascript)
 
-最近在codewars上升级为了4段，难度增加了不少，出现了更多的算法题，我没有做出来，看了答案，感觉很是精妙。
 
 1 
 

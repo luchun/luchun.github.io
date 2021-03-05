@@ -2,9 +2,11 @@
 layout: post
 title: Arrow This 理清箭头函数
 ---
+原文 [Arrow This: Clearing Up Confusion over Arrow Functions](http://blog.getify.com/arrow-this)
+<!-- more -->
+
 ## Arrow This 理清箭头函数
 
-原文 [Arrow This: Clearing Up Confusion over Arrow Functions](http://blog.getify.com/arrow-this)
 
 ES6中一个最值得称赞的功能是新的箭头函数```=>```即函数表达式(拉姆达)的简写。你很难发现哪个关于ES6的博客文章或者会议讨论或者书籍会不讨论```=>``` 是新的功能。
 

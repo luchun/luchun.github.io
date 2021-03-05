@@ -2,10 +2,12 @@
 layout: post
 title: windows-multiple-node-versions-management
 ---
+最近跟随nodejs的步伐，将本机上的nodejs更新到了v5.1.0，前几天开始使用IBM 的额bluemix，它目前支持的nodejs版本为0.12.x。所以不得不使用多版本管理了。
+
+<!-- more -->
 ## windows下nodejs多版本管理
 
 
-最近跟随nodejs的步伐，将本机上的nodejs更新到了v5.1.0，前几天开始使用IBM 的额bluemix，它目前支持的nodejs版本为0.12.x。所以不得不使用多版本管理了。
 
 目前来看，windows上的node多版本管理一共有三个工具 [nvm-windows](https://github.com/coreybutler/nvm-windows),[nvmw](),[nodist]()
 

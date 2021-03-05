@@ -5,7 +5,7 @@ title: stylesheets has a disabled attribute
 ## stylesheets 和 script 元素上的disabled 标签
 
 stylesheets 和 script 元素上有一个可以查询和定义的布尔型属性：`disabled` 。通过它可以十分简便的禁用指定的stylesheet或script。
-
+<!-- more -->
 例如，我们引用了一个stylesheet和一个script，使用变量`mySheet`和`myScript`代表，我们可以这样禁用他们：
 
     mySheet.disabled = true;

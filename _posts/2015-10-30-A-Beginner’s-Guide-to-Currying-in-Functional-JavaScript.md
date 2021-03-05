@@ -2,13 +2,15 @@
 layout: post
 title: A Beginner’s Guide to Currying in Functional JavaScript
 ---
+柯里化，或者叫部分应用，是一项熟悉传统javascript的人感到陌生的函数式技术.但使用正确的话，它能使你的函数式javascript更具备可读性.
+<!-- more -->
+
 ## 新手指南： 函数式编程之柯里化
 
 原文 [A Beginner’s Guide to Currying in Functional JavaScript](http://www.sitepoint.com/currying-in-functional-javascript)
 
 
 
-柯里化，或者叫部分应用，是一项熟悉传统javascript的人感到陌生的函数式技术.但使用正确的话，它能使你的函数式javascript更具备可读性.
 
 ### 更具可读性更具弹性
 

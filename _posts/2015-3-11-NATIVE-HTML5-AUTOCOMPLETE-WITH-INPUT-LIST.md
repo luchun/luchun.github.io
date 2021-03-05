@@ -2,9 +2,10 @@
 layout: post
 title: 原生 HTML5 输入自动完成
 ---
+现在，HTML5 有了原生的自动输入完成
+<!-- more -->
 ## 2015-3-11 原生 HTML5 输入自动完成
 
-现在，HTML5 有了原生的自动输入完成
 
 <input list="pasta">
 

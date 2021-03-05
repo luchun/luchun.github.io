@@ -2,11 +2,13 @@
 layout: post
 title: ECMAScript proposal function callable classes
 ---
+本文介绍了建议性ECMAScript功能：[调用构造函数](https://github.com/tc39/ecma262/blob/master/workingdocs/callconstructor.md)
+<!-- more -->
+
 ## ECMAScript 建议：函数可调用的类
 
 原文 [ECMAScript proposal: function-callable classes](http://www.2ality.com/2015/10/call-constructor-esprop.html)
 
-本文介绍了建议性ECMAScript功能：[调用构造函数](https://github.com/tc39/ecma262/blob/master/workingdocs/callconstructor.md)
 
 ### 1. 类在ES6中不能作为函数调用
 

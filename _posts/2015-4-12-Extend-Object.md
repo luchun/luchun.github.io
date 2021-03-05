@@ -2,10 +2,9 @@
 layout: post
 title: Extend function
 ---
-## 一个简单的extend方法
 
 从《 EssentialJavaScript Design Patterns 》中学习到一个，就是如果某个属性是对象，则继续深复制。
-
+<!-- more -->
 ```
 function extend(destination,source){
     var toString = Object.prototype.toString,

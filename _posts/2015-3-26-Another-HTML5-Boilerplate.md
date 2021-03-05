@@ -2,6 +2,8 @@
 layout: post
 title: 又一个HTML5 Boilerplate 选择
 ---
+<!-- more -->
+
 ## 为什么要使用HTML5 Boilerplate
 
 在我处初学html的时候和早期做项目的时候，是怎么初始化一个项目的呢？一直都是比较随意，用emmet 的!就完事了。等遇到了问题再去解决，比如需要reset,就加上reset.css,遇到jquery就加上jquey.js。后来发现有些工作很重复，就自己写个模板放下一些常用的引用文件，新项目的时候就直接开始。其实这就是一种模板，只是内容不完全而已。后来我遇到了[HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)这个项目,简直一见如果，关于他的作者来历什么的就不说了，它在github上有近3万个star就足以说明一切。它的优势主要是包含了很多基础内容，对ie什么的也都有准备。

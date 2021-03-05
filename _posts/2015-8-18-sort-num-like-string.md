@@ -2,8 +2,9 @@
 layout: post
 title: 用Ruby语言对数字排序
 ---
-##用Ruby语言对数字排序
 
+用Ruby语言对数字排序
+<!-- more -->
 原题地址在 [codewars](http://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/ruby)
 
 这是一道简单的入门级题目，对给出的数字进行排序返回，比如

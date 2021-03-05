@@ -2,11 +2,14 @@
 layout: post
 title: 一道扩展Function以实现Functional 编程的语言基础题
 ---
+今年函数式编程又火了起来，一本2013年在国外出版的《Functional Javascript》今年被翻译引进至国内，又火了一把。
+<!-- more -->
+
 ##一道扩展Function以实现Functional 编程的语言基础题
 
 原题地址在 [codewars](http://www.codewars.com/kata/527176c487961e5900000106/train/javascript)
 
-今年函数式编程又火了起来，一本2013年在国外出版的《Functional Javascript》今年被翻译引进至国内，又火了一把。
+
 下面是这道题的介绍
 
 Build a function pipe to achieve this with JS. An example use could be:

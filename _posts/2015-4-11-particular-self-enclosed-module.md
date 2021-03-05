@@ -2,9 +2,10 @@
 layout: post
 title: particular self-enclosed module
 ---
-## particular self-enclosed module
+particular self-enclosed module
 
 这种设计模式的中文名称我忘了叫什么，不过挺常见，对于不大的项目来说很实用，是以前我使用的最多的模式。拥有内部方法和参数，已经公共方法公共参数，既有对外的接口也有私有成员。并且简单改造就是一个单例。
+<!-- more -->
 
 典型的构成如下
 

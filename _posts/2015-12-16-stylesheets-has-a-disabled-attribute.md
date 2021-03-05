@@ -2,6 +2,8 @@
 layout: post
 title: Kickoff：A new frontend-framework
 ---
+新的前端框架
+<!-- more -->
 ## Kickoff:一个可以构建弹性的响应式站点的轻量级前端框架
 
 [Website](http://trykickoff.com/)  [Github](https://github.com/trykickoff/kickoff/)

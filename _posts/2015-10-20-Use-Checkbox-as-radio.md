@@ -2,9 +2,8 @@
 layout: post
 title: 用checkbox实现单选
 ---
-## 用checkbox实现单选
-
-
+用checkbox实现单选
+<!-- more -->
 ```js
 
     $('input').on('change', function() {

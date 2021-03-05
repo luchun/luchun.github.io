@@ -2,6 +2,8 @@
 layout: post
 title: 10 Habits of a Happy Node Hacker 2016 
 ---
+Node 开发的十个好习惯
+<!-- more -->
 ## 10 Habits of a Happy Node Hacker 2016 
 
 

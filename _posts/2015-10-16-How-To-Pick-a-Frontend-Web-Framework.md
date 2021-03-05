@@ -2,9 +2,9 @@
 layout: post
 title: How To Pick a Frontend Web Framework
 ---
-##如何选择一个前端框架
-
 原文地址在 [博客地址](http://www.fse.guru/how-to-pick-a-frontend-web-framework)
+如何选择一个前端框架
+<!-- more -->
 
 #### 你自己使用它吗？
 
