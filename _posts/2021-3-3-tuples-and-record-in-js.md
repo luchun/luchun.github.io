@@ -2,6 +2,8 @@
 layout: post
 title: JavaScript中的Tuples和Records
 ---
+今天看到Babel7.13发布，主要更新是开始支持元组和记录，就了解了一下这两个原始类型
+<!-- more -->
 不可变性是函数式编程中的常见术语，也是函数式编程的一个核心原则。不可变性对象意味一个变量一旦声明，它的值就永远不能改变。如
 ```javascript
 const arr = [0,1,2,3]

@@ -4,7 +4,7 @@ title: WSL2里设置代理
 ---
 在电脑里安装了WSL2和Ubuntu，但是`apt update` 一直超时，网上找了更换阿里云镜像/更换dns都不好使。
 搜索了一下Ubuntu可以代理。
-
+<!-- more -->
 首先是要配置允许来自局域网的请求
 ![](https://ftp.bmp.ovh/imgs/2021/02/84734f1ca966e740.jpg)
 

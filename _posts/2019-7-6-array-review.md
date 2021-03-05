@@ -4,7 +4,7 @@ title: 温故知新： Array
 ---
 又重新翻看了一下MDN上数组的介绍,《JavaScript权威指南》第七章，《ES6标准入门》第七章。
 总结一下JavaScript中数组的一些细节，主要是在工作长时间不使用而遗漏的细节。
-
+<!-- more -->
 ## 1. `delete` 数组成员
 
 <img src="{{ site.baseurl }}/images/arrayreview/WX20190705-104015@2x.png" alt="delete"/>

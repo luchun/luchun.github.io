@@ -2,6 +2,9 @@
 layout: post
 title: 
 ---
+最近Web API 又增加了一个 `ReportingObserver` ，我是没看懂这个Observer怎么用，但正好总结下目前已有的 Web Observer API
+<!-- more -->
+
 ## IntersectionObserver
 Intersection Observer API提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。
 过去为了实现图片懒加载，需要监听`document`的`scroll`事件，并在回调内获取目标元素的位置判断是否进入了视窗，执行图片加载动作，如

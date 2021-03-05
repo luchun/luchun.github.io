@@ -4,7 +4,7 @@ title: 创建响应式图片
 ---
 偶尔读到一篇老文章 [Time-saving CSS techniques to create responsive images
 ](https://medium.com/free-code-camp/time-saving-css-techniques-to-create-responsive-images-ebb1e84f90d5) ，结合自己在工作中遇到过的情况，分享一些小东西。
-
+<!-- more -->
 img是一种[可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element) , 如果不给它指定宽高，它会在加载过程中一点一点撑开文档流，体验很不好。
 在移动端用px作为单位来指定图片的宽高不是一个好办法。用百分比在`height`上并不能生效。
 我以前做过一个论坛，其中图片处理的方式用的是：
