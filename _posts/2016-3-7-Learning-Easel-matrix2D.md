@@ -4,7 +4,7 @@ title: 学习createjs中的Matrix2D
 ---
 
 借鉴了[这篇文章](http://kudox.jp/java-script/createjs-easeljs-matrix2d)，理解下Createjs中的Matrix2D类。
-
+<!-- more -->
 
 ### 应用Matrix2D实例的生成和对象
 

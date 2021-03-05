@@ -4,7 +4,7 @@ title: Domator.js 源代码学习
 ---
 
 通过学习Domator.js源代码以及打包方法，学习到了一些npm知识和ES2016方法，以及一些语法
-
+<!-- more -->
 ### Domator
 
 简洁的DOM元素创建方法，使用Jade类似的语法。并可以在服务器端运行，[Github主页](https://github.com/mjlescano/domator)

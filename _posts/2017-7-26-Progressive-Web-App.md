@@ -2,7 +2,8 @@
 layout: post
 title: Progressive Web App(PWA) 升级
 ---
-
+关于PWA的一些误解
+<!-- more -->
 ### 关于pwa的一些误解
 1)  **不是Application才需要PWA**
 

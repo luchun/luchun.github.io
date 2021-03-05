@@ -8,7 +8,7 @@ title: 你不知道的 (S)CSS 最佳实践
 例如对于React，由于它是组件性质，最好使用 [CSS modules](https://github.com/css-modules/css-modules) 编写样式。
 如果你想使用最新的 CSS 功能，使用 [CSSNext](http://cssnext.io/) 是明智之举。
 不要忘记很好的预处理器，比如 Sass 或者 LESS。你可能会想-这么多工具，我打赌每一个的写作风格是不同的。你是对的，但基础是一样的。
-
+<!-- more -->
 在这篇文章中，我想提出一些很好的提示来编写强大而可维护的CSS，无论你是使用 CSS modules 还是 Sass/LESS。
 这些提示以SCSS语法呈现，所以如果您需要对Sass的一些介绍，[这里](http://sass-lang.com/guide)是一个很好的开始。
 如果你使用纯CSS，扩展的 CSS next，这篇文章也可以看看。这些基本概念可以轻松地用于其他CSS工具或预处理器。

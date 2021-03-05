@@ -6,8 +6,8 @@ title: WindowBase64 接口
 WindowBase64 接口定义了两个分别用来进行编码和解码 base64 的工具函数。 base64 经常用在 [data URI](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/data_URIs) 中。
 
 WindowBase64 并不是一个全局对象，没有直接访问 WindowBase64 接口的方式。 不过 Window 对象上有该接口的实现.    
-    
 
+<!-- more -->
 ## window.btoa 
 将ascii字符串或二进制数据转换成一个base64编码过的字符串,该方法不能直接作用于Unicode字符串.
 

@@ -4,7 +4,7 @@ title: 我的项目脚手架
 
 ---
 著名的html起步器boilerplate有针对移动端优化的[html5boilerplate](https://html5boilerplate.com/mobile/),可以在新开项目时使用。
-
+<!-- more -->
 记录一些我在移动端项目中的起步设置
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>

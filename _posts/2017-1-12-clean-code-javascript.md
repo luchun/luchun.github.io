@@ -2,7 +2,8 @@
 layout: post
 title: javascript代码简介之道
 ---
-
+javascript代码简介之道
+<!-- more -->
 #### 来源 [https://github.com/ryanmcdermott/clean-code-javascript?utm_source=ESnextNews.com&utm_medium=Weekly+Newsletter&utm_campaign=2017-00-09#variables](https://github.com/ryanmcdermott/clean-code-javascript?utm_source=ESnextNews.com&utm_medium=Weekly+Newsletter&utm_campaign=2017-00-09#variables)
 
 ## 目录

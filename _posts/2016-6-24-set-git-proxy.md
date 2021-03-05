@@ -3,6 +3,8 @@ layout: post
 title: 在git中设置代理
 ---
 最近在git中提交代码的时候总是遇到 443 Timeout 的问题。谷歌了一下找到了设置代理的方法
+<!-- more -->
+
 
      git config --global http.proxy 127.0.0.1:1080
      

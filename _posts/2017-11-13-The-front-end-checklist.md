@@ -6,7 +6,7 @@ title: 前端清单
 在将网站发布到生产环境前需要做的所有检查
 
 [github](https://github.com/thedaviddias/Front-End-Checklist)
-
+<!-- more -->
 
 
 ## 目录 

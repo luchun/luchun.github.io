@@ -2,6 +2,8 @@
 layout: post
 title: Template7 Mobile-first JavaScript Template Engine
 ---
+一个移动优先的模板引擎
+<!-- more -->
 ## Template7 移动优先的额模板引擎
 
 因为是开发Swiper滑动插件的那个公司开发的，在javascript 周刊中推荐到了，所以看了看。

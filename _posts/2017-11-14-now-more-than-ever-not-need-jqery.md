@@ -7,6 +7,7 @@ title: 现在更不需要jQuery了
 自2013年以来，人们一直在撰写“You Might Not Need jQuery”的文章（请参阅此[网站](http://youmightnotneedjquery.com/)和此[项目](https://github.com/oneuijs/You-Dont-Need-jQuery)）。
 本文并不想重复以前的内容，但自从上一版“You Might Not Need jQuery”文章，您可能已经偶然发现了浏览器上的一点点改变。
 浏览器继续实现新的API，从无框架开发中解脱出来，其中许多API直接从jQuery中复制。
+<!-- more -->
 
 ## Remove an element from the page
 

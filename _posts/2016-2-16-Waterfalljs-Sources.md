@@ -2,6 +2,9 @@
 layout: post
 title: Waterfall.js 源代码学习
 ---
+源代码学习
+<!-- more -->
+
 ## Waterfall.js 源代码学习
 
 

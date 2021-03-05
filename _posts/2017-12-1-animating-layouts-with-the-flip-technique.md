@@ -2,7 +2,8 @@
 layout: post
 title: 使用FLIP技术设置动画布局
 ---
-
+直观且易于理解的用户界面才是最有效的。
+<!-- more -->
 直观且易于理解的用户界面才是最有效的。 动画在这方面起着重要的作用 - 正如 Nick Babich 所说 [animation brings user interfaces to life](https://uxplanet.org/functional-animation-in-ux-design-what-makes-a-good-transition-d6e7b4344e5e)。
 然而, 增加有意义的过渡和微观互动往往是事后的, 或者是 "好的", 如果时间允许的话。
 通常，我们使用的 web 应用只是简单的从一个视图"跳"到另一个视图，而不会给用户时间来处理当前上下文中发生的事情。

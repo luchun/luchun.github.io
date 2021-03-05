@@ -2,6 +2,9 @@
 layout: post
 title: Top 9 Animation Libraries to Use in 2016 
 ---
+2016年应该使用的9个顶级动画库
+<!-- more -->
+
 ## 2016年应该使用的9个顶级动画库
 
 原文 [Top 9 Animation Libraries to Use in 2016)](http://www.sitepoint.com/top-9-animation-libraries-use-2016/?utm_source=html5weekly&utm_medium=email)

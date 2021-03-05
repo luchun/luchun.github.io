@@ -8,7 +8,7 @@ title: Vuejs 中的 Mixins 和 Plugins
 使用 Vuejs 这类库进行开发时，有一种趋势是组件优先的方案。这个库可以将功能和视图行为拆分为组件。
 但有时可能需要在多个组件/ Vue 实例之间共享功能。
 这就是 mixins 和 plugins 可以提供很多帮助的地方。
-
+<!-- more -->
 ## Mixins
 
 ![mixins](https://cdn-images-1.medium.com/max/600/0*X4EOKgmh4fKjgAnW.jpg)

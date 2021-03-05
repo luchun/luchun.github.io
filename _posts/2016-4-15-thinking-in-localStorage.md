@@ -2,6 +2,8 @@
 layout: post
 title: 关于 LocalStorage 的一些思考
 ---
+关于 LocalStorage 的一些思考
+<!-- more -->
 
 今天又看了一下 LocalStorage ，LocalStorage 是 HTML5 提供的客户端存储数据的[新方法](http://www.w3school.com.cn/html5/html_5_webstorage.asp)。它主要有五个方法：
 *   `LocalStorage.clear()` 不接收参数，无返回值。作用是将所有保存的数据清理。

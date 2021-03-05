@@ -4,7 +4,7 @@ title: 理解CSS3 transform中的Matrix(矩阵)
 ---
 
 大学没好好学习高数线性代数，工作中遇到麻烦了，从大师那里 [文章](http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/) 学习一下矩阵。
-
+<!-- more -->
 先是复习下三角函数，sin cos tan 总是记不住。
 
 [<img src="{{ site.baseurl }}/images/sjhs.jpg" alt="三角函数"/>]({{ site.baseurl }}/)

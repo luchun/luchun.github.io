@@ -4,6 +4,7 @@ title:  前端hacking备忘录
 ---
  
 记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是[Indrek Lasn](https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a)收集的最棒的前端备忘录。
+<!-- more -->
 
 ## Javascript ES2015 特性
 

@@ -3,6 +3,7 @@ layout: post
 title: Webpack — The Confusing Parts
 ---
 webpack 中一些让人迷惑的地方
+<!-- more -->
 
 Webpack 是 React 和 Redux apps 的模块打包工具，在 Angulars2 和其他框架开发者中也有人使用。
 

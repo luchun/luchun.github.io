@@ -2,7 +2,8 @@
 layout: post
 title: 测试HTML5 Notification
 ---
-
+测试HTML5 Notification
+<!-- more -->
 ### 旧的实现方法
 
     setInterval(function () {

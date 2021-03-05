@@ -6,7 +6,7 @@ title: Linux screen & two remote git
 一直在命令行中跑 node ,当关闭bash之后，任务就会停止。今天在发布项目到 aws时我就考虑，一旦我关闭了ssh ，不就停止了吗。
 找了一下，linux 有个 screen 命令，只要在 npm前加个 screen ,就会新开一个screen，并且只要任务没结束，它就不会被关闭。
 当再次登录到aws后，执行 `screen -ls` 就可以显示所有正在运行的screen, 执行 `screen -r ` 加上要切换到的screen 端口，就可以切换过去。
- 
+ <!-- more -->
  
 ---
 

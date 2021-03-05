@@ -4,7 +4,7 @@ title: 使用Github fetch polyfill
 
 ---
 看了一下 fetch 以及github 实现的polyfill
-
+<!-- more -->
 [http://github.github.io/fetch/](http://github.github.io/fetch/)
 
 [https://github.com/github/fetch](https://github.com/github/fetch)

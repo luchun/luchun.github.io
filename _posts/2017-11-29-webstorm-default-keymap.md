@@ -3,7 +3,7 @@ layout: post
 title:  Webstorm 快捷键
 ---
 Webstorm用的久了 ，记住一些快捷键会方便很多
-
+<!-- more -->
 ### table of Contents
 
 1. **[Editing](#Editing)**

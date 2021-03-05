@@ -6,6 +6,7 @@ title: 使用 ffmpeg 转换 mp4 为 gif 文件
 在 Web 中尽量使用 mp4 而不是 gif ，因为 gif 文件要比 mp4 大很多。 
 但还是会有一些需求 或者是 变态产品经理 要求把 mp4 转为 gif 使用。
 mmfpeg 是一个优秀的格式转化工具
+<!-- more -->
 
 ## 安装
 

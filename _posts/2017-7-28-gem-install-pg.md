@@ -4,7 +4,7 @@ title: 解决gem install pg 报错
 ---
 
 在 macos 下安装 pg 报错
-
+<!-- more -->
     ...
     checking for libpq-fe.h... no
     Can't find the 'libpq-fe.h header

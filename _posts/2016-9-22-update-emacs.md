@@ -2,7 +2,8 @@
 layout: post
 title: mac 下升级 Emacs
 ---
-
+mac 下升级 Emacs
+<!-- more -->
 最近在学习使用 mac 下的 emacs ,OS X 自带的版本是 22， 我就想升级一下。但是这种预装的软件升级是很麻烦的，参考了下Emacs 网站上的[这篇文章](http://wikemacs.org/wiki/Installing_Emacs_on_OS_X)
 
 	       $ brew update

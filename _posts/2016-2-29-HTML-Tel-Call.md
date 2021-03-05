@@ -6,6 +6,7 @@ title: HTML 中的电话链接
     <a href="tel:1-562-867-5309">1-562-867-5309</a>
     
 事实上，即使没有tel ，浏览器也会自行判断是否为电话的，所以有时候我们需要禁用浏览器的判断
+<!-- more -->
 
     <meta name="format-detection" content="telephone=no">
     

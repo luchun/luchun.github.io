@@ -5,7 +5,7 @@ title: 编写Node和浏览器通用的组件
 
 假设你要在npm发布一个模块，支持 Node 和 browser 。
 但是模块的 Node 版本 和 browser 版本的实现上有所不同。
-
+<!-- more -->
 Node 和 browser 的环境有很多细微不同，这种情况会频繁遇到。它很难正确解决，
 尤其是当你想尽可能优化 brower 版的体积。
 

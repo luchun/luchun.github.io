@@ -7,6 +7,7 @@ title: Vue.js中的 Transition 和 Animation
 但是，他们很容易出错。
 在复杂情况下，如处理处理列表。依赖原生JavaScript和CSS的时候，几乎不可能实现出来。
 每当我问后台开发人员为什么他们不喜欢这个前台时，他们的反应通常都是“...动画”的一部分。
+<!-- more -->
 
 Vue.js这样的框架，将setTimeout函数的猜测工作和笨拙的链从 Transition 中抽出来。
 已经有无数的文章概述了基本的使用模式，

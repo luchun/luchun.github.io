@@ -6,7 +6,7 @@ title: 被动事件监听
 读了微软Edge团队的[一篇文章](https://blogs.windows.com/msedgedev/2017/03/08/scrolling-on-the-web/#kRhE0HeVS0Q6qMO8.97)
 讲了现代浏览器对滚动的优化，即把滚动从主线程移动到了后台线程。文中有一个展示，主线程被js弄卡顿时，页面一样可以滚动。不过我在mac上尝试的
 时候，只有safari可以，chrome和firefox都卡住了，囧。估计在windows上firefox和chrome实现了吧。
-
+<!-- more -->
 但是前端开发者很容易就会干扰到滚动。
 
     window.addEventListener(“wheel”, function (e) {
