@@ -3,6 +3,7 @@ layout: post
 title: Eslint忽略npm link 文件夹
 ---
 今天在一个由vue-cli 生成的项目中，通过npm link 引用了另一个文件夹，项目执行起来后就开始报错：
+
 ```
  error  in C:/web_project/packages/contract/lib/clpContract.umd.js
 
